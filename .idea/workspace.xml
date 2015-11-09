@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e952d7f6-9b0e-4205-893e-b6a6e24e3300" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/FFT_deangeli.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/TesteFFT.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/index.html" afterPath="$PROJECT_DIR$/Main/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/myFFT.js" afterPath="$PROJECT_DIR$/Main/myFFT.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/myUtils.js" afterPath="$PROJECT_DIR$/Main/myUtils.js" />
+    </list>
+    <ignored path="deangelign.github.io.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="deangelign.github.io" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.307692">
+              <caret line="171" column="22" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myFFT.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/myFFT.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="126" column="11" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fft.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/fft.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.206897">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FFT_deangeli.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/FFT_deangeli.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TesteFFT.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/TesteFFT.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.0384614">
+              <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myUtils.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Main/myUtils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29289427">
+              <caret line="647" column="18" selection-start-line="647" selection-start-column="18" selection-end-line="647" selection-end-column="18" />
+              <folding>
+                <element signature="e#2017#2252#0" expanded="false" />
+                <element signature="e#2381#2682#0" expanded="false" />
+                <element signature="e#2834#3177#0" expanded="false" />
+                <element signature="n#!!block;n#findPos#0" expanded="false" />
+                <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
+                <element signature="n#!!block;n#storeObjectShape#0" expanded="false" />
+                <element signature="n#!!block;n#drawObjectShapesInOriginalImage#0" expanded="false" />
+                <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
+                <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
+                <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
+                <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
+                <element signature="n#!!block;n#drawLine#0" expanded="false" />
+                <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
+                <element signature="n#!!block;n#anyObjectShapeSelected#0" expanded="false" />
+                <element signature="n#!!block;n#anyRectangleSelected#0" expanded="false" />
+                <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
+                <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
+                <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
+                <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
+                <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
+                <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
+                <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
+                <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
+                <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
+                <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
+                <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
+                <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
+                <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
+                <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
+                <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
+                <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Main/TesteFFT.html" />
+        <option value="$PROJECT_DIR$/Main/myFFT.js" />
+        <option value="$PROJECT_DIR$/Main/FFT_deangeli.js" />
+        <option value="$PROJECT_DIR$/Main/index.html" />
+        <option value="$PROJECT_DIR$/Main/myUtils.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deangelign.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deangelign.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deangelign.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deangelign.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deangelign.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e952d7f6-9b0e-4205-893e-b6a6e24e3300" name="Default" comment="" />
+      <created>1446897231450</created>
+      <option name="number" value="Default" />
+      <updated>1446897231450</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Main/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myFFT.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="186" column="54" selection-start-line="186" selection-start-column="54" selection-end-line="186" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2017#2252#0" expanded="false" />
+            <element signature="e#2381#2682#0" expanded="false" />
+            <element signature="e#2834#3177#0" expanded="false" />
+            <element signature="n#!!block;n#findPos#0" expanded="false" />
+            <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
+            <element signature="n#!!block;n#storeObjectShape#0" expanded="false" />
+            <element signature="n#!!block;n#drawObjectShapesInOriginalImage#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawLine#0" expanded="false" />
+            <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyObjectShapeSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyRectangleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
+            <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
+            <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
+            <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
+            <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/FFT_deangeli.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/TesteFFT.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0384614">
+          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myFFT.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="11" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/fft.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.206897">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.307692">
+          <caret line="171" column="22" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/myUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29289427">
+          <caret line="647" column="18" selection-start-line="647" selection-start-column="18" selection-end-line="647" selection-end-column="18" />
+          <folding>
+            <element signature="e#2017#2252#0" expanded="false" />
+            <element signature="e#2381#2682#0" expanded="false" />
+            <element signature="e#2834#3177#0" expanded="false" />
+            <element signature="n#!!block;n#findPos#0" expanded="false" />
+            <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
+            <element signature="n#!!block;n#storeObjectShape#0" expanded="false" />
+            <element signature="n#!!block;n#drawObjectShapesInOriginalImage#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawLine#0" expanded="false" />
+            <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyObjectShapeSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyRectangleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
+            <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
+            <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
+            <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
+            <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

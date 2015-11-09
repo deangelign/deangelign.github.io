@@ -1,6 +1,11 @@
 //na verdade esse arquivo de FFT foi feito por outro cara, eu apenas fiz algumas modificacoes.
 //Talvez seja necessario fazer a minha propria implementacao caso acha a necessidade de mudar alguma coisa na FFT
-//resultante
+//resultan
+var rawResult;
+//var widthFFT;
+//var heightFFT;
+
+
 function __getNextPowerOfTwo( nn ) {
     var pp = 1;
     while ( pp < nn ) {
@@ -114,6 +119,8 @@ function __performFFT( _real, _imag, _ww, _hh, _dx, _dy, _inverse ) {
         }
     }
 
+    //widthFFT = _ww;
+    //h/eightFFT = _imag;
     return {
         width: _ww,
         height: _hh,
@@ -137,7 +144,8 @@ function FFT( _canvasId ) {
         return false;
     }
 
-    var rawResult = context.getImageData( 0, 0, ww, hh );
+   // var rawResult = context.getImageData( 0, 0, ww, hh );
+    rawResult = context.getImageData( 0, 0, ww, hh );
     var result = rawResult.data;
 
     var real = new Array();
@@ -159,6 +167,8 @@ function FFT( _canvasId ) {
             var index = pp + kk;
             var rr = real[ index ];
             var ii = imag[ index ];
+            //var rr = fftData.real[index];
+            //var ii = 0;
             result[ index ] = Math.sqrt( rr*rr + ii*ii );
         }
         result[ pp + 3 ] = 255;
@@ -169,14 +179,20 @@ function FFT( _canvasId ) {
     return fftData;
 }
 
-function IFFT( _fftData, _canvasId ) {
+function IFFT( _fftData, _canvasId, canvasSource ) {
     var canvas = document.getElementById( _canvasId );
     if ( !canvas ) {
         return false;
     }
 
+    var canvas2 = document.getElementById(canvasSource);
+    canvas2.width;
+    canvas2.height;
     var ww = _fftData.width;
     var hh = _fftData.height;
+    //var ww = widthFFT;
+    //var hh = heightFFT;
+
 
     canvas.width = ww;
     canvas.height = hh;
@@ -214,5 +230,9 @@ function IFFT( _fftData, _canvasId ) {
 
     context.putImageData( rawResult, 0, 0 );
     return true;
+}
+
+function MY_IFFT( _canvasId ){
+
 }
 

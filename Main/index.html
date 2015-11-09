@@ -143,7 +143,7 @@
         var canvasAreaHeight = 256;
 
 
-        var imageLoader = document.getElementById('imageLoader');
+        var imageLoader = document.getElementById('imageLoader', 'imageFourier');
         //adiciona um listener no input que envia mensagens
         imageLoader.addEventListener('change', handleImage, false);
 
@@ -167,9 +167,9 @@
                     contextFourierTransformArea.drawImage(canvasImageUploadedArea, 0,0);
 
                     // 2D-FFT
-                    FFT('imageFourier');
+                    data_fft = FFT('imageFourier');
                     receiveDataFromNewImageUpdated(contextFourierTransformArea.getImageData(0,0,canvasAreaWidth, canvasAreaHeight));
-
+                    //IFFT(data_fft,'imageFourierResult', );
                 }
                 img.src = event.target.result;
 

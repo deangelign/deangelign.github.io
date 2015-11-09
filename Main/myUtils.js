@@ -30,6 +30,12 @@ var imageGeneratedFromLastMousePressUp = OriginalImage;
 //////////////////////////
 
 
+////////////////drag and drop objects/////////////////
+var lastMouseCursorPositionX = 0;
+var lastMouseCursorPositionY = 0;
+
+/////////////////////////////////////////////////
+
 //////////////////////////////////////////////////////
 var isButtonDrawingRectangleSelected = false;
 var isButtonDrawingCircleSelected = false;
@@ -49,12 +55,13 @@ var selectedButtonBorderStyle = "2px solid blue";
 
 
 /////////////////////////////classes constructor//////////////////////////////
-var Rectangle = function (coordinateX_InCanvasArea,coordinateY_InCanvasArea,width,heigh, isSelected) {
+var Rectangle = function (coordinateX_InCanvasArea,coordinateY_InCanvasArea,width,height, isSelected) {
     this.coordinateX_InCanvasArea = coordinateX_InCanvasArea
     this.coordinateY_InCanvasArea = coordinateY_InCanvasArea
     this.width = width;
-    this.heigh = heigh;
+    this.height = height;
     this.isSelected = isSelected;
+    this.isCtrlC = false;
 }
 
 var Circle = function (centerCoordinateX_InCanvasArea,centerCoordinateY_InCanvasArea,radius, startAngle, endAngle, isSelected) {
@@ -64,6 +71,7 @@ var Circle = function (centerCoordinateX_InCanvasArea,centerCoordinateY_InCanvas
     this.startAngle = startAngle;
     this.endAngle = endAngle;
     this.isSelected = isSelected;
+    this.isCtrlC = false;
 }
 
 var Line = function (startCoordinateX_InCanvasArea,startCoordinateY_InCanvasArea,endCoordinateX_InCanvasArea,endCoordinateY_InCanvasArea, isSelected) {
@@ -72,6 +80,7 @@ var Line = function (startCoordinateX_InCanvasArea,startCoordinateY_InCanvasArea
     this.endCoordinateX_InCanvasArea = endCoordinateX_InCanvasArea;
     this.endCoordinateY_InCanvasArea = endCoordinateY_InCanvasArea;
     this.isSelected = isSelected;
+    this.isCtrlC = false;
 }
 ///////////////////////////////////////////////////////////////
 
@@ -79,6 +88,7 @@ var Line = function (startCoordinateX_InCanvasArea,startCoordinateY_InCanvasArea
 var rectangles = [];
 var circles = [];
 var lines = [];
+//////////////////////////////////////////////////////
 
 
 //acha a posicao do curso do mouse em relacao a um objeto na pagina
@@ -93,6 +103,15 @@ function findPos(obj) {
     }
     return undefined;
 }
+
+//convert R-G-B to Hexadecimal
+function rgbToHex(r, g, b) {
+    if (r > 255 || g > 255 || b > 255)
+        throw "Invalid color component";
+    return ((r << 16) | (g << 8) | b).toString(16);
+}
+
+
 
 function storeObjectShape(){
     if(isButtonDrawingRectangleSelected){
@@ -157,12 +176,12 @@ function drawObjectShapesInOriginalImage(){
 
 ////////////drawing functions//////////
 function drawFilledRectangle(rectangle){
-    contextFourierTransformArea.fillRect(rectangle.coordinateX_InCanvasArea, rectangle.coordinateY_InCanvasArea, rectangle.width,rectangle.heigh );
+    contextFourierTransformArea.fillRect(rectangle.coordinateX_InCanvasArea, rectangle.coordinateY_InCanvasArea, rectangle.width,rectangle.height );
 }
 
 function drawFilledRectangleSelected(rectangle){
     contextFourierTransformArea.beginPath();
-    contextFourierTransformArea.rect(rectangle.coordinateX_InCanvasArea, rectangle.coordinateY_InCanvasArea, rectangle.width, rectangle.heigh);
+    contextFourierTransformArea.rect(rectangle.coordinateX_InCanvasArea, rectangle.coordinateY_InCanvasArea, rectangle.width, rectangle.height);
     contextFourierTransformArea.fillStyle = 'black';
     contextFourierTransformArea.fill();
     contextFourierTransformArea.lineWidth = 2;
@@ -192,6 +211,7 @@ function drawLine(line){
     contextFourierTransformArea.lineTo(line.endCoordinateX_InCanvasArea,line.endCoordinateY_InCanvasArea);
     contextFourierTransformArea.stroke();
 }
+
 function drawLineSelected(line){
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.moveTo(line.startCoordinateX_InCanvasArea,line.startCoordinateY_InCanvasArea);
@@ -220,7 +240,7 @@ function anyRectangleSelected(mouseX,mouseY){
 function isRetangleSelected(rectangle,mouseX, mouseY){
 
     if( (mouseX > rectangle.coordinateX_InCanvasArea) && (mouseX < rectangle.coordinateX_InCanvasArea + rectangle.width) ){
-        if((mouseY > rectangle.coordinateY_InCanvasArea) && (mouseY < rectangle.coordinateY_InCanvasArea + rectangle.heigh)){
+        if((mouseY > rectangle.coordinateY_InCanvasArea) && (mouseY < rectangle.coordinateY_InCanvasArea + rectangle.height)){
             rectangle.isSelected = true;
             return;
         }
@@ -264,6 +284,78 @@ function isLineSelected(line,mouseX, mouseY){
 
 }
 /////////////////////////////////////////////////
+
+
+////////////////////////////displacements////////////
+function rectangleDisplacement(rectangle,deltaX,deltaY){
+    rectangle.coordinateX_InCanvasArea = rectangle.coordinateX_InCanvasArea + deltaX;
+    rectangle.coordinateY_InCanvasArea = rectangle.coordinateY_InCanvasArea + deltaY;
+}
+
+function circleDisplacement(circle,deltaX,deltaY){
+    circle.centerCoordinateX_InCanvasArea = circle.centerCoordinateX_InCanvasArea + deltaX;
+    circle.centerCoordinateY_InCanvasArea = circle.centerCoordinateY_InCanvasArea + deltaY;
+}
+////////////////////////////////////////////////////
+
+
+/////////////////////////////////ctrl+c functions
+function ctrlC_objects(){
+    ctrlC_rectangle();
+    ctrlC_circles();
+}
+
+function ctrlC_rectangle(){
+    for(var index=0; index<rectangles.length; index++){
+        if(rectangles[index].isSelected){
+            rectangles[index].isCtrlC = true;
+        }
+    }
+}
+
+function ctrlC_circles(){
+    for(var index=0; index<circles.length; index++){
+        if(circles[index].isSelected){
+            circles[index].isCtrlC = true;
+        }
+    }
+}
+////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////ctrl+v functions
+function ctrlV_objects(){
+    ctrlV_rectangles();
+    ctrlV_circles();
+    drawObjectShapesInOriginalImage();
+}
+
+
+function ctrlV_rectangles() {
+    var numberOfRectanglesBeforeCtrlV = rectangles.length;
+    for (var index = 0; index < numberOfRectanglesBeforeCtrlV; index++) {
+        if (rectangles[index].isCtrlC) {
+            var rectangle = new Rectangle(mouseCursorPositionInArea_X, mouseCursorPositionInArea_Y, rectangles[index].width, rectangles[index].height, false);
+            rectangles.push(rectangle);
+            rectangles[index].isCtrlC = false;
+        }
+    }
+}
+
+function ctrlV_circles() {
+    var numberOfCirclesBeforeCtrlV = circles.length;
+    for (var index = 0; index < numberOfCirclesBeforeCtrlV; index++) {
+        if (circles[index].isCtrlC) {
+            var circle = new Circle(mouseCursorPositionInArea_X, mouseCursorPositionInArea_Y, circles[index].radius, circles[index].startAngle, circles[index].endAngle, false);
+            circles.push(circle);
+            circles[index].isCtrlC = false;
+        }
+    }
+}
+///////////////////////////////////////////////////////
+
+
 
 function receiveDataFromNewImageUpdated(imageData) {
     OriginalImage = imageData;
@@ -369,11 +461,44 @@ function drawFreeFormSelectedButton(){
 ////////////////////////////////////////
 
 
-//convert R-G-B to Hexadecimal
-function rgbToHex(r, g, b) {
-    if (r > 255 || g > 255 || b > 255)
-        throw "Invalid color component";
-    return ((r << 16) | (g << 8) | b).toString(16);
+
+
+
+
+
+/////////////////////////////////while mouse down
+function whileMouseDown(CursorPositionX, CursorPositionY){
+    contextFourierTransformArea.putImageData(imageGeneratedFromLastMousePressUp, 0,0);
+    mouseCursorPositionInArea_X_mouseDown_While = CursorPositionX;
+    mouseCursorPositionInArea_Y_mouseDown_While = CursorPositionY;
+    drawShapeBorderWhileMouseDown();
+    coordMouseDownMouseUp = "x=" + mouseCursorPositionInArea_X_mouseDown + ", y=" + mouseCursorPositionInArea_Y_mouseDown +
+        "<br>" + "x=" + mouseCursorPositionInArea_X_mouseDown_While + ", y=" + mouseCursorPositionInArea_Y_mouseDown_While;
+
+    //debugging purposes
+    $('#status2').html(coordMouseDownMouseUp);
+}
+
+function whileMouseDownObjectSelected(){
+    var displacementX = mouseCursorPositionInArea_X - lastMouseCursorPositionX;
+    var displacementY = mouseCursorPositionInArea_Y - lastMouseCursorPositionY;
+
+    for(var index=0; index<rectangles.length ; index++){
+        if(rectangles[index].isSelected){
+            rectangleDisplacement(rectangles[index],displacementX,displacementY)
+        }
+    }
+
+    for(var index=0; index<circles.length ; index++){
+        if(circles[index].isSelected){
+            circleDisplacement(circles[index],displacementX,displacementY);
+        }
+    }
+    drawObjectShapesInOriginalImage();
+
+    lastMouseCursorPositionX = mouseCursorPositionInArea_X;
+    lastMouseCursorPositionY = mouseCursorPositionInArea_Y;
+
 }
 
 function drawShapeBorderWhileMouseDown(){
@@ -401,31 +526,28 @@ function drawShapeBorderWhileMouseDown(){
     }
 
 }
+/////////////////////////////////////////////
 
-function whileMouseDown(CursorPositionX, CursorPositionY){
-    contextFourierTransformArea.putImageData(imageGeneratedFromLastMousePressUp, 0,0);
-    mouseCursorPositionInArea_X_mouseDown_While = CursorPositionX;
-    mouseCursorPositionInArea_Y_mouseDown_While = CursorPositionY;
-    drawShapeBorderWhileMouseDown();
-    coordMouseDownMouseUp = "x=" + mouseCursorPositionInArea_X_mouseDown + ", y=" + mouseCursorPositionInArea_Y_mouseDown +
-        "<br>" + "x=" + mouseCursorPositionInArea_X_mouseDown_While + ", y=" + mouseCursorPositionInArea_Y_mouseDown_While;
-
-    //debugging purposes
-    $('#status2').html(coordMouseDownMouseUp);
-}
-
-$("#imageFourier").on('click', function (e) {
-    if (longpress) {
-
+function anyButtonDrawSelected() {
+    if ((isButtonDrawingRectangleSelected || isButtonDrawingCircleSelected || isButtonDrawingLineSelected || isButtonDrawingFreeFormSelected)) {
+        return true;
+    }else{
+        return false;
     }
 
-    if(!(isButtonDrawingRectangleSelected || isButtonDrawingCircleSelected || isButtonDrawingLineSelected || isButtonDrawingFreeFormSelected)){
+}
 
+
+$("#imageFourier").on('click', function (e) {
+    /*if (longpress) {
+
+    }*/
+
+    if(!(anyButtonDrawSelected())){
         var pos = findPos(this);
         mouseCursorPositionInArea_X = e.pageX - pos.x;
         mouseCursorPositionInArea_Y = e.pageY - pos.y;
         anyObjectShapeSelected(mouseCursorPositionInArea_X, mouseCursorPositionInArea_Y);
-
     }
 
 
@@ -438,7 +560,10 @@ $("#imageFourier").on('mousedown', function (e) {
     coordMouseDownMouseUp = "x=" + mouseCursorPositionInArea_X_mouseDown + ", y=" + mouseCursorPositionInArea_Y_mouseDown;
     $('#status2').html(coordMouseDownMouseUp);
     startTime = new Date().getTime();
+
     mousePressed =  true;
+    lastMouseCursorPositionX = mouseCursorPositionInArea_X;
+    lastMouseCursorPositionY = mouseCursorPositionInArea_Y;
 });
 
 $("#imageFourier").on('mouseup', function (e) {
@@ -462,13 +587,21 @@ $('#imageFourier').mousemove(function(e) {
     $('#status').html(coord + "<br>" + hex);
     if(mousePressed){
         whileMouseDown(mouseCursorPositionInArea_X, mouseCursorPositionInArea_Y);
+        if(!(anyButtonDrawSelected())){
+            whileMouseDownObjectSelected();
+        }
     }
 });
 
-document.addEventListener("keydown", keyDownTextField, false);
 
+//deletar objeto
+document.addEventListener("keydown", keyDownTextField, false);
 function keyDownTextField(e) {
     var keyCode = e.keyCode;
+    var ctrlDown = false;
+    var ctrlKey = 17, vKey = 86, cKey = 67;
+
+
     if(keyCode==46) {
         for(var index=0; index<rectangles.length ; index++){
             if(rectangles[index].isSelected){
@@ -490,7 +623,42 @@ function keyDownTextField(e) {
         }
         drawObjectShapesInOriginalImage();
     }
+
 }
+
+//ctrl+c and ctrl+v of objects
+$(document).ready(function()
+{
+    var ctrlDown = false;
+    var ctrlKey = 17, vKey = 86, cKey = 67;
+
+    $(document).keydown(function(e)
+    {
+        if (e.keyCode == ctrlKey) ctrlDown = true;
+    }).keyup(function(e)
+    {
+        if (e.keyCode == ctrlKey) ctrlDown = false;
+    });
+
+    $(document).keydown(function(e)
+    {
+        if (ctrlDown && (e.keyCode == cKey)){
+            if(!anyButtonDrawSelected()){
+                ctrlC_objects();
+                //alert('objetos copiados');
+            }
+
+        }
+        if (ctrlDown && (e.keyCode == vKey)){
+            if(!anyButtonDrawSelected()){
+                ctrlV_objects();
+                //alert('objetos colados');
+            }
+        }
+
+    });
+});
+
 
 
 
