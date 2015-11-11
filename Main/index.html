@@ -22,7 +22,7 @@
     <script src="filter.js"></script>
     <script src="spectrum.js"></script>
     -->
-    <script src="myFFT.js"></script>
+    <script src="MyJs/fftFunctions.js"></script>
 
     <!-- JQuerry-->
     <script src="jquery.min.js"></script>
@@ -64,68 +64,115 @@
                         <div class="form-group">
                             <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                         </div>
+
                         <div class="form-group">
                             <input type="file" name="imageLoader"  id="imageLoader" />
                         </div>
+
+
+                        <!-- static content -->
                         <div class="form-group">
-                            <canvas id="imagemUploaded" width="256" height="256" style="border:1px solid #d3d3d3;"></canvas>
+
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Imagem Original</th>
+                                    <th></th>
+                                    <th>Espectrum</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <canvas id="imagemUploaded" width="256" height="256" style="border:1px solid #d3d3d3;"></canvas>
+                                    </td>
+                                    <td>
+                                        <img src="imagesIcons/fouriertransform.gif" width="128" height="100">
+                                    </td>
+                                    <td>
+                                        <canvas id="imageFourierOriginalUnsettable" width="256" height="256" style="border:1px solid #d3d3d3;" ></canvas>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /#static content -->
+
+                        <!-- dynamic content -->
+                        <div class="form-group">
+                            <table>
+                                <thead>
+                                <tr>
+                                        <th>Espectrum editavel</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th>Imagem resultante</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <!-- editable spectrum -->
+                                            <canvas id="imageFourier" width="256" height="256" style="border:1px solid #d3d3d3;" ></canvas>
+                                        </td>
+                                        <td>
+                                            <!-- draw options -->
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <button id="drawRectangleIcon" onclick="drawRectangleSelectedButton()" type="button">
+                                                                <img src="imagesIcons/drawRectangleIcon.png" title="retangulo" width="32" height="32"/>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button id="drawCircleIcon" onclick="drawCircleSelectedButton()" class = "buttoIconSelection" type="button">
+                                                                <img src="imagesIcons/drawCircleIcon.png" title="circulo" width="32" height="32"/>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button id="drawLineIcon" onclick="drawLineSelectedButton()" class = "buttoIconSelection" type="button">
+                                                                <img src="imagesIcons/drawLineIcon.png" title="linha" width="32" height="32"/>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button id="drawFreeFormIcon" onclick="drawFreeFormSelectedButton()" class = "buttoIconSelection" type="button">
+                                                                <img src="imagesIcons/drawFreeFormIcon.gif" title="desenho livre" width="32" height="32"/>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </td>
+                                        <td>
+                                            <img src="imagesIcons/fouriertransform.gif" width="128" height="100">
+                                        </td>
+                                        <td>
+                                            <canvas id="imageFourierResult" width="256" height="256" style="border:1px solid #d3d3d3;" ></canvas>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- #/dynamic content -->
+
                         </div>
 
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <canvas id="imageFourier" width="256" height="256" style="border:1px solid #d3d3d3;" ></canvas>
-                            </div>
-
-                            <div class="form-group">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <button id="drawRectangleIcon" onclick="drawRectangleSelectedButton()" type="button">
-                                                        <img src="imagesIcons/drawRectangleIcon.png" title="retangulo" width="32" height="32"/>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <button id="drawCircleIcon" onclick="drawCircleSelectedButton()" class = "buttoIconSelection" type="button">
-                                                        <img src="imagesIcons/drawCircleIcon.png" title="circulo" width="32" height="32"/>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <button id="drawLineIcon" onclick="drawLineSelectedButton()" class = "buttoIconSelection" type="button">
-                                                        <img src="imagesIcons/drawLineIcon.png" title="linha" width="32" height="32"/>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <button id="drawFreeFormIcon" onclick="drawFreeFormSelectedButton()" class = "buttoIconSelection" type="button">
-                                                        <img src="imagesIcons/drawFreeFormIcon.gif" title="desenho livre" width="32" height="32"/>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
+                        <div>
                             <div id="status"></div>
                             <div id="status2"></div>
-
-
-                        </form>
-
-                        <div class="form-group">
-                            <canvas id="imageFourierResult" width="256" height="256" style="border:1px solid #d3d3d3;" ></canvas>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -138,9 +185,15 @@
 
     <!-- javascripts -->
     <script>
-
         var canvasAreaWidth = 256;
         var canvasAreaHeight = 256;
+
+        var canvasEditableAreaWidth = 256;
+        var canvasEditableAreaHeight = 256;
+
+
+        var data_fft;
+        var isImageLoaded = false;
 
 
         var imageLoader = document.getElementById('imageLoader', 'imageFourier');
@@ -152,6 +205,10 @@
 
         var canvasFourierTransformArea = document.getElementById('imageFourier');
         var contextFourierTransformArea = canvasFourierTransformArea.getContext('2d');
+
+        var canvasFourierTransformAreaUnsettable = document.getElementById('imageFourierOriginalUnsettable');
+        var contextFourierTransformAreaUnsettable = canvasFourierTransformAreaUnsettable.getContext('2d');
+
         var myImageData,
         re = [], im = [];
 
@@ -162,14 +219,20 @@
                 img.onload = function(){
                     //canvasImageUploaded.width = canvasAreaWidth;
                     //canvasImageUploaded.height = canvasAreaHeight;
+
                     //redimensiona a imagem e coloca na area do canvas de id imagemUploaded
                     contextCanvasImageUploadedArea.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasAreaWidth, canvasAreaHeight);
-                    contextFourierTransformArea.drawImage(canvasImageUploadedArea, 0,0);
+                    contextFourierTransformArea.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasEditableAreaWidth, canvasEditableAreaHeight);
+                    contextFourierTransformAreaUnsettable.drawImage(canvasImageUploadedArea, 0,0);
+                    isImageLoaded = true;
 
                     // 2D-FFT
-                    data_fft = FFT('imageFourier');
-                    receiveDataFromNewImageUpdated(contextFourierTransformArea.getImageData(0,0,canvasAreaWidth, canvasAreaHeight));
-                    //IFFT(data_fft,'imageFourierResult', );
+                    FFT('imageFourierOriginalUnsettable');
+                    FFT('imageFourier');
+
+                    receiveDataFromNewImageUpdated(contextFourierTransformArea.getImageData(0,0,canvasEditableAreaWidth, canvasEditableAreaHeight));
+                    fftCopyData(fftSpectrumOriginal,fftSpectrumModified);
+                    IFFT(fftSpectrumModified,'imageFourierResult',contextCanvasImageUploadedArea.getImageData(0,0,canvasEditableAreaWidth,canvasEditableAreaHeight).data);
                 }
                 img.src = event.target.result;
 
@@ -193,7 +256,7 @@
             $("#wrapper").toggleClass("toggled");
         });
     </script>
-    <script src="myUtils.js"></script>
+    <script src="MyJs/myUtils.js"></script>
 
 </body>
 </html>

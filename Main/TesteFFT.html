@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Deangeli">
+
+    <title>Processamento de Imagens</title>
+
+    <!-- CSS-->
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="bootstrap/css/simple-sidebar.css" rel="stylesheet">
+
+
+    <!--
+    <script src="fft.js"></script>
+    <script src="filter.js"></script>
+    <script src="spectrum.js"></script>
+    -->
+    <script src="MyJs/FFT_deangeli.js"></script>
+
+    <!-- JQuerry-->
+    <script src="jquery.min.js"></script>
+
+
+
 </head>
-<body>
 
 <body>
 
@@ -112,27 +137,106 @@
 
 
 <!-- javascripts -->
-<script src="FFT_deangeli.js"></script>
-
-<!-- jQuery -->
-<script src="bootstrap/js/jquery.js"></script>
 
 <script>
 
-    $(document).ready(function() {
-        var myVector = [1, 0.5, 0.2, 0.1];
-        var myVectorImag = [0, 0, 0, 0];
-        //performFFT_inVector(myVector,myVectorImag,4);
-
-        var A = [1, 0.5, 0.3, 0.1,2 ,1, 0.5, 0.3,3, 2, 1, 0.5,4, 3, 2, 1];
-        var B = [0, 0, 0, 0,0 ,0, 0, 0,0, 0, 0, 0,0, 0, 0, 0];
-        performfft2dInSigleFrame(A, B, 4,4);
-        Shift2d();
+    var canvasAreaWidth = 256;
+    var canvasAreaHeight = 256;
 
 
-    })
+    var imageLoader = document.getElementById('imageLoader', 'imageFourier');
+    //adiciona um listener no input que envia mensagens
+    imageLoader.addEventListener('change', handleImage, false);
 
+    var canvasImageUploadedArea = document.getElementById('imagemUploaded');
+    var contextCanvasImageUploadedArea = canvasImageUploadedArea.getContext('2d');
+
+    var canvasFourierTransformArea = document.getElementById('imageFourier');
+    var contextFourierTransformArea = canvasFourierTransformArea.getContext('2d');
+    var myImageData,
+            re = [], im = [];
+
+    function handleImage(e){
+        var reader = new FileReader();
+        reader.onload = function(event){//toda vez quando uma imagem for enviada e estiver sendo carregada
+            var img = new Image();
+            img.onload = function(){
+                //canvasImageUploaded.width = canvasAreaWidth;
+                //canvasImageUploaded.height = canvasAreaHeight;
+                //redimensiona a imagem e coloca na area do canvas de id imagemUploaded
+                contextCanvasImageUploadedArea.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasAreaWidth, canvasAreaHeight);
+                contextFourierTransformArea.drawImage(canvasImageUploadedArea, 0,0);
+
+               /*A = [new MyComplex(1,0), new MyComplex(0.5,0), new MyComplex(0.3,0), new MyComplex(0.1,0)];
+                B = [new MyComplex(2,0), new MyComplex(1,0), new MyComplex(0.5,0), new MyComplex(0.3,0)];
+                C = [new MyComplex(3,0), new MyComplex(2,0), new MyComplex(1,0), new MyComplex(0.5,0)];
+                D = [new MyComplex(4,0), new MyComplex(3,0), new MyComplex(2,0), new MyComplex(1,0)];
+
+                A2 = [new MyComplex(1,0), new MyComplex(0.5,0), new MyComplex(0.3,0), new MyComplex(0.1,0)];
+                B2 = [new MyComplex(2,0), new MyComplex(1,0), new MyComplex(0.5,0), new MyComplex(0.3,0)];
+                C2 = [new MyComplex(3,0), new MyComplex(2,0), new MyComplex(1,0), new MyComplex(0.5,0)];
+                D2 = [new MyComplex(4,0), new MyComplex(3,0), new MyComplex(2,0), new MyComplex(1,0)];
+
+                A3 = [new MyComplex(1,0), new MyComplex(0.5,0), new MyComplex(0.3,0), new MyComplex(0.1,0)];
+                B3 = [new MyComplex(2,0), new MyComplex(1,0), new MyComplex(0.5,0), new MyComplex(0.3,0)];
+                C3 = [new MyComplex(3,0), new MyComplex(2,0), new MyComplex(1,0), new MyComplex(0.5,0)];
+                D3 = [new MyComplex(4,0), new MyComplex(3,0), new MyComplex(2,0), new MyComplex(1,0)];
+
+                A4 = [new MyComplex(1,0), new MyComplex(0.5,0), new MyComplex(0.3,0), new MyComplex(0.1,0)];
+                B4 = [new MyComplex(2,0), new MyComplex(1,0), new MyComplex(0.5,0), new MyComplex(0.3,0)];
+                C4 = [new MyComplex(3,0), new MyComplex(2,0), new MyComplex(1,0), new MyComplex(0.5,0)];
+                D4 = [new MyComplex(4,0), new MyComplex(3,0), new MyComplex(2,0), new MyComplex(1,0)];
+
+
+                frames[0].matrix[0] = A;
+                frames[0].matrix[1] = B;
+                frames[0].matrix[2] = C;
+                frames[0].matrix[3] = D;
+
+                frames[1].matrix[0] = A2;
+                frames[1].matrix[1] = B2;
+                frames[1].matrix[2] = C2;
+                frames[1].matrix[3] = D2;
+
+                frames[2].matrix[0] = A3;
+                frames[2].matrix[1] = B3;
+                frames[2].matrix[2] = C3;
+                frames[2].matrix[3] = D3;
+
+                frames[3].matrix[0] = A4;
+                frames[3].matrix[1] = B4;
+                frames[3].matrix[2] = C4;
+                frames[3].matrix[3] = D4;*/
+
+                //imageWidthtFFT = 4;
+                //imageHeightFFT = 4;
+                myImageData = contextFourierTransformArea.getImageData(0,0,256,256);
+                data = myImageData.data;
+                splitFrames(data,256,256);
+                performFFT2d();
+                perform2d_shift();
+                mergeFrames(data);
+                contextFourierTransformArea.putImageData(myImageData,0,0);
+                //contextFourierTransformArea.putImageData(imageDataSpectrum,0,0);
+
+                //extractFrames(contextCanvasImageUploadedArea.getImageData(0,0,img.width,img.height).data,canvasAreaWidth,canvasAreaHeight);
+                // 2D-FFT
+                //data_fft = FFT('imageFourier');
+
+                receiveDataFromNewImageUpdated(contextFourierTransformArea.getImageData(0,0,canvasAreaWidth, canvasAreaHeight));
+                //IFFT(data_fft,'imageFourierResult', );
+            }
+            img.src = event.target.result;
+
+        }
+        reader.readAsDataURL(e.target.files[0]);
+
+
+    }
 </script>
+
+<!-- jQuery -->
+<script src="bootstrap/js/jquery.js"></script>
 
 
 
@@ -146,10 +250,7 @@
         $("#wrapper").toggleClass("toggled");
     });
 </script>
-<script src="myUtils.js"></script>
-
-</body>
-
+<script src="MyJs/myUtils.js"></script>
 
 </body>
 </html>

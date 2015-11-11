@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Editable Spectrum</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="sbAdmin1.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="sbAdmin1.0.3/css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="sbAdmin1.0.3/css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="sbAdmin1.0.3/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="sbAdmin1.0.3/web/html5shiv.js"></script>
+    <script src="sbAdmin1.0.3/web/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- FFT -->
+    <script src="MyJs/fftFunctions.js"></script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="imagesdecoration/UFRN-PNG.png" width="120" height="30" /> </a>
+            </div>
+            <!-- Top Menu Items -->
+
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href="home.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo">Frequency Domain<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="editableSpectrum.html">Editable Spectrum</a>
+                            </li>
+                            <li>
+                                <a href="#">Low-pass & High-pass filter</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="blank-page.html">Convolution</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Spectrum edition
+                        </h1>
+
+                    </div>
+                </div>
+                <!-- /.row -->
+
+
+
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"></i>Static Data</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-xs-6 col-md-3">
+
+                                    <div class="form-group">
+                                        <input type="file" name="imageLoader"  id="imageLoader" />
+                                    </div>
+
+                                    <!-- static content -->
+                                    <div class="form-group">
+
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <th>Unsettable Image</th>
+                                                <th></th>
+                                                <th>Unsettable Espectrum</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <canvas id="imagemUploaded" width="256" height="256" style="border:1px solid #d3d3d3;"></canvas>
+                                                </td>
+                                                <td>
+                                                    <img src="imagesIcons/fouriertransform.gif" width="128" height="100">
+                                                </td>
+                                                <td>
+                                                    <canvas id="imageFourierOriginalUnsettable" width="256" height="256" style="border:1px solid #d3d3d3;" ></canvas>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /#static content -->
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"></i>Editable Content</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-xs-6 col-md-3">
+
+                                    <!-- dynamic content -->
+                                    <div class="form-group">
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <th>Editable Spectrum</th>
+                                                <th></th>
+                                                <th></th>
+                                                <th>Dynamic Output</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <!-- editable spectrum -->
+                                                    <canvas id="imageFourier" width="256" height="256" style="border:1px solid #d3d3d3;" ></canvas>
+                                                </td>
+                                                <td>
+                                                    <!-- draw options -->
+                                                    <table>
+                                                        <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th></th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <button id="drawRectangleIcon" onclick="drawRectangleSelectedButton()" type="button">
+                                                                    <img src="imagesIcons/drawRectangleIcon.png" title="retangulo" width="32" height="32"/>
+                                                                </button>
+                                                            </td>
+                                                            <td>
+                                                                <button id="drawConjugate" onclick="drawComplexConjugateButtonSelected()" type="button">
+                                                                    <img src="imagesIcons/polar-form-of-complex-number.png" title="complex conjugate" width="32" height="32"/>
+                                                                </button>
+                                                            <td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <button id="drawCircleIcon" onclick="drawCircleSelectedButton()" class = "buttoIconSelection" type="button">
+                                                                    <img src="imagesIcons/drawCircleIcon.png" title="circulo" width="32" height="32"/>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <button id="drawLineIcon" onclick="drawLineSelectedButton()" class = "buttoIconSelection" type="button">
+                                                                    <img src="imagesIcons/drawLineIcon.png" title="linha" width="32" height="32"/>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <button id="drawFreeFormIcon" onclick="drawFreeFormSelectedButton()" class = "buttoIconSelection" type="button">
+                                                                    <img src="imagesIcons/drawFreeFormIcon.gif" title="desenho livre" width="32" height="32"/>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </td>
+                                                <td>
+                                                    <img src="imagesIcons/fouriertransform.gif" width="128" height="100">
+                                                </td>
+                                                <td>
+                                                    <canvas id="imageFourierResult" width="256" height="256" style="border:1px solid #d3d3d3;" ></canvas>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- #/dynamic content -->
+                                    </div>
+                                    <div>
+                                        <div id="status"></div>
+                                        <div id="status2"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="sbAdmin1.0.3/js/jquery.js"></script>
+
+    <!-- MyJavascript -->
+    <script>
+        var canvasAreaWidth = 256;
+        var canvasAreaHeight = 256;
+
+        var canvasEditableAreaWidth = 256;
+        var canvasEditableAreaHeight = 256;
+
+
+        var data_fft;
+        var isImageLoaded = false;
+
+
+        var imageLoader = document.getElementById('imageLoader', 'imageFourier');
+        //adiciona um listener no input que envia mensagens
+        imageLoader.addEventListener('change', handleImage, false);
+
+        var canvasImageUploadedArea = document.getElementById('imagemUploaded');
+        var contextCanvasImageUploadedArea = canvasImageUploadedArea.getContext('2d');
+
+        var canvasFourierTransformArea = document.getElementById('imageFourier');
+        var contextFourierTransformArea = canvasFourierTransformArea.getContext('2d');
+
+        var canvasFourierTransformAreaUnsettable = document.getElementById('imageFourierOriginalUnsettable');
+        var contextFourierTransformAreaUnsettable = canvasFourierTransformAreaUnsettable.getContext('2d');
+
+        var myImageData,
+                re = [], im = [];
+
+        function handleImage(e){
+            var reader = new FileReader();
+            reader.onload = function(event){//toda vez quando uma imagem for enviada e estiver sendo carregada
+                var img = new Image();
+                img.onload = function(){
+                    //canvasImageUploaded.width = canvasAreaWidth;
+                    //canvasImageUploaded.height = canvasAreaHeight;
+                    deleteAllObjectsShape();
+                    //redimensiona a imagem e coloca na area do canvas de id imagemUploaded
+                    contextCanvasImageUploadedArea.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasAreaWidth, canvasAreaHeight);
+                    contextFourierTransformArea.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasEditableAreaWidth, canvasEditableAreaHeight);
+                    contextFourierTransformAreaUnsettable.drawImage(canvasImageUploadedArea, 0,0);
+                    isImageLoaded = true;
+
+                    // 2D-FFT
+                    FFT('imageFourierOriginalUnsettable');
+                    FFT('imageFourier');
+
+                    receiveDataFromNewImageUpdated(contextFourierTransformArea.getImageData(0,0,canvasEditableAreaWidth, canvasEditableAreaHeight));
+                    fftCopyData(fftSpectrumOriginal,fftSpectrumModified);
+                    IFFT(fftSpectrumModified,'imageFourierResult',contextCanvasImageUploadedArea.getImageData(0,0,canvasEditableAreaWidth,canvasEditableAreaHeight).data);
+                }
+                img.src = event.target.result;
+
+            }
+            reader.readAsDataURL(e.target.files[0]);
+
+
+        }
+    </script>
+    <script src="MyJs/myUtils.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="sbAdmin1.0.3/js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="sbAdmin1.0.3/js/plugins/morris/raphael.min.js"></script>
+
+</body>
+
+</html>
