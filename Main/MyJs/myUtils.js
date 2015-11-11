@@ -187,22 +187,23 @@ function storeObjectShape(){
 
 function deleteAllObjectsShape(){
 
-    for(var index; index < rectangles.length; index++){
-        rectangles.pop();
-    }
+    rectangles.splice(0,rectangles.length);
+    circles.splice(0,circles.length);
+    //for(var index; index < rectangles.length; index++){
+    //    rectangles.pop();
+    //}
 
-    for(var index; index < circles.length; index++){
-        circles.pop();
-    }
+    //for(var index; index < circles.length; index++){
+    //    circles.pop();
+    //}
 
-    for(var index; index < lines.length; index++){
-        lines.pop();
-    }
+    //for(var index; index < lines.length; index++){
+    //    lines.pop();
+    //}
 
 }
 
 function drawObjectShapesInOriginalImage(){
-    imageGeneratedFromLastMousePressUp = OriginalImage;
     contextFourierTransformArea.putImageData(OriginalImage, 0,0);
 
     for(var index=0; index<rectangles.length ; index++){

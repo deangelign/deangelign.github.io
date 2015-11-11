@@ -1,7 +1,7 @@
 //na verdade esse arquivo de FFT foi feito por outro cara, eu apenas fiz algumas modificacoes.
 //Talvez seja necessario fazer a minha propria implementacao caso acha a necessidade de mudar alguma coisa na FFT
 //resultan
-var rawResult;
+
 //var widthFFT;
 //var heightFFT;
 
