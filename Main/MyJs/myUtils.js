@@ -189,6 +189,7 @@ function deleteAllObjectsShape(){
 
     rectangles.splice(0,rectangles.length);
     circles.splice(0,circles.length);
+    lines.splice(0,lines.length);
     //for(var index; index < rectangles.length; index++){
     //    rectangles.pop();
     //}

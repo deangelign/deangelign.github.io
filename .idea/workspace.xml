@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e952d7f6-9b0e-4205-893e-b6a6e24e3300" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/filters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/bootstrapSlider/jquery-ui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/bootstrapSlider/jquery-ui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/bootstrapSlider/modernizr.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/LowHighPassFilter.html" afterPath="$PROJECT_DIR$/Main/LowHighPassFilter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/fftFunctions.js" afterPath="$PROJECT_DIR$/Main/MyJs/fftFunctions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/myUtils.js" afterPath="$PROJECT_DIR$/Main/MyJs/myUtils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/editableSpectrum.html" afterPath="$PROJECT_DIR$/Main/editableSpectrum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/home.html" afterPath="$PROJECT_DIR$/Main/home.html" />
     </list>
     <ignored path="deangelign.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +28,7 @@
       <file leaf-file-name="LowHighPassFilter.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/LowHighPassFilter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="15.363636">
+            <state vertical-scroll-proportion="35.884617">
               <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -51,7 +44,7 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769">
+            <state vertical-scroll-proportion="0.0">
               <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
               <folding />
             </state>
@@ -73,23 +66,20 @@
       <file leaf-file-name="myUtils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.62069">
-              <caret line="299" column="35" selection-start-line="299" selection-start-column="30" selection-end-line="299" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="191" column="33" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
               <folding>
                 <element signature="e#2552#2787#0" expanded="false" />
                 <element signature="e#2916#3217#0" expanded="false" />
                 <element signature="e#3369#3712#0" expanded="false" />
                 <element signature="n#!!block;n#findPos#0" expanded="false" />
                 <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
-                <element signature="n#!!block;n#storeObjectShape#0" expanded="false" />
-                <element signature="n#!!block;n#deleteAllObjectsShape#0" expanded="false" />
                 <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
                 <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
                 <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
                 <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
                 <element signature="n#!!block;n#drawLine#0" expanded="false" />
                 <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
-                <element signature="n#!!block;n#anyRectangleSelected#0" expanded="false" />
                 <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
                 <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
                 <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
@@ -116,20 +106,19 @@
                 <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
                 <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
                 <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
-                <element signature="e#26883#27196#0" expanded="false" />
-                <element signature="e#27248#27761#0" expanded="false" />
-                <element signature="n#!!block;n#keyDownTextField#0" expanded="false" />
-                <element signature="e#29984#30674#0" expanded="false" />
+                <element signature="e#26917#27230#0" expanded="false" />
+                <element signature="e#27282#27795#0" expanded="false" />
+                <element signature="e#30018#30708#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editableSpectrum.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="editableSpectrum.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6363635">
-              <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.85">
+              <caret line="221" column="107" selection-start-line="221" selection-start-column="107" selection-end-line="221" selection-end-column="107" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -140,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filters.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="filters.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/MyJs/filters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38283828">
+            <state vertical-scroll-proportion="0.0">
               <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
               <folding />
             </state>
@@ -173,11 +162,11 @@
         <option value="$PROJECT_DIR$/Main/index.html" />
         <option value="$PROJECT_DIR$/Main/Frequency Domain/editableSpectrum.html" />
         <option value="$PROJECT_DIR$/Main/MyJs/fftFunctions.js" />
-        <option value="$PROJECT_DIR$/Main/MyJs/myUtils.js" />
-        <option value="$PROJECT_DIR$/Main/editableSpectrum.html" />
         <option value="$PROJECT_DIR$/Main/LowHighPassFilter.html" />
         <option value="$PROJECT_DIR$/Main/home.html" />
         <option value="$PROJECT_DIR$/Main/MyJs/filters.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/myUtils.js" />
+        <option value="$PROJECT_DIR$/Main/editableSpectrum.html" />
       </list>
     </option>
   </component>
@@ -218,7 +207,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,6 +259,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,24 +346,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -395,16 +384,214 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Main/LowHighPassFilter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/fftFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="191" column="33" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
+          <folding>
+            <element signature="e#2552#2787#0" expanded="false" />
+            <element signature="e#2916#3217#0" expanded="false" />
+            <element signature="e#3369#3712#0" expanded="false" />
+            <element signature="n#!!block;n#findPos#0" expanded="false" />
+            <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawLine#0" expanded="false" />
+            <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#rectangleDisplacement#0" expanded="false" />
+            <element signature="n#!!block;n#circleDisplacement#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlC_objects#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlV_objects#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlV_rectangles#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlV_circles#0" expanded="false" />
+            <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
+            <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
+            <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawComplexConjugateButtonSelected#0" expanded="false" />
+            <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
+            <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
+            <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
+            <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
+            <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
+            <element signature="e#26917#27230#0" expanded="false" />
+            <element signature="e#27282#27795#0" expanded="false" />
+            <element signature="e#30018#30708#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/LowHighPassFilter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/fftFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="299" column="35" selection-start-line="299" selection-start-column="30" selection-end-line="299" selection-end-column="35" />
+          <folding>
+            <element signature="e#2552#2787#0" expanded="false" />
+            <element signature="e#2916#3217#0" expanded="false" />
+            <element signature="e#3369#3712#0" expanded="false" />
+            <element signature="n#!!block;n#findPos#0" expanded="false" />
+            <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
+            <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawLine#0" expanded="false" />
+            <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
+            <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
+            <element signature="n#!!block;n#rectangleDisplacement#0" expanded="false" />
+            <element signature="n#!!block;n#circleDisplacement#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlC_objects#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlV_objects#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlV_rectangles#0" expanded="false" />
+            <element signature="n#!!block;n#ctrlV_circles#0" expanded="false" />
+            <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
+            <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
+            <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
+            <element signature="n#!!block;n#drawComplexConjugateButtonSelected#0" expanded="false" />
+            <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
+            <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
+            <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
+            <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
+            <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
+            <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
+            <element signature="e#26917#27230#0" expanded="false" />
+            <element signature="e#27282#27795#0" expanded="false" />
+            <element signature="e#30018#30708#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -428,15 +615,12 @@
             <element signature="e#3369#3712#0" expanded="false" />
             <element signature="n#!!block;n#findPos#0" expanded="false" />
             <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
-            <element signature="n#!!block;n#storeObjectShape#0" expanded="false" />
-            <element signature="n#!!block;n#deleteAllObjectsShape#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
             <element signature="n#!!block;n#drawLine#0" expanded="false" />
             <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyRectangleSelected#0" expanded="false" />
             <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
             <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
             <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
@@ -463,10 +647,9 @@
             <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
             <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
             <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
-            <element signature="e#26883#27196#0" expanded="false" />
-            <element signature="e#27248#27761#0" expanded="false" />
-            <element signature="n#!!block;n#keyDownTextField#0" expanded="false" />
-            <element signature="e#29984#30674#0" expanded="false" />
+            <element signature="e#26917#27230#0" expanded="false" />
+            <element signature="e#27282#27795#0" expanded="false" />
+            <element signature="e#30018#30708#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -475,20 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="389" column="26" selection-start-line="389" selection-start-column="26" selection-end-line="389" selection-end-column="26" />
-          <folding>
-            <element signature="e#70#97#0" expanded="false" />
-            <element signature="e#138#312#0" expanded="false" />
-            <element signature="e#444#507#0" expanded="false" />
-            <element signature="e#570#661#0" expanded="false" />
-            <element signature="e#719#999#0" expanded="false" />
-            <element signature="e#1053#1221#0" expanded="false" />
-            <element signature="n#!!block;n#performFFT_InVectorHorizontal#0" expanded="false" />
-            <element signature="n#!!block;n#performFFT2d#0" expanded="false" />
-            <element signature="n#!!block;n#perform2d_shift#0" expanded="false" />
-            <element signature="n#!!block;n#getElementFromFrame#0" expanded="false" />
-            <element signature="n#!!block;n#setElementFromFrame#0" expanded="false" />
-            <element signature="n#!!block;n#calculateSpectrumMagnitude#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -496,7 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="216" column="16" selection-start-line="216" selection-start-column="16" selection-end-line="216" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -504,12 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -533,15 +695,12 @@
             <element signature="e#3369#3712#0" expanded="false" />
             <element signature="n#!!block;n#findPos#0" expanded="false" />
             <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
-            <element signature="n#!!block;n#storeObjectShape#0" expanded="false" />
-            <element signature="n#!!block;n#deleteAllObjectsShape#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
             <element signature="n#!!block;n#drawLine#0" expanded="false" />
             <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyRectangleSelected#0" expanded="false" />
             <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
             <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
             <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
@@ -568,10 +727,9 @@
             <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
             <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
             <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
-            <element signature="e#26883#27196#0" expanded="false" />
-            <element signature="e#27248#27761#0" expanded="false" />
-            <element signature="n#!!block;n#keyDownTextField#0" expanded="false" />
-            <element signature="e#29984#30674#0" expanded="false" />
+            <element signature="e#26917#27230#0" expanded="false" />
+            <element signature="e#27282#27795#0" expanded="false" />
+            <element signature="e#30018#30708#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -580,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.3310347">
           <caret line="216" column="16" selection-start-line="216" selection-start-column="16" selection-end-line="216" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,7 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -596,7 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -604,7 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03074141">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -612,12 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5553539">
           <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -625,22 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38283828">
           <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
-          <folding>
-            <element signature="e#70#97#0" expanded="false" />
-            <element signature="e#138#312#0" expanded="false" />
-            <element signature="e#444#507#0" expanded="false" />
-            <element signature="e#570#661#0" expanded="false" />
-            <element signature="e#719#999#0" expanded="false" />
-            <element signature="e#1053#1221#0" expanded="false" />
-            <element signature="n#!!block;n#splitFrames#0" expanded="false" />
-            <element signature="n#!!block;n#mergeFrames#0" expanded="false" />
-            <element signature="n#!!block;n#performFFT_InVectorHorizontal#0" expanded="false" />
-            <element signature="n#!!block;n#performFFT2d#0" expanded="false" />
-            <element signature="n#!!block;n#perform2d_shift#0" expanded="false" />
-            <element signature="n#!!block;n#getElementFromFrame#0" expanded="false" />
-            <element signature="n#!!block;n#setElementFromFrame#0" expanded="false" />
-            <element signature="n#!!block;n#calculateSpectrumMagnitude#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -664,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,29 +802,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/fftFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.62069">
-          <caret line="299" column="35" selection-start-line="299" selection-start-column="30" selection-end-line="299" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="191" column="33" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
           <folding>
             <element signature="e#2552#2787#0" expanded="false" />
             <element signature="e#2916#3217#0" expanded="false" />
             <element signature="e#3369#3712#0" expanded="false" />
             <element signature="n#!!block;n#findPos#0" expanded="false" />
             <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
-            <element signature="n#!!block;n#storeObjectShape#0" expanded="false" />
-            <element signature="n#!!block;n#deleteAllObjectsShape#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
             <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
             <element signature="n#!!block;n#drawLine#0" expanded="false" />
             <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyRectangleSelected#0" expanded="false" />
             <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
             <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
             <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
@@ -721,48 +873,16 @@
             <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
             <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
             <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
-            <element signature="e#26883#27196#0" expanded="false" />
-            <element signature="e#27248#27761#0" expanded="false" />
-            <element signature="n#!!block;n#keyDownTextField#0" expanded="false" />
-            <element signature="e#29984#30674#0" expanded="false" />
+            <element signature="e#26917#27230#0" expanded="false" />
+            <element signature="e#27282#27795#0" expanded="false" />
+            <element signature="e#30018#30708#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/fftFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6363635">
-          <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/LowHighPassFilter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="15.363636">
+        <state vertical-scroll-proportion="35.884617">
           <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -774,11 +894,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/filters.js">
+    <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38283828">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.85">
+          <caret line="221" column="107" selection-start-line="221" selection-start-column="107" selection-end-line="221" selection-end-column="107" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
