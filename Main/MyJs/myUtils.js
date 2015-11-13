@@ -38,6 +38,10 @@ function storeObjectShape(){
         obj = circleConjugate2Object();
     }
 
+    else if(isButtonDrawingCircleSelected && isButtonDrawingClearAreaSelected){
+        obj = circleClear2Object();
+    }
+
     else if(isButtonDrawingCircleSelected){
         obj = circle2Object();
     }
@@ -109,6 +113,15 @@ function drawObjectShapesInOriginalImage(){
             }
         }
 
+        else if(objetcsShape[index].type == shapeTypes[6]){
+            if(objetcsShape[index].shape.isSelected){
+                drawFilledCircleClearSelected(objetcsShape[index].shape);
+            }
+            else{
+                drawFilledCircleClear(objetcsShape[index].shape);
+            }
+        }
+
     }
 
     imageGeneratedFromLastMousePressUp = contextFourierTransformArea.getImageData(0,0,canvasEditableAreaWidth, canvasEditableAreaHeight);
@@ -147,6 +160,9 @@ function anyObjectShapeSelected(mouseX,mouseY){
         else if(objetcsShape[index].type == shapeTypes[5]){
             isRectangleClearConjugateSelected(objetcsShape[index].shape,mouseX, mouseY)
         }
+        else if(objetcsShape[index].type == shapeTypes[6]){
+            isCircleClearSelected(objetcsShape[index].shape,mouseX, mouseY)
+        }
     }
 
     drawObjectShapesInOriginalImage();
@@ -159,11 +175,9 @@ function receiveDataFromNewImageUpdated(imageData) {
 }
 
 function deslectAllObjectShapes(){
-
     for(var index=0; index<objetcsShape.length; index++){
         objetcsShape[index].shape.isSelected = false;
     }
-
 }
 
 /////////////////////////////////while mouse down
@@ -199,6 +213,9 @@ function whileMouseDownObjectSelected(){
             else if (objetcsShape[index].type == shapeTypes[5]) {
                 rectangleClearConjugateDisplacement(objetcsShape[index].shape, displacementX, displacementY)
             }
+            else if (objetcsShape[index].type == shapeTypes[6]) {
+                circleClearDisplacement(objetcsShape[index].shape, displacementX, displacementY)
+            }
         }
     }
 
@@ -223,6 +240,9 @@ function drawShapeBorderWhileMouseDown(){
         drawFilledRectangleWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
     }else if(isButtonDrawingCircleSelected && isButtonDrawingConjugateSelected){
         drawFilledCircleConjugateWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
+    }
+    else if(isButtonDrawingCircleSelected && isButtonDrawingClearAreaSelected){
+        drawFilledCircleClearWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
     }
     else if(isButtonDrawingCircleSelected){
         drawFilledCircleWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
@@ -252,9 +272,13 @@ function addObjetcsInSpectrum(){
         if (objetcsShape[index].type == shapeTypes[4]){
             rectangleClearInSpectrum(objetcsShape[index].shape);
         }
+        if (objetcsShape[index].type == shapeTypes[5]){
+            rectangleClearConjugateInSpectrum(objetcsShape[index].shape);
+        }
+        if (objetcsShape[index].type == shapeTypes[6]){
+            circleClearInSpectrum(objetcsShape[index].shape);
+        }
 
     }
-
-
 
 }

@@ -2,30 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e952d7f6-9b0e-4205-893e-b6a6e24e3300" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/ImagesDecoration/ViewSize.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/imagesIcons/Actions-edit-clear-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/imagesIcons/Save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/imagesIcons/clearRectangleAreaIcon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/imagesIcons/mouse_pointer-512.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/imagesIcons/ringIcon.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/ButtonsController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/Circle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/CircleConjugate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/MouseEventController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/ObjectShape.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/RectangleClear.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/RectangleClearConjugate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/RectangleConjugate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/Style.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/keyEventController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/rectangle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/CircleClear.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/fftFunctions.js" afterPath="$PROJECT_DIR$/Main/MyJs/fftFunctions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/Circle.js" afterPath="$PROJECT_DIR$/Main/MyJs/Circle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/KeyEventController.js" afterPath="$PROJECT_DIR$/Main/MyJs/KeyEventController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/ObjectShape.js" afterPath="$PROJECT_DIR$/Main/MyJs/ObjectShape.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/Rectangle.js" afterPath="$PROJECT_DIR$/Main/MyJs/Rectangle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/RectangleClearConjugate.js" afterPath="$PROJECT_DIR$/Main/MyJs/RectangleClearConjugate.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/myUtils.js" afterPath="$PROJECT_DIR$/Main/MyJs/myUtils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/editableSpectrum.html" afterPath="$PROJECT_DIR$/Main/editableSpectrum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/home.html" afterPath="$PROJECT_DIR$/Main/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/index.html" afterPath="$PROJECT_DIR$/Main/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="deangelign.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editableSpectrum.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="editableSpectrum.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.461538">
-              <caret line="348" column="27" selection-start-line="348" selection-start-column="27" selection-end-line="348" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.6775862">
+              <caret line="359" column="47" selection-start-line="359" selection-start-column="47" selection-end-line="359" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#canvas#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -78,23 +63,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myUtils.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="myUtils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26343155">
-              <caret line="208" column="1" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
+            <state vertical-scroll-proportion="-14.034483">
+              <caret line="244" column="14" selection-start-line="244" selection-start-column="14" selection-end-line="244" selection-end-column="14" />
               <folding>
-                <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+                <marker date="1447394142864" expanded="true" signature="1367:1456" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RectangleClearConjugate.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleClearConjugate.js">
+      <file leaf-file-name="KeyEventController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/MyJs/KeyEventController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="151" column="33" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
+              <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -104,18 +89,30 @@
         <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleClear.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="33" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="33" />
+              <caret line="101" column="151" selection-start-line="101" selection-start-column="83" selection-end-line="101" selection-end-column="151" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RectangleConjugate.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleConjugate.js">
+      <file leaf-file-name="CircleClear.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/MyJs/CircleClear.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="147" column="1" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
+            <state vertical-scroll-proportion="-1.3448275">
+              <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Circle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/MyJs/Circle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.62069">
+              <caret line="64" column="12" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#41#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,17 +149,18 @@
         <option value="$PROJECT_DIR$/Main/MyJs/ButtonsController.js" />
         <option value="$PROJECT_DIR$/Main/MyJs/keyEventController.js" />
         <option value="$PROJECT_DIR$/Main/MyJs/MouseEventController.js" />
-        <option value="$PROJECT_DIR$/Main/MyJs/Rectangle.js" />
-        <option value="$PROJECT_DIR$/Main/MyJs/Circle.js" />
-        <option value="$PROJECT_DIR$/Main/MyJs/ObjectShape.js" />
-        <option value="$PROJECT_DIR$/Main/MyJs/KeyEventController.js" />
-        <option value="$PROJECT_DIR$/Main/editableSpectrum.html" />
         <option value="$PROJECT_DIR$/Main/MyJs/Style.js" />
         <option value="$PROJECT_DIR$/Main/MyJs/CircleConjugate.js" />
         <option value="$PROJECT_DIR$/Main/MyJs/RectangleClear.js" />
         <option value="$PROJECT_DIR$/Main/MyJs/RectangleConjugate.js" />
-        <option value="$PROJECT_DIR$/Main/MyJs/myUtils.js" />
         <option value="$PROJECT_DIR$/Main/MyJs/RectangleClearConjugate.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/Rectangle.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/Circle.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/ObjectShape.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/myUtils.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/CircleClear.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/KeyEventController.js" />
+        <option value="$PROJECT_DIR$/Main/editableSpectrum.html" />
       </list>
     </option>
   </component>
@@ -363,7 +361,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -402,30 +400,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="247" column="36" selection-start-line="247" selection-start-column="12" selection-end-line="247" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#4;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#5;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#6;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+            <marker date="1447394142864" expanded="true" signature="1367:1456" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -463,7 +443,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+            <marker date="1447394142864" expanded="true" signature="1367:1456" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -497,7 +477,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="191" column="33" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
           <folding>
-            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+            <marker date="1447394142864" expanded="true" signature="1367:1456" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -531,7 +511,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="191" column="33" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
           <folding>
-            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+            <marker date="1447394142864" expanded="true" signature="1367:1456" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -583,7 +563,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="299" column="35" selection-start-line="299" selection-start-column="30" selection-end-line="299" selection-end-column="35" />
           <folding>
-            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+            <marker date="1447394142864" expanded="true" signature="1367:1456" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -628,7 +608,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="102" selection-start-line="57" selection-start-column="102" selection-end-line="57" selection-end-column="102" />
           <folding>
-            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+            <marker date="1447394142864" expanded="true" signature="1367:1456" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -669,7 +649,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+            <marker date="1447394142864" expanded="true" signature="1367:1456" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -752,46 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/ObjectShape.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33663365">
-          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/MyJs/Style.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/KeyEventController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="46" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/Circle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="118" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/Rectangle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="83" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -814,42 +758,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleClear.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="33" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleConjugate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="147" column="1" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
+          <caret line="218" column="1" selection-start-line="182" selection-start-column="0" selection-end-line="218" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/MouseEventController.js">
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/ObjectShape.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5891089">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.36468646">
+          <caret line="15" column="111" selection-start-line="15" selection-start-column="111" selection-end-line="15" selection-end-column="111" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleClearConjugate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="151" column="33" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
+          <caret line="189" column="146" selection-start-line="189" selection-start-column="80" selection-end-line="189" selection-end-column="146" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/MouseEventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/Rectangle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="114" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleClear.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="151" selection-start-line="101" selection-start-column="83" selection-end-line="101" selection-end-column="151" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/Circle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.62069">
+          <caret line="64" column="12" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/KeyEventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.034483">
+          <caret line="244" column="14" selection-start-line="244" selection-start-column="14" selection-end-line="244" selection-end-column="14" />
+          <folding>
+            <marker date="1447394142864" expanded="true" signature="1367:1456" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/CircleClear.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3448275">
+          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.461538">
-          <caret line="348" column="27" selection-start-line="348" selection-start-column="27" selection-end-line="348" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.6775862">
+          <caret line="359" column="47" selection-start-line="359" selection-start-column="47" selection-end-line="359" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#canvas#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -860,16 +858,6 @@
             <element signature="n#style#0;n#button#5;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#6;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26343155">
-          <caret line="208" column="1" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
-          <folding>
-            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
           </folding>
         </state>
       </provider>

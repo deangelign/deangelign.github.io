@@ -109,3 +109,7 @@ function ctrlV_rectangle(rectangle) {
         rectangle.isCtrlC = false;
     }
 }
+
+function areaCalculation(rectangle){
+    return (rectangle.width*rectangle.height);
+}

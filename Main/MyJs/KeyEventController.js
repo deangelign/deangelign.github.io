@@ -25,6 +25,9 @@ function ctrlC_objects(){
             if (objetcsShape[index].type == shapeTypes[5]) {
                 objetcsShape[index].shape.isCtrlC = true;
             }
+            if (objetcsShape[index].type == shapeTypes[6]) {
+                objetcsShape[index].shape.isCtrlC = true;
+            }
         }
 
     }
@@ -53,6 +56,9 @@ function ctrlV_objects(){
             }
             if (objetcsShape[index].type == shapeTypes[5]) {
                 ctrlV_rectanglesClearConjugate(objetcsShape[index].shape);
+            }
+            if (objetcsShape[index].type == shapeTypes[6]) {
+                ctrlV_circlesClear(objetcsShape[index].shape);
             }
         }
     }

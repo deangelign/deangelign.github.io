@@ -115,5 +115,8 @@ function circleInSpectrum(circle){
 
     }
 
+}
 
+function areaCalculation(circle){
+    return (circle.radius*circle.radius*Math.PI);
 }
