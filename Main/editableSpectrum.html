@@ -23,6 +23,13 @@
     <!-- Custom Fonts -->
     <link href="sbAdmin1.0.3/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- CSS-->
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="bootstrap/css/simple-sidebar.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -41,44 +48,46 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><img src="imagesdecoration/UFRN-PNG.png" width="120" height="30" /> </a>
-            </div>
-            <!-- Top Menu Items -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><img src="imagesDecoration/viewSize.png" width="60" height="30" /> </a>
+        </div>
 
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="home.html">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo">Frequency Domain<i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="editableSpectrum.html">Editable Spectrum</a>
-                            </li>
-                            <li>
-                                <a href="LowHighPassFilter.html">Low-pass & High-pass filter</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="blank-page.html">Convolution</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </nav>
+
+
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#demo">Frequency Domain<i class="fa fa-fw fa-caret-down"></i></a>
+                    <ul id="demo" class="collapse">
+                        <li>
+                            <a href="editableSpectrum.html">Editable Spectrum</a>
+                        </li>
+                        <li>
+                            <a href="LowHighPassFilter.html">Low-pass & High-pass filter</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Convolucao</a>
+                </li>
+            </ul>
+        </div>
+
 
         <div id="page-wrapper">
 
@@ -95,8 +104,6 @@
                 </div>
                 <!-- /.row -->
 
-
-
                 <!-- /.row -->
                 <div class="row">
                     <div class="col-lg-12">
@@ -105,138 +112,123 @@
                                 <h3 class="panel-title"></i>Static Data</h3>
                             </div>
                             <div class="panel-body">
-                                <div class="col-xs-6 col-md-3">
+                                <div class="col-xs-12 col-md-12">
 
-                                    <div class="form-group">
-                                        <input type="file" name="imageLoader"  id="imageLoader" />
-                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="file" name="imageLoader"  id="imageLoader" />
+                                            </div>
+                                        </div>
+                                    </div >
 
-                                    <!-- static content -->
-                                    <div class="form-group">
-
-                                        <table>
-                                            <thead>
-                                            <tr>
-                                                <th>Unsettable Image</th>
-                                                <th></th>
-                                                <th>Unsettable Espectrum</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>
+                                    <div class="row">
+                                                <div class="col-md-3">
+                                                    <label>Input Image</label>
+                                                    <div class="row"></div>
                                                     <canvas id="imagemUploaded" width="256" height="256" style="border:1px solid #d3d3d3;"></canvas>
-                                                </td>
-                                                <td>
-                                                    <img src="imagesIcons/fouriertransform.gif" width="128" height="100">
-                                                </td>
-                                                <td>
-                                                    <canvas id="imageFourierOriginalUnsettable" width="256" height="256" style="border:1px solid #d3d3d3;" ></canvas>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- /#static content -->
+                                                </div>
 
+                                                <div class="col-md-2">
+
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <label>Input Spectrum </label>
+                                                    <div class="row"></div>
+                                                    <canvas id="imageFourierOriginalUnsettable" width="256" height="256" style="border:1px solid #d3d3d3;" />
+                                                </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"></i>Editable Content</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class="col-xs-6 col-md-3">
 
-                                    <!-- dynamic content -->
-                                    <div class="form-group">
-                                        <table>
-                                            <thead>
-                                            <tr>
-                                                <th>Editable Spectrum</th>
-                                                <th></th>
-                                                <th></th>
-                                                <th>Dynamic Output</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <!-- editable spectrum -->
-                                                    <canvas id="imageFourier" width="512" height="512" style="border:1px solid #d3d3d3;" ></canvas>
-                                                </td>
-                                                <td>
-                                                    <!-- draw options -->
-                                                    <table>
-                                                        <thead>
-                                                        <tr>
-                                                            <th></th>
-                                                            <th></th>
-                                                        </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <button id="drawRectangleIcon" onclick="drawRectangleSelectedButton()" type="button">
-                                                                    <img src="imagesIcons/drawRectangleIcon.png" title="retangulo" width="32" height="32"/>
-                                                                </button>
-                                                            </td>
-                                                            <td>
-                                                                <button id="drawConjugate" onclick="drawComplexConjugateButtonSelected()" type="button">
-                                                                    <img src="imagesIcons/polar-form-of-complex-number.png" title="complex conjugate" width="32" height="32"/>
-                                                                </button>
-                                                            <td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <button id="drawCircleIcon" onclick="drawCircleSelectedButton()" class = "buttoIconSelection" type="button">
-                                                                    <img src="imagesIcons/drawCircleIcon.png" title="circulo" width="32" height="32"/>
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <button id="drawLineIcon" onclick="drawLineSelectedButton()" class = "buttoIconSelection" type="button">
-                                                                    <img src="imagesIcons/drawLineIcon.png" title="linha" width="32" height="32"/>
-                                                                </button>
-                                                            </td>
-                                                        </tr>
+                                <div class="col-xs-12 col-md-12">
+                                    <h1 class="page-header">Editable Content</h1>
+                                    <div class="row">
+                                        <div class="col-md-7" >
 
-                                                        <tr>
-                                                            <td>
-                                                                <button id="drawFreeFormIcon" onclick="drawFreeFormSelectedButton()" class = "buttoIconSelection" type="button">
-                                                                    <img src="imagesIcons/drawFreeFormIcon.gif" title="desenho livre" width="32" height="32"/>
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
+                                            <label id="teste">Editable Spectrum</label>
+                                            <div class="row"></div>
 
-                                                </td>
-                                                <td>
-                                                    <img src="imagesIcons/fouriertransform.gif" width="128" height="100">
-                                                </td>
-                                                <td>
-                                                    <canvas id="imageFourierResult" width="512" height="512" style="border:1px solid #d3d3d3;" ></canvas>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                        <!-- #/dynamic content -->
+                                            <table style="border: ">
+                                                <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td >
+                                                        <canvas id="imageFourier" width="512" height="512" style="border:1px solid #d3d3d3;" ></canvas>
+                                                    </td>
+                                                    <td style="padding: 5px">
+
+                                                        <button id="drawRectangleIcon" onclick="drawRectangleSelectedButton()" type="button">
+                                                            <img src="imagesIcons/drawRectangleIcon.png" title="retangulo" width="32" height="32"/>
+                                                        </button>
+
+                                                        <div class="row"></div>
+
+                                                        <button id="drawCircleIcon" onclick="drawCircleSelectedButton()" class = "buttoIconSelection" type="button">
+                                                            <img src="imagesIcons/drawCircleIcon.png" title="circulo" width="32" height="32"/>
+                                                        </button>
+
+                                                        <div class="row"></div>
+
+                                                        <button id="drawConjugate" onclick="drawComplexConjugateButtonSelected()" type="button" >
+                                                            <img src="imagesIcons/polar-form-of-complex-number.png" title="complex conjugate" width="32" height="32"/>
+                                                        </button>
+
+                                                        <div class="row"></div>
+
+                                                        <button id="drawClearArea" onclick="drawClearAreaButtonSelected()" type="button" >
+                                                            <img src="imagesIcons/clearRectangleAreaIcon.png" title="Draw Clear Area" width="32" height="32"/>
+                                                        </button>
+
+                                                        <div class="row"></div>
+
+                                                        <button id="mouserPointer" onclick="deslectAllButtonsDrawSelected()" type="button" style="border: 2px solid #555555;">
+                                                            <img src="imagesIcons/mouse_pointer-512.png" title="cursor edit" width="32" height="32"/>
+                                                        </button>
+
+                                                        <div class="row"></div>
+
+                                                        <button id="SaveButton" onclick="saveCanvasAsImage()" type="button" style="border: 2px solid #555555;">
+                                                            <img src="imagesIcons/Save.png" title="Save output image" width="32" height="32"/>
+                                                        </button>
+
+                                                        <div class="row"></div>
+
+                                                        <button id="deleteAllObjects" onclick="deleteAllObjectsShape()" type="button" style="border: 2px solid #555555;">
+                                                            <img src="imagesIcons/Actions-edit-clear-icon.png" title="Delete all Objects drawn" width="32" height="32"/>
+                                                        </button>
+
+                                                        <div class="row"></div>
+                                                        <label class="checkbox-inline"><input type="checkbox" value="option1">Conjugate</label>
+
+                                                        <div class="row"></div>
+
+                                                        <br/>
+                                                        <p id="TextInfo"></p>
+
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="col-md-5">
+                                            <label>Output Image</label>
+                                            <div class="row"></div>
+                                            <canvas id="imageFourierResult" width="512" height="512" style="border:1px solid #d3d3d3;" ></canvas>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <div id="status"></div>
-                                        <div id="status2"></div>
-                                    </div>
-
                                 </div>
-
-                            </div>
-
-                        </div>
-
                     </div>
                 </div>
                 <!-- /.row -->
@@ -261,6 +253,11 @@
         var canvasEditableAreaWidth = 512;
         var canvasEditableAreaHeight = 512;
 
+        var originalImageWidth;
+        var originalImageHeight;
+
+
+        $('#TextInfo').html("x=" +  0 + ", y=" + 0 + "<br>" + "#" + ("000000"))   ;
 
         var data_fft;
         var isImageLoaded = false;
@@ -276,8 +273,14 @@
         var canvasFourierTransformArea = document.getElementById('imageFourier');
         var contextFourierTransformArea = canvasFourierTransformArea.getContext('2d');
 
+        var canvasFourierResult = document.getElementById('imageFourierResult');
+        var contextFourierResult = canvasFourierResult.getContext('2d');
+
         var canvasFourierTransformAreaUnsettable = document.getElementById('imageFourierOriginalUnsettable');
         var contextFourierTransformAreaUnsettable = canvasFourierTransformAreaUnsettable.getContext('2d');
+
+        //var w=window.open('about:blank','image from canvas');
+        //w.document.write("<img src='"+canvasFourierResult.toDataURL("image/png")+"' alt='from canvas'/>");
 
         var myImageData,
                 re = [], im = [];
@@ -291,18 +294,27 @@
                     //canvasImageUploaded.height = canvasAreaHeight;
                     deleteAllObjectsShape();
                     //redimensiona a imagem e coloca na area do canvas de id imagemUploaded
+
+                    originalImageWidth = img.width;
+                    originalImageHeight = img.height;
+
                     contextCanvasImageUploadedArea.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasAreaWidth, canvasAreaHeight);
-                    contextFourierTransformArea.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasEditableAreaWidth, canvasEditableAreaHeight);
-                    contextFourierTransformAreaUnsettable.drawImage(canvasImageUploadedArea, 0,0);
+                    contextFourierTransformAreaUnsettable.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasAreaWidth, canvasAreaHeight);
+                    FFT('imageFourierOriginalUnsettable');
+
+                    //contextFourierTransformAreaUnsettable.scale(2,2);
+                    contextFourierTransformArea.drawImage(img,0,0, img.width, img.height, 0 ,0, 512, 512);
+                    FFT('imageFourier');
+
+                    contextFourierResult.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasEditableAreaWidth, canvasEditableAreaHeight);
                     isImageLoaded = true;
 
                     // 2D-FFT
-                    FFT('imageFourierOriginalUnsettable');
-                    FFT('imageFourier');
+                    //FFT('imageFourier');
 
                     receiveDataFromNewImageUpdated(contextFourierTransformArea.getImageData(0,0,canvasEditableAreaWidth, canvasEditableAreaHeight));
                     fftCopyData(fftSpectrumOriginal,fftSpectrumModified);
-                    IFFT(fftSpectrumModified,'imageFourierResult',contextCanvasImageUploadedArea.getImageData(0,0,canvasEditableAreaWidth,canvasEditableAreaHeight).data);
+                    IFFT(fftSpectrumOriginal,'imageFourierResult');
                 }
                 img.src = event.target.result;
 
@@ -311,14 +323,41 @@
 
 
         }
+
+        function saveCanvasAsImage(){
+            var w=window.open('about:blank','image from canvas');
+            w.document.write(" <img id ='saveOutput' src='"+canvasFourierResult.toDataURL("image/png")+ "'" + " alt='from canvas' width='"+  originalImageWidth  +  "" +
+                    "' height = '" + originalImageHeight + "' /> " );
+        }
     </script>
-    <script src="MyJs/myUtils.js"></script>
+
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="sbAdmin1.0.3/js/bootstrap.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
     <script src="sbAdmin1.0.3/js/plugins/morris/raphael.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <script src="MyJs/Style.js"></script>
+    <script src="MyJs/ButtonsController.js"></script>
+    <script src="MyJs/KeyEventController.js"></script>
+    <script src="MyJs/MouseEventController.js"></script>
+    <script src="MyJs/ObjectShape.js"></script>
+    <script src="MyJs/Rectangle.js"></script>
+    <script src="MyJs/RectangleClear.js"></script>
+    <script src="MyJs/RectangleConjugate.js"></script>
+    <script src="MyJs/RectangleClearConjugate.js"></script>
+    <script src="MyJs/Circle.js"></script>
+    <script src="MyJs/CircleConjugate.js"></script>
+    <script src="MyJs/myUtils.js"></script>
 
 </body>
 

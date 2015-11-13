@@ -14,6 +14,7 @@ var fftData = function () {
 
 var fftSpectrumOriginal = new fftData();
 var fftSpectrumModified = new fftData();
+var numberOfSamples = 1;
 
 function fftCopyData(dataSource, dataDestination){
     dataDestination.width = dataSource.width;
@@ -153,6 +154,7 @@ function FFT( _canvasId ) {
 
     var ww = canvas.width;
     var hh = canvas.height;
+    numberOfSamples = ww*hh;
 
     var context = canvas.getContext( '2d' );
     if ( !context ) {
@@ -160,7 +162,6 @@ function FFT( _canvasId ) {
     }
 
     var rawResult = context.getImageData( 0, 0, ww, hh );
-    //rawResult = context.getImageData( 0, 0, ww, hh );
     var result = rawResult.data;
 
     var real = new Array();
@@ -170,7 +171,8 @@ function FFT( _canvasId ) {
     imag.length = ww * hh * 4;
 
     for ( var pp=0; pp < result.length; ++pp ) {
-        real[ pp ] = result[ pp ] / 255.0;
+        //real[ pp ] = result[ pp ] / 255.0;
+        real[ pp ] = result[ pp ] /numberOfSamples;
         imag[ pp ] = 0.0;
     }
 
@@ -187,9 +189,7 @@ function FFT( _canvasId ) {
             var index = pp + kk;
             var rr = real[ index ];
             var ii = imag[ index ];
-            //var rr = fftData.real[index];
-            //var ii = 0;
-            result[ index ] = Math.sqrt( rr*rr + ii*ii );
+            result[ index ] = Math.sqrt( rr*rr + ii*ii )*255;
         }
         result[ pp + 3 ] = 255;
     }
@@ -199,7 +199,7 @@ function FFT( _canvasId ) {
     return fftData;
 }
 
-function IFFT( _fftData, _canvasId, originalImageData ) {
+function IFFT( _fftData, _canvasId ) {
     var canvas = document.getElementById( _canvasId );
     if ( !canvas ) {
         return false;
@@ -229,12 +229,15 @@ function IFFT( _fftData, _canvasId, originalImageData ) {
     var rawResult = context.getImageData( 0, 0, ww, hh );
     var result = rawResult.data;
 
+
     var scale = ww * hh;
+
 
     for ( var pp=0; pp < result.length; pp += 4 ) {
         for ( var kk=0; kk < 3; ++kk ) {
             var index = pp + kk;
-            var vv = 255.0 * real[ index ] / scale;
+            //var vv = 255 * real[ index ] / scale;
+            var vv = real[ index ] ;
             if ( vv < 0 ) {
                 vv = 0;
             }
@@ -243,8 +246,8 @@ function IFFT( _fftData, _canvasId, originalImageData ) {
             }
             result[ index ] = vv;
         }
-       // result[ pp + 3 ] = 255;
-        result[ pp + 3 ] = originalImageData[pp + 3];
+       result[ pp + 3 ] = 255;
+        //result[ pp + 3 ] =
     }
 
     context.putImageData( rawResult, 0, 0 );

@@ -2,7 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e952d7f6-9b0e-4205-893e-b6a6e24e3300" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/ImagesDecoration/ViewSize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/imagesIcons/Actions-edit-clear-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/imagesIcons/Save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/imagesIcons/clearRectangleAreaIcon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/imagesIcons/mouse_pointer-512.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/imagesIcons/ringIcon.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/ButtonsController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/Circle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/CircleConjugate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/MouseEventController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/ObjectShape.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/RectangleClear.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/RectangleClearConjugate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/RectangleConjugate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/Style.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/keyEventController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/MyJs/rectangle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/fftFunctions.js" afterPath="$PROJECT_DIR$/Main/MyJs/fftFunctions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/MyJs/myUtils.js" afterPath="$PROJECT_DIR$/Main/MyJs/myUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/editableSpectrum.html" afterPath="$PROJECT_DIR$/Main/editableSpectrum.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/home.html" afterPath="$PROJECT_DIR$/Main/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/index.html" afterPath="$PROJECT_DIR$/Main/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="deangelign.github.io.iws" />
@@ -24,85 +46,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LowHighPassFilter.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/LowHighPassFilter.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="35.884617">
-              <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="fftFunctions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/MyJs/fftFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myUtils.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="191" column="33" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
-              <folding>
-                <element signature="e#2552#2787#0" expanded="false" />
-                <element signature="e#2916#3217#0" expanded="false" />
-                <element signature="e#3369#3712#0" expanded="false" />
-                <element signature="n#!!block;n#findPos#0" expanded="false" />
-                <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
-                <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
-                <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
-                <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
-                <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
-                <element signature="n#!!block;n#drawLine#0" expanded="false" />
-                <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
-                <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
-                <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
-                <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
-                <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
-                <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
-                <element signature="n#!!block;n#rectangleDisplacement#0" expanded="false" />
-                <element signature="n#!!block;n#circleDisplacement#0" expanded="false" />
-                <element signature="n#!!block;n#ctrlC_objects#0" expanded="false" />
-                <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
-                <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
-                <element signature="n#!!block;n#ctrlV_objects#0" expanded="false" />
-                <element signature="n#!!block;n#ctrlV_rectangles#0" expanded="false" />
-                <element signature="n#!!block;n#ctrlV_circles#0" expanded="false" />
-                <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
-                <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
-                <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
-                <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
-                <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
-                <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
-                <element signature="n#!!block;n#drawComplexConjugateButtonSelected#0" expanded="false" />
-                <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
-                <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
-                <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
-                <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
-                <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
-                <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
-                <element signature="e#26917#27230#0" expanded="false" />
-                <element signature="e#27282#27795#0" expanded="false" />
-                <element signature="e#30018#30708#0" expanded="false" />
-                <marker date="1447248470914" expanded="true" signature="8098:8105" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -111,23 +61,60 @@
       <file leaf-file-name="editableSpectrum.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.961538">
-              <caret line="221" column="107" selection-start-line="221" selection-start-column="107" selection-end-line="221" selection-end-column="107" />
+            <state vertical-scroll-proportion="-14.461538">
+              <caret line="348" column="27" selection-start-line="348" selection-start-column="27" selection-end-line="348" selection-end-column="27" />
               <folding>
-                <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#4;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#5;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#6;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="myUtils.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.029310346">
-              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.26343155">
+              <caret line="208" column="1" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
+              <folding>
+                <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RectangleClearConjugate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleClearConjugate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="151" column="33" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RectangleClear.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleClear.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="89" column="33" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RectangleConjugate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleConjugate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="147" column="1" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -153,15 +140,29 @@
         <option value="$PROJECT_DIR$/Main/FFT_deangeli.js" />
         <option value="$PROJECT_DIR$/Main/myFFT.js" />
         <option value="$PROJECT_DIR$/Main/myUtils.js" />
-        <option value="$PROJECT_DIR$/Main/index.html" />
         <option value="$PROJECT_DIR$/Main/Frequency Domain/editableSpectrum.html" />
-        <option value="$PROJECT_DIR$/Main/MyJs/fftFunctions.js" />
         <option value="$PROJECT_DIR$/Main/LowHighPassFilter.html" />
         <option value="$PROJECT_DIR$/Main/home.html" />
         <option value="$PROJECT_DIR$/Main/MyJs/filters.js" />
-        <option value="$PROJECT_DIR$/Main/MyJs/myUtils.js" />
-        <option value="$PROJECT_DIR$/Main/editableSpectrum.html" />
+        <option value="$PROJECT_DIR$/Main/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/Main/MyJs/fftFunctions.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/rectangle.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/ButtonsControl.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/ButtonsController.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/keyEventController.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/MouseEventController.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/Rectangle.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/Circle.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/ObjectShape.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/KeyEventController.js" />
+        <option value="$PROJECT_DIR$/Main/editableSpectrum.html" />
+        <option value="$PROJECT_DIR$/Main/MyJs/Style.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/CircleConjugate.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/RectangleClear.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/RectangleConjugate.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/myUtils.js" />
+        <option value="$PROJECT_DIR$/Main/MyJs/RectangleClearConjugate.js" />
       </list>
     </option>
   </component>
@@ -175,6 +176,28 @@
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript validity issuesJavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>BadExpressionStatementJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -201,6 +224,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -220,9 +244,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deangelign.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deangelign.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deangelign.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deangelign.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyJs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,11 +292,11 @@
       <recent name="C:\Users\mypc\Documents\GitHub\deangelign.github.io\Main" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mypc\Documents\GitHub\deangelign.github.io\Main\imagesIcons" />
+      <recent name="C:\Users\mypc\Documents\GitHub\deangelign.github.io\Main\ImagesDecoration" />
       <recent name="C:\Users\mypc\Documents\GitHub\deangelign.github.io\Main\bootstrapSlider" />
       <recent name="C:\Users\mypc\Documents\GitHub\deangelign.github.io\Main" />
       <recent name="C:\Users\mypc\Documents\GitHub\deangelign.github.io\Main\imagesTest" />
-      <recent name="C:\Users\mypc\Documents\GitHub\deangelign.github.io\Main\imagesIcons" />
-      <recent name="C:\Users\mypc\Documents\GitHub\deangelign.github.io\Main\Frequency Domain" />
     </key>
   </component>
   <component name="RunManager">
@@ -308,25 +363,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -342,16 +397,81 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="247" column="36" selection-start-line="247" selection-start-column="12" selection-end-line="247" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#4;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#5;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#6;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/fftFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="239" column="35" selection-start-line="239" selection-start-column="35" selection-end-line="239" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="247" column="36" selection-start-line="247" selection-start-column="12" selection-end-line="247" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#4;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#5;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#6;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main/LowHighPassFilter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -359,7 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -378,47 +497,41 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="191" column="33" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
           <folding>
-            <element signature="e#2552#2787#0" expanded="false" />
-            <element signature="e#2916#3217#0" expanded="false" />
-            <element signature="e#3369#3712#0" expanded="false" />
-            <element signature="n#!!block;n#findPos#0" expanded="false" />
-            <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawLine#0" expanded="false" />
-            <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#rectangleDisplacement#0" expanded="false" />
-            <element signature="n#!!block;n#circleDisplacement#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_objects#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_objects#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_rectangles#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_circles#0" expanded="false" />
-            <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
-            <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
-            <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawComplexConjugateButtonSelected#0" expanded="false" />
-            <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
-            <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
-            <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
-            <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
-            <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
-            <element signature="e#26917#27230#0" expanded="false" />
-            <element signature="e#27282#27795#0" expanded="false" />
-            <element signature="e#30018#30708#0" expanded="false" />
-            <marker date="1447248470914" expanded="true" signature="8098:8105" placeholder="{...}" />
+            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/LowHighPassFilter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/fftFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="191" column="33" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
+          <folding>
+            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -428,10 +541,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
           <folding>
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#4;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#5;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#6;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -440,7 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -448,7 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -467,47 +583,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="299" column="35" selection-start-line="299" selection-start-column="30" selection-end-line="299" selection-end-column="35" />
           <folding>
-            <element signature="e#2552#2787#0" expanded="false" />
-            <element signature="e#2916#3217#0" expanded="false" />
-            <element signature="e#3369#3712#0" expanded="false" />
-            <element signature="n#!!block;n#findPos#0" expanded="false" />
-            <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawLine#0" expanded="false" />
-            <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#rectangleDisplacement#0" expanded="false" />
-            <element signature="n#!!block;n#circleDisplacement#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_objects#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_objects#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_rectangles#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_circles#0" expanded="false" />
-            <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
-            <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
-            <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawComplexConjugateButtonSelected#0" expanded="false" />
-            <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
-            <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
-            <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
-            <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
-            <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
-            <element signature="e#26917#27230#0" expanded="false" />
-            <element signature="e#27282#27795#0" expanded="false" />
-            <element signature="e#30018#30708#0" expanded="false" />
-            <marker date="1447248470914" expanded="true" signature="8098:8105" placeholder="{...}" />
+            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -517,10 +593,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="63" />
           <folding>
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#4;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#5;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#6;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -547,47 +628,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="102" selection-start-line="57" selection-start-column="102" selection-end-line="57" selection-end-column="102" />
           <folding>
-            <element signature="e#2552#2787#0" expanded="false" />
-            <element signature="e#2916#3217#0" expanded="false" />
-            <element signature="e#3369#3712#0" expanded="false" />
-            <element signature="n#!!block;n#findPos#0" expanded="false" />
-            <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawLine#0" expanded="false" />
-            <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#rectangleDisplacement#0" expanded="false" />
-            <element signature="n#!!block;n#circleDisplacement#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_objects#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_objects#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_rectangles#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_circles#0" expanded="false" />
-            <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
-            <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
-            <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawComplexConjugateButtonSelected#0" expanded="false" />
-            <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
-            <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
-            <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
-            <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
-            <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
-            <element signature="e#26917#27230#0" expanded="false" />
-            <element signature="e#27282#27795#0" expanded="false" />
-            <element signature="e#30018#30708#0" expanded="false" />
-            <marker date="1447248470914" expanded="true" signature="8098:8105" placeholder="{...}" />
+            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -628,47 +669,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2552#2787#0" expanded="false" />
-            <element signature="e#2916#3217#0" expanded="false" />
-            <element signature="e#3369#3712#0" expanded="false" />
-            <element signature="n#!!block;n#findPos#0" expanded="false" />
-            <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawLine#0" expanded="false" />
-            <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#rectangleDisplacement#0" expanded="false" />
-            <element signature="n#!!block;n#circleDisplacement#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_objects#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_objects#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_rectangles#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_circles#0" expanded="false" />
-            <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
-            <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
-            <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawComplexConjugateButtonSelected#0" expanded="false" />
-            <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
-            <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
-            <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
-            <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
-            <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
-            <element signature="e#26917#27230#0" expanded="false" />
-            <element signature="e#27282#27795#0" expanded="false" />
-            <element signature="e#30018#30708#0" expanded="false" />
-            <marker date="1447248470914" expanded="true" signature="8098:8105" placeholder="{...}" />
+            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -694,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5553539">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/MyJs/FFT_deangeli.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38283828">
@@ -712,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,100 +716,161 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Main/LowHighPassFilter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.0">
+          <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.083484575">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029310346">
+          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/ButtonsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/ObjectShape.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33663365">
+          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/Style.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/KeyEventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/Circle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="118" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/Rectangle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="83" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main/MyJs/fftFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/home.html">
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/CircleConjugate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.074257426">
+          <caret line="173" column="34" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleClear.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="191" column="33" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="33" />
-          <folding>
-            <element signature="e#2552#2787#0" expanded="false" />
-            <element signature="e#2916#3217#0" expanded="false" />
-            <element signature="e#3369#3712#0" expanded="false" />
-            <element signature="n#!!block;n#findPos#0" expanded="false" />
-            <element signature="n#!!block;n#rgbToHex#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledRectangle#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledRectangleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledCircle#0" expanded="false" />
-            <element signature="n#!!block;n#drawFilledCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawLine#0" expanded="false" />
-            <element signature="n#!!block;n#drawLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isRetangleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isCircleSelected#0" expanded="false" />
-            <element signature="n#!!block;n#anyLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#isLineSelected#0" expanded="false" />
-            <element signature="n#!!block;n#rectangleDisplacement#0" expanded="false" />
-            <element signature="n#!!block;n#circleDisplacement#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_objects#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_rectangle#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlC_circles#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_objects#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_rectangles#0" expanded="false" />
-            <element signature="n#!!block;n#ctrlV_circles#0" expanded="false" />
-            <element signature="n#!!block;n#receiveDataFromNewImageUpdated#0" expanded="false" />
-            <element signature="n#!!block;n#deslectAllObjectShapes#0" expanded="false" />
-            <element signature="n#!!block;n#drawRectangleSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawCircleSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawLineSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawFreeFormSelectedButton#0" expanded="false" />
-            <element signature="n#!!block;n#drawComplexConjugateButtonSelected#0" expanded="false" />
-            <element signature="n#!!block;n#whileMouseDown#0" expanded="false" />
-            <element signature="n#!!block;n#whileMouseDownObjectSelected#0" expanded="false" />
-            <element signature="n#!!block;n#drawShapeBorderWhileMouseDown#0" expanded="false" />
-            <element signature="n#!!block;n#anyButtonDrawSelected#0" expanded="false" />
-            <element signature="n#!!block;n#calculateZeroAreaInSpectrum#0" expanded="false" />
-            <element signature="n#!!block;n#rectangleInSpectrum#0" expanded="false" />
-            <element signature="e#26917#27230#0" expanded="false" />
-            <element signature="e#27282#27795#0" expanded="false" />
-            <element signature="e#30018#30708#0" expanded="false" />
-            <marker date="1447248470914" expanded="true" signature="8098:8105" placeholder="{...}" />
-          </folding>
+          <caret line="89" column="33" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/LowHighPassFilter.html">
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleConjugate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="35.884617">
-          <caret line="74" column="59" selection-start-line="74" selection-start-column="59" selection-end-line="74" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="147" column="1" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/MouseEventController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5891089">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/RectangleClearConjugate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="151" column="33" selection-start-line="151" selection-start-column="33" selection-end-line="151" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.961538">
-          <caret line="221" column="107" selection-start-line="221" selection-start-column="107" selection-end-line="221" selection-end-column="107" />
+        <state vertical-scroll-proportion="-14.461538">
+          <caret line="348" column="27" selection-start-line="348" selection-start-column="27" selection-end-line="348" selection-end-column="27" />
           <folding>
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#4;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#5;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#6;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029310346">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding />
+        <state vertical-scroll-proportion="0.26343155">
+          <caret line="208" column="1" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
+          <folding>
+            <marker date="1447389629926" expanded="true" signature="1244:1333" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
