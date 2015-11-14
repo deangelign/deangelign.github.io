@@ -19,38 +19,46 @@ function storeObjectShape(){
 
     if(isButtonDrawingRectangleSelected && isButtonDrawingConjugateSelected && isButtonDrawingClearAreaSelected){
         obj = rectangleClearConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
+        objetcsShape.push(obj);
     }
 
     else if(isButtonDrawingRectangleSelected && isButtonDrawingConjugateSelected){
         obj = rectangleConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
+        objetcsShape.push(obj);
     }
 
     else if(isButtonDrawingClearAreaSelected && isButtonDrawingRectangleSelected){
         obj =rectangleClear2Object();
+        objetcsShape.push(obj);
     }
 
     else if(isButtonDrawingRectangleSelected){
         obj = rectangle2Object();
+        objetcsShape.push(obj);
     }
 
     else if(isButtonDrawingCircleSelected && isButtonDrawingConjugateSelected && isButtonDrawingClearAreaSelected){
         obj = circleClearConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
+        objetcsShape.push(obj);
     }
 
 
     else if(isButtonDrawingCircleSelected && isButtonDrawingConjugateSelected){
         obj = circleConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
+        objetcsShape.push(obj);
     }
 
     else if(isButtonDrawingCircleSelected && isButtonDrawingClearAreaSelected){
         obj = circleClear2Object();
+        objetcsShape.push(obj);
     }
 
     else if(isButtonDrawingCircleSelected){
         obj = circle2Object();
+        objetcsShape.push(obj);
     }
 
-    objetcsShape.push(obj);
+
 }
 
 function deleteAllObjectsShape(){
