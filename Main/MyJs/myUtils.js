@@ -3,7 +3,7 @@
 
 
 ///////////////////////////
-var OriginalImage = contextFourierTransformArea.getImageData(0,0,canvasEditableAreaWidth, canvasEditableAreaHeight);
+OriginalImage =  contextFourierTransformArea.getImageData(0,0,imageWidthZeroPadding, imageHeightZeroPadding);
 var imageWhileMousePresses = OriginalImage;
 var imageGeneratedFromLastMousePressUp = OriginalImage;
 //////////////////////////
@@ -18,11 +18,11 @@ function storeObjectShape(){
     var obj;
 
     if(isButtonDrawingRectangleSelected && isButtonDrawingConjugateSelected && isButtonDrawingClearAreaSelected){
-        obj = rectangleClearConjugate2Object();
+        obj = rectangleClearConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
     }
 
     else if(isButtonDrawingRectangleSelected && isButtonDrawingConjugateSelected){
-        obj = rectangleConjugate2Object();
+        obj = rectangleConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
     }
 
     else if(isButtonDrawingClearAreaSelected && isButtonDrawingRectangleSelected){
@@ -33,9 +33,13 @@ function storeObjectShape(){
         obj = rectangle2Object();
     }
 
+    else if(isButtonDrawingCircleSelected && isButtonDrawingConjugateSelected && isButtonDrawingClearAreaSelected){
+        obj = circleClearConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
+    }
+
 
     else if(isButtonDrawingCircleSelected && isButtonDrawingConjugateSelected){
-        obj = circleConjugate2Object();
+        obj = circleConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
     }
 
     else if(isButtonDrawingCircleSelected && isButtonDrawingClearAreaSelected){
@@ -52,6 +56,12 @@ function storeObjectShape(){
 function deleteAllObjectsShape(){
     objetcsShape.splice(0,objetcsShape.length);
     drawObjectShapesInOriginalImage();
+}
+
+function clearAllCanvas(){
+    contextCanvasImageUploadedArea.clearRect(0,0,imageWidthZeroPadding, imageHeightZeroPadding);
+    contextFourierTransformArea.clearRect(0,0,imageWidthZeroPadding, imageHeightZeroPadding);
+    contextFourierResult.clearRect(0,0,imageWidthZeroPadding, imageHeightZeroPadding);
 }
 
 function drawObjectShapesInOriginalImage(){
@@ -122,9 +132,18 @@ function drawObjectShapesInOriginalImage(){
             }
         }
 
+        else if(objetcsShape[index].type == shapeTypes[7]){
+            if(objetcsShape[index].shape.isSelected){
+                drawFilledCircleClearConjugateSelected(objetcsShape[index].shape);
+            }
+            else{
+                drawFilledCircleClearConjugate(objetcsShape[index].shape);
+            }
+        }
+
     }
 
-    imageGeneratedFromLastMousePressUp = contextFourierTransformArea.getImageData(0,0,canvasEditableAreaWidth, canvasEditableAreaHeight);
+    imageGeneratedFromLastMousePressUp = contextFourierTransformArea.getImageData(0,0,imageWidthZeroPadding, imageHeightZeroPadding);
     drawInverseFFTImage();
 }
 
@@ -133,36 +152,53 @@ function drawObjectShapesInOriginalImage(){
 function drawInverseFFTImage(){
     if(isImageLoaded){
         addObjetcsInSpectrum();
-        IFFT(fftSpectrumModified,'imageFourierResult',contextCanvasImageUploadedArea.getImageData(0,0,canvasEditableAreaWidth,canvasEditableAreaHeight).data );
+        IFFT(fftSpectrumModified,'imageFourierResult',contextCanvasImageUploadedArea.getImageData(0,0,imageWidthZeroPadding, imageHeightZeroPadding).data );
+        if(needCrop){
+            cropOutputImage();
+        }
     }
 }
 
 ///////isSelected object-shape functions/////////
 function anyObjectShapeSelected(mouseX,mouseY){
 
-    for(var index=0; index<objetcsShape.length; index++){
+    for(var index=objetcsShape.length-1; index>=0; index--){
 
         if(objetcsShape[index].type == shapeTypes[0]){
             isRetangleSelected(objetcsShape[index].shape,mouseX, mouseY);
         }
         else if(objetcsShape[index].type == shapeTypes[1]){
             isRectangleConjugateSelected(objetcsShape[index].shape,mouseX, mouseY);
+
         }
         else if(objetcsShape[index].type == shapeTypes[2]){
-            isCircleSelected(objetcsShape[index].shape,mouseX, mouseY)
+            isCircleSelected(objetcsShape[index].shape,mouseX, mouseY);
+
         }
         else if(objetcsShape[index].type == shapeTypes[3]){
-            isCircleConjugateSelected(objetcsShape[index].shape,mouseX, mouseY)
+            isCircleConjugateSelected(objetcsShape[index].shape,mouseX, mouseY);
+
         }
         else if(objetcsShape[index].type == shapeTypes[4]){
-            isClearRectangleSelected(objetcsShape[index].shape,mouseX, mouseY)
+            isClearRectangleSelected(objetcsShape[index].shape,mouseX, mouseY);
+
         }
         else if(objetcsShape[index].type == shapeTypes[5]){
-            isRectangleClearConjugateSelected(objetcsShape[index].shape,mouseX, mouseY)
+            isRectangleClearConjugateSelected(objetcsShape[index].shape,mouseX, mouseY);
+
         }
         else if(objetcsShape[index].type == shapeTypes[6]){
-            isCircleClearSelected(objetcsShape[index].shape,mouseX, mouseY)
+            isCircleClearSelected(objetcsShape[index].shape,mouseX, mouseY);
+
         }
+        else if(objetcsShape[index].type == shapeTypes[7]){
+            isCircleClearConjugateSelected(objetcsShape[index].shape,mouseX, mouseY);
+        }
+
+        if(objetcsShape[index].shape.isSelected){
+            break;
+        }
+
     }
 
     drawObjectShapesInOriginalImage();
@@ -216,6 +252,9 @@ function whileMouseDownObjectSelected(){
             else if (objetcsShape[index].type == shapeTypes[6]) {
                 circleClearDisplacement(objetcsShape[index].shape, displacementX, displacementY)
             }
+            else if (objetcsShape[index].type == shapeTypes[7]) {
+                circleClearConjugateDisplacement(objetcsShape[index].shape, displacementX, displacementY)
+            }
         }
     }
 
@@ -228,18 +267,24 @@ function whileMouseDownObjectSelected(){
 function drawShapeBorderWhileMouseDown(){
 
     if(isButtonDrawingRectangleSelected && isButtonDrawingConjugateSelected && isButtonDrawingClearAreaSelected){
-        drawFilledRectangleClearConjugateWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
+        drawFilledRectangleClearConjugateWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,imageWidthZeroPadding, imageHeightZeroPadding);
     }
+    else if(isButtonDrawingCircleSelected && isButtonDrawingConjugateSelected && isButtonDrawingClearAreaSelected){
+        drawFilledCircleClearConjugateWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,imageWidthZeroPadding, imageHeightZeroPadding);
+    }
+
     else if(isButtonDrawingRectangleSelected && isButtonDrawingConjugateSelected){
-        drawFilledRectangleConjugateWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
+        drawFilledRectangleConjugateWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,imageWidthZeroPadding, imageHeightZeroPadding);
     }
     else if(isButtonDrawingClearAreaSelected && isButtonDrawingRectangleSelected){
         drawFilledClearRectangleWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
     }
     else if(isButtonDrawingRectangleSelected){
         drawFilledRectangleWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
-    }else if(isButtonDrawingCircleSelected && isButtonDrawingConjugateSelected){
-        drawFilledCircleConjugateWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
+    }
+
+    else if(isButtonDrawingCircleSelected && isButtonDrawingConjugateSelected){
+        drawFilledCircleConjugateWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,imageWidthZeroPadding, imageHeightZeroPadding);
     }
     else if(isButtonDrawingCircleSelected && isButtonDrawingClearAreaSelected){
         drawFilledCircleClearWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
@@ -252,9 +297,7 @@ function drawShapeBorderWhileMouseDown(){
 
 ///////////////////////////////////output image fft functions
 function addObjetcsInSpectrum(){
-
     fftCopyData(fftSpectrumOriginal,fftSpectrumModified);
-
     for(var index=0; index < objetcsShape.length; index++){
 
         if (objetcsShape[index].type == shapeTypes[0]){
@@ -278,7 +321,84 @@ function addObjetcsInSpectrum(){
         if (objetcsShape[index].type == shapeTypes[6]){
             circleClearInSpectrum(objetcsShape[index].shape);
         }
+        if (objetcsShape[index].type == shapeTypes[7]){
+            circleClearConjugateInSpectrum(objetcsShape[index].shape);
+        }
 
     }
+}
+
+function preparationImage(img){
+    originalImageWidth = img.width;
+    originalImageHeight = img.height;
+    var selector = document.getElementById("outputSize");
+
+    if(originalImageWidth>canvasMaximumWidth || originalImageHeight>canvasMaximumHeight){
+        var messageBox = document.getElementById("messagesBox");
+        var message = document.getElementById("infoText");
+        $('.messagesBox').selectpicker('val', '512x512');
+
+        messageBox.style.visibility = "visible";
+        message.innerHTML ="Sorry, but the image is too large to fit on the canvas area. We resize it to fit in the canvas area. You still be able to save the output  image in the original size.";
+
+
+        setTimeout(function(){
+            messageBox.style.visibility = "hidden";
+            message.innerHTML = "";
+        },10000);
+        selector.value = 2;
+
+    }
+
+    if(selector.value == 1){
+
+        imageWidthZeroPadding = getNextPowerOfTwo(originalImageWidth);
+        imageHeightZeroPadding = getNextPowerOfTwo(originalImageHeight);
+
+        contextFourierTransformArea.canvas.width = imageWidthZeroPadding;
+        contextFourierTransformArea.canvas.height = imageHeightZeroPadding;
+        contextCanvasImageUploadedArea.canvas.width = originalImageWidth;
+        contextCanvasImageUploadedArea.canvas.height = originalImageHeight;
+
+
+        var imageData = contextFourierTransformArea.getImageData(0,0,imageWidthZeroPadding,imageHeightZeroPadding);
+        var canvasData = imageData.data;
+
+        for(var row=0; row < imageHeightZeroPadding; row++){
+            for(var col=0; col < imageWidthZeroPadding; col++){
+                canvasData[((row*imageWidthZeroPadding)+col)*4] = 0;
+                canvasData[((row*imageWidthZeroPadding)+col)*4+1] = 0;
+                canvasData[((row*imageWidthZeroPadding)+col)*4+2] = 0;
+                canvasData[((row*imageWidthZeroPadding)+col)*4+3] = 255;
+            }
+        }
+        contextFourierTransformArea.putImageData(imageData,0,0);
+        contextFourierTransformArea.drawImage(img,0,0, img.width, img.height);
+        contextCanvasImageUploadedArea.drawImage(img,0,0, img.width, img.height);
+        needCrop = true;
+
+    }
+    else if(selector.value    == 2){
+
+        ImageWidthZeroPadding = 512;
+        ImageHeightZeroPadding = 512;
+
+        contextFourierTransformArea.canvas.width = ImageWidthZeroPadding;
+        contextFourierTransformArea.canvas.height = ImageHeightZeroPadding;
+        contextCanvasImageUploadedArea.canvas.width = ImageWidthZeroPadding;
+        contextCanvasImageUploadedArea.canvas.height = ImageHeightZeroPadding;
+
+        contextFourierTransformArea.drawImage(img,0,0, img.width, img.height,0,0,ImageWidthZeroPadding,ImageHeightZeroPadding);
+        contextCanvasImageUploadedArea.drawImage(img,0,0, img.width, img.height,0,0,ImageWidthZeroPadding,ImageHeightZeroPadding);
+        needCrop = false;
+    }
+
+}
+
+function cropOutputImage(){
+    var imageData = contextFourierResult.getImageData(0,0,originalImageWidth,originalImageHeight);
+    contextFourierResult.canvas.width = originalImageWidth;
+    contextFourierResult.canvas.height = originalImageHeight;
+    contextFourierResult.putImageData(imageData,0,0);
 
 }

@@ -5,7 +5,7 @@ var CircleConjugate = function (circle1,circle2, isSelected) {
     this.isCtrlC = false;
 }
 
-function circleConjugate2Object(){
+function circleConjugate2Object(canvasEditableAreaWidth,canvasEditableAreaHeight){
 
     var deltaX = mouseCursorPositionInArea_X_mouseDown_While - mouseCursorPositionInArea_X_mouseDown;
     var deltaY = mouseCursorPositionInArea_Y_mouseDown_While - mouseCursorPositionInArea_Y_mouseDown;
@@ -44,7 +44,27 @@ function drawFilledCircleConjugate(circleConjugate){
     contextFourierTransformArea.globalAlpha= globalAlpha;
     contextFourierTransformArea.strokeStyle = strokeColor;
     contextFourierTransformArea.lineWidth = borderWidth;
+    contextFourierTransformArea.arc(circleConjugate.circle1.centerCoordinateX_InCanvasArea, circleConjugate.circle1.centerCoordinateY_InCanvasArea,internRadius,circleConjugate.circle1.startAngle,circleConjugate.circle1.endAngle);
+    contextFourierTransformArea.fill();
+    contextFourierTransformArea.stroke();
+    contextFourierTransformArea.closePath();
+
+    contextFourierTransformArea.beginPath();
+    contextFourierTransformArea.fillStyle =  fillColor;
+    contextFourierTransformArea.globalAlpha= globalAlpha;
+    contextFourierTransformArea.strokeStyle = strokeColor;
+    contextFourierTransformArea.lineWidth = borderWidth;
     contextFourierTransformArea.arc(circleConjugate.circle2.centerCoordinateX_InCanvasArea, circleConjugate.circle2.centerCoordinateY_InCanvasArea,circleConjugate.circle2.radius,circleConjugate.circle2.startAngle,circleConjugate.circle2.endAngle);
+    contextFourierTransformArea.fill();
+    contextFourierTransformArea.stroke();
+    contextFourierTransformArea.closePath();
+
+    contextFourierTransformArea.beginPath();
+    contextFourierTransformArea.fillStyle =  fillColor;
+    contextFourierTransformArea.globalAlpha= globalAlpha;
+    contextFourierTransformArea.strokeStyle = strokeColor;
+    contextFourierTransformArea.lineWidth = borderWidth;
+    contextFourierTransformArea.arc(circleConjugate.circle2.centerCoordinateX_InCanvasArea, circleConjugate.circle2.centerCoordinateY_InCanvasArea,internRadius,circleConjugate.circle2.startAngle,circleConjugate.circle2.endAngle);
     contextFourierTransformArea.fill();
     contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
@@ -66,7 +86,27 @@ function drawFilledCircleConjugateSelected(circleConjugate){
     contextFourierTransformArea.globalAlpha= globalAlphaSelected;
     contextFourierTransformArea.strokeStyle = strokeColorSelected;
     contextFourierTransformArea.lineWidth = borderWidthSelected;
+    contextFourierTransformArea.arc(circleConjugate.circle1.centerCoordinateX_InCanvasArea, circleConjugate.circle1.centerCoordinateY_InCanvasArea,internRadius,circleConjugate.circle1.startAngle,circleConjugate.circle1.endAngle);
+    contextFourierTransformArea.fill();
+    contextFourierTransformArea.stroke();
+    contextFourierTransformArea.closePath();
+
+    contextFourierTransformArea.beginPath();
+    contextFourierTransformArea.fillStyle =  fillColorSelected;
+    contextFourierTransformArea.globalAlpha= globalAlphaSelected;
+    contextFourierTransformArea.strokeStyle = strokeColorSelected;
+    contextFourierTransformArea.lineWidth = borderWidthSelected;
     contextFourierTransformArea.arc(circleConjugate.circle2.centerCoordinateX_InCanvasArea, circleConjugate.circle2.centerCoordinateY_InCanvasArea,circleConjugate.circle2.radius,circleConjugate.circle2.startAngle,circleConjugate.circle2.endAngle);
+    contextFourierTransformArea.fill();
+    contextFourierTransformArea.stroke();
+    contextFourierTransformArea.closePath();
+
+    contextFourierTransformArea.beginPath();
+    contextFourierTransformArea.fillStyle =  fillColorSelected;
+    contextFourierTransformArea.globalAlpha= globalAlphaSelected;
+    contextFourierTransformArea.strokeStyle = strokeColorSelected;
+    contextFourierTransformArea.lineWidth = borderWidthSelected;
+    contextFourierTransformArea.arc(circleConjugate.circle2.centerCoordinateX_InCanvasArea, circleConjugate.circle2.centerCoordinateY_InCanvasArea,internRadius,circleConjugate.circle2.startAngle,circleConjugate.circle2.endAngle);
     contextFourierTransformArea.fill();
     contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
@@ -115,7 +155,7 @@ function circleConjugateDisplacement(circleConjugate,deltaX,deltaY){
     }
 }
 
-function ctrlV_circlesConjugate(circleConjugate) {
+function ctrlV_circlesConjugate(circleConjugate,canvasEditableAreaWidth,canvasEditableAreaHeight) {
     if (circleConjugate.isCtrlC) {
         var circ1 = new Circle(mouseCursorPositionInArea_X, mouseCursorPositionInArea_Y, circleConjugate.circle1.radius,circleConjugate.circle1.startAngle, circleConjugate.circle1.endAngle, false);
 
@@ -138,7 +178,7 @@ function ctrlV_circlesConjugate(circleConjugate) {
     }
 }
 
-function drawFilledCircleConjugateWhileMouseHold(mouseX_while,mouseY_while,mouseX,mouseY){
+function drawFilledCircleConjugateWhileMouseHold(mouseX_while,mouseY_while,mouseX,mouseY,canvasEditableAreaWidth,canvasEditableAreaHeight){
 
     var deltaX = mouseX_while - mouseX;
     var deltaY = mouseY_while - mouseY;
@@ -149,6 +189,15 @@ function drawFilledCircleConjugateWhileMouseHold(mouseX_while,mouseY_while,mouse
     contextFourierTransformArea.strokeStyle = strokeColorWhileDown;
     contextFourierTransformArea.lineWidth = borderWidthWhileDown;
     contextFourierTransformArea.arc(mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,  radius, 0, 2 * Math.PI);
+    contextFourierTransformArea.fill();
+    contextFourierTransformArea.stroke();
+
+    contextFourierTransformArea.beginPath();
+    contextFourierTransformArea.fillStyle =  fillColorWhileDown;
+    contextFourierTransformArea.globalAlpha= globalAlphaWhileDown;
+    contextFourierTransformArea.strokeStyle = strokeColorWhileDown;
+    contextFourierTransformArea.lineWidth = borderWidthWhileDown;
+    contextFourierTransformArea.arc(mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,  internRadius, 0, 2 * Math.PI);
     contextFourierTransformArea.fill();
     contextFourierTransformArea.stroke();
 
@@ -166,6 +215,15 @@ function drawFilledCircleConjugateWhileMouseHold(mouseX_while,mouseY_while,mouse
     contextFourierTransformArea.strokeStyle = strokeColorWhileDown;
     contextFourierTransformArea.lineWidth = borderWidthWhileDown;
     contextFourierTransformArea.arc(conjugateCentroidX,conjugateCentroidY,  radius, 0, 2 * Math.PI);
+    contextFourierTransformArea.fill();
+    contextFourierTransformArea.stroke();
+
+    contextFourierTransformArea.beginPath();
+    contextFourierTransformArea.fillStyle =  fillColorWhileDown;
+    contextFourierTransformArea.globalAlpha= globalAlphaWhileDown;
+    contextFourierTransformArea.strokeStyle = strokeColorWhileDown;
+    contextFourierTransformArea.lineWidth = borderWidthWhileDown;
+    contextFourierTransformArea.arc(conjugateCentroidX,conjugateCentroidY,  internRadius, 0, 2 * Math.PI);
     contextFourierTransformArea.fill();
     contextFourierTransformArea.stroke();
 }

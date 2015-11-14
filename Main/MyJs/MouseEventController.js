@@ -55,7 +55,6 @@ $("#imageFourier").on('click', function (e) {
     /*if (longpress) {
 
      }*/
-
     if(!(anyButtonDrawSelected())){
         var pos = findPos(this);
         mouseCursorPositionInArea_X = e.pageX - pos.x;

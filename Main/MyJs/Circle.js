@@ -32,6 +32,17 @@ function drawFilledCircle(circle){
     contextFourierTransformArea.fill();
     contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
+
+
+    contextFourierTransformArea.beginPath();
+    contextFourierTransformArea.fillStyle =  fillColor;
+    contextFourierTransformArea.globalAlpha= globalAlpha;
+    contextFourierTransformArea.strokeStyle = strokeColor;
+    contextFourierTransformArea.lineWidth = borderWidth;
+    contextFourierTransformArea.arc(circle.centerCoordinateX_InCanvasArea, circle.centerCoordinateY_InCanvasArea,internRadius,circle.startAngle,circle.endAngle);
+    contextFourierTransformArea.fill();
+    contextFourierTransformArea.stroke();
+    contextFourierTransformArea.closePath();
 }
 
 function drawFilledCircleSelected(circle){
@@ -41,6 +52,16 @@ function drawFilledCircleSelected(circle){
     contextFourierTransformArea.strokeStyle = strokeColorSelected;
     contextFourierTransformArea.lineWidth = borderWidthSelected;
     contextFourierTransformArea.arc(circle.centerCoordinateX_InCanvasArea, circle.centerCoordinateY_InCanvasArea,circle.radius,circle.startAngle,circle.endAngle);
+    contextFourierTransformArea.fill();
+    contextFourierTransformArea.stroke();
+    contextFourierTransformArea.closePath();
+
+    contextFourierTransformArea.beginPath();
+    contextFourierTransformArea.fillStyle =  fillColorSelected;
+    contextFourierTransformArea.globalAlpha= globalAlphaSelected;
+    contextFourierTransformArea.strokeStyle = strokeColorSelected;
+    contextFourierTransformArea.lineWidth = borderWidthSelected;
+    contextFourierTransformArea.arc(circle.centerCoordinateX_InCanvasArea, circle.centerCoordinateY_InCanvasArea,internRadius,circle.startAngle,circle.endAngle);
     contextFourierTransformArea.fill();
     contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
@@ -81,6 +102,15 @@ function drawFilledCircleWhileMouseHold(mouseX_while,mouseY_while,mouseX,mouseY)
     contextFourierTransformArea.strokeStyle = strokeColorWhileDown;
     contextFourierTransformArea.lineWidth = borderWidthWhileDown;
     contextFourierTransformArea.arc(mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,  radius, 0, 2 * Math.PI);
+    contextFourierTransformArea.fill();
+    contextFourierTransformArea.stroke();
+
+    contextFourierTransformArea.beginPath();
+    contextFourierTransformArea.fillStyle =  fillColorWhileDown;
+    contextFourierTransformArea.globalAlpha= globalAlphaWhileDown;
+    contextFourierTransformArea.strokeStyle = strokeColorWhileDown;
+    contextFourierTransformArea.lineWidth = borderWidthWhileDown;
+    contextFourierTransformArea.arc(mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,  internRadius, 0, 2 * Math.PI);
     contextFourierTransformArea.fill();
     contextFourierTransformArea.stroke();
 }

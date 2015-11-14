@@ -1,9 +1,5 @@
-//na verdade esse arquivo de FFT foi feito por outro cara, eu apenas fiz algumas modificacoes.
-//Talvez seja necessario fazer a minha propria implementacao caso acha a necessidade de mudar alguma coisa na FFT
-//resultan
-
-//var widthFFT;
-//var heightFFT;
+//code from: http://nklein.com/2009/09/fourier-transforms-in-javascript/
+//I just made some modifications
 
 var fftData = function () {
     this.width = 0;
@@ -23,7 +19,7 @@ function fftCopyData(dataSource, dataDestination){
     dataDestination.imag = dataSource.imag.slice();
 }
 
-function __getNextPowerOfTwo( nn ) {
+function getNextPowerOfTwo( nn ) {
     var pp = 1;
     while ( pp < nn ) {
         pp *= 2;
@@ -38,8 +34,8 @@ function prepImageForFFT( _imageId, _canvasId ) {
         return false;
     }
 
-    var ww = __getNextPowerOfTwo( image.width );
-    var hh = __getNextPowerOfTwo( image.height );
+    var ww = getNextPowerOfTwo( image.width );
+    var hh = getNextPowerOfTwo( image.height );
 
     canvas.width = ww;
     canvas.height = hh;
@@ -171,6 +167,7 @@ function FFT( _canvasId ) {
     imag.length = ww * hh * 4;
 
     for ( var pp=0; pp < result.length; ++pp ) {
+        //real[ pp ] = result[ pp ];
         //real[ pp ] = result[ pp ] / 255.0;
         real[ pp ] = result[ pp ] /numberOfSamples;
         imag[ pp ] = 0.0;
@@ -184,15 +181,39 @@ function FFT( _canvasId ) {
     fftSpectrumOriginal.real = fftData.real.slice();
     fftSpectrumOriginal.imag = fftData.imag.slice();
 
+    var maximumModulo = -1;
+    var myAbs ;
+    var myCoef = 12 ;
+
     for ( var pp=0; pp < result.length; pp += 4 ) {
         for ( var kk=0; kk < 3; ++kk ) {
             var index = pp + kk;
             var rr = real[ index ];
             var ii = imag[ index ];
+            //Modulo = Math.sqrt( rr*rr + ii*ii );
+            //if(Modulo > maximumModulo){
+            //    maximumModulo = Modulo;
+            //}
+            //result[ index ] = Modulo;
+            //result[ index ] = Math.sqrt( rr*rr + ii*ii );
+            //myAbs = Math.log(Math.sqrt( rr*rr + ii*ii )+1);
+            //myAbs = Math.sqrt( rr*rr + ii*ii );
+            //if(myAbs>maximumModulo){
+            //    maximumModulo = myAbs;
+            //}
+            //result[ index ] = myAbs;
             result[ index ] = Math.sqrt( rr*rr + ii*ii )*255;
         }
         result[ pp + 3 ] = 255;
     }
+
+    /*for ( var pp=0; pp < result.length; pp += 4 ) {
+        for ( var kk=0; kk < 3; ++kk ) {
+            var index = pp + kk;
+            result[ index ] = (result[ index ]/myAbs)*255;
+        }
+        result[ pp + 3 ] = 255;
+    }*/
 
     context.putImageData( rawResult, 0, 0 );
 
@@ -253,5 +274,7 @@ function IFFT( _fftData, _canvasId ) {
     context.putImageData( rawResult, 0, 0 );
     return true;
 }
+
+
 
 

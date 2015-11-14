@@ -13,4 +13,4 @@ var ObjectShape = function (type,object){
     this.sizeObjectSeleted = -1;
 }
 
-var shapeTypes = ["rect","rectConjugate","circ", "circConjugate", "clearRect", "clearRectConjugate", "circClear"];
+var shapeTypes = ["rect","rectConjugate","circ", "circConjugate", "clearRect", "clearRectConjugate", "circClear", "circClearConjugate"];

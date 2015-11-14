@@ -11,7 +11,6 @@ var strokeColorClearArea = "#f2f2f2";
 var borderWidthClearArea = 2;
 var globalAlphaClearArea = 0.7;
 
-
 var fillColorSelected = "black";
 var strokeColorSelected = "blue";
 var borderWidthSelected = 2;
@@ -22,4 +21,6 @@ var fillColorWhileDown = "#ff3232";
 var strokeColorWhileDown = "#ff0000";
 var borderWidthWhileDown = 2;
 var globalAlphaWhileDown = 0.3;
+
+var internRadius = 1;
 ///////////////////////////////

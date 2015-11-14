@@ -3,31 +3,7 @@ function ctrlC_objects(){
 
     for(var index=0; index<objetcsShape.length; index++){
         if(objetcsShape[index].shape.isSelected) {
-
-            if (objetcsShape[index].type == shapeTypes[0]) {
-                objetcsShape[index].shape.isCtrlC = true;
-            }
-
-            if (objetcsShape[index].type == shapeTypes[1]) {
-                objetcsShape[index].shape.isCtrlC = true;
-            }
-
-            if (objetcsShape[index].type == shapeTypes[2]) {
-                objetcsShape[index].shape.isCtrlC = true;
-            }
-
-            if (objetcsShape[index].type == shapeTypes[3]) {
-                objetcsShape[index].shape.isCtrlC = true;
-            }
-            if (objetcsShape[index].type == shapeTypes[4]) {
-                objetcsShape[index].shape.isCtrlC = true;
-            }
-            if (objetcsShape[index].type == shapeTypes[5]) {
-                objetcsShape[index].shape.isCtrlC = true;
-            }
-            if (objetcsShape[index].type == shapeTypes[6]) {
-                objetcsShape[index].shape.isCtrlC = true;
-            }
+            objetcsShape[index].shape.isCtrlC = true;
         }
 
     }
@@ -43,22 +19,25 @@ function ctrlV_objects(){
                 ctrlV_rectangle(objetcsShape[index].shape);
             }
             if (objetcsShape[index].type == shapeTypes[1]) {
-                ctrlV_rectanglesConjugate(objetcsShape[index].shape);
+                ctrlV_rectanglesConjugate(objetcsShape[index].shape,imageWidthZeroPadding, imageHeightZeroPadding);
             }
             if (objetcsShape[index].type == shapeTypes[2]) {
                 ctrlV_circles(objetcsShape[index].shape);
             }
             if (objetcsShape[index].type == shapeTypes[3]) {
-                ctrlV_circlesConjugate(objetcsShape[index].shape);
+                ctrlV_circlesConjugate(objetcsShape[index].shape,imageWidthZeroPadding, imageHeightZeroPadding);
             }
             if (objetcsShape[index].type == shapeTypes[4]) {
                 ctrlV_clearRectangle(objetcsShape[index].shape);
             }
             if (objetcsShape[index].type == shapeTypes[5]) {
-                ctrlV_rectanglesClearConjugate(objetcsShape[index].shape);
+                ctrlV_rectanglesClearConjugate(objetcsShape[index].shape,imageWidthZeroPadding, imageHeightZeroPadding);
             }
             if (objetcsShape[index].type == shapeTypes[6]) {
                 ctrlV_circlesClear(objetcsShape[index].shape);
+            }
+            if (objetcsShape[index].type == shapeTypes[7]) {
+                ctrlV_circlesClearConjugate(objetcsShape[index].shape,imageWidthZeroPadding, imageHeightZeroPadding);
             }
         }
     }

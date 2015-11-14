@@ -5,7 +5,7 @@ var RectangleClearConjugate = function(rectangleClear1,rectangleClear2, isSelect
     this.isCtrlC = false;
 }
 
-function rectangleClearConjugate2Object(){
+function rectangleClearConjugate2Object(canvasEditableAreaWidth,canvasEditableAreaHeight){
     var object;
     var rectWidth = mouseCursorPositionInArea_X_mouseDown_While - mouseCursorPositionInArea_X_mouseDown;
     var rectHeight = mouseCursorPositionInArea_Y_mouseDown_While - mouseCursorPositionInArea_Y_mouseDown;
@@ -124,7 +124,7 @@ function rectangleClearConjugateDisplacement(rectangleClearConjugate,deltaX,delt
     }
 }
 
-function ctrlV_rectanglesClearConjugate(rectangleClearConjugate) {
+function ctrlV_rectanglesClearConjugate(rectangleClearConjugate,canvasEditableAreaWidth,canvasEditableAreaHeight ) {
 
     if (rectangleClearConjugate.isCtrlC) {
 
@@ -149,7 +149,7 @@ function ctrlV_rectanglesClearConjugate(rectangleClearConjugate) {
     }
 }
 
-function drawFilledRectangleClearConjugateWhileMouseHold(mouseX_while,mouseY_while,mouseX,mouseY){
+function drawFilledRectangleClearConjugateWhileMouseHold(mouseX_while,mouseY_while,mouseX,mouseY,canvasEditableAreaWidth,canvasEditableAreaHeight){
 
     var rectWidth = mouseX_while - mouseX;
     var rectHeight = mouseY_while - mouseY;
