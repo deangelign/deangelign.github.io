@@ -19,6 +19,11 @@ function fftCopyData(dataSource, dataDestination){
     dataDestination.imag = dataSource.imag.slice();
 }
 
+
+function calculteMagnitude(realComponent, complexComponent){
+    return Math.sqrt((realComponent*realComponent) + (complexComponent*complexComponent));
+}
+
 function getNextPowerOfTwo( nn ) {
     var pp = 1;
     while ( pp < nn ) {
@@ -142,7 +147,7 @@ function __performFFT( _real, _imag, _ww, _hh, _dx, _dy, _inverse ) {
 }
 
 
-function FFT( _canvasId ) {
+function FFT( _canvasId, compressionType ) {
     var canvas = document.getElementById( _canvasId );
     if ( !canvas ) {
         return false;
@@ -169,7 +174,7 @@ function FFT( _canvasId ) {
     for ( var pp=0; pp < result.length; ++pp ) {
         //real[ pp ] = result[ pp ];
         //real[ pp ] = result[ pp ] / 255.0;
-        real[ pp ] = result[ pp ] /numberOfSamples;
+        real[ pp ] = result[ pp ] ;
         imag[ pp ] = 0.0;
     }
 
@@ -181,46 +186,79 @@ function FFT( _canvasId ) {
     fftSpectrumOriginal.real = fftData.real.slice();
     fftSpectrumOriginal.imag = fftData.imag.slice();
 
-    var maximumModulo = -1;
-    var myAbs ;
-    var myCoef = 12 ;
 
-    for ( var pp=0; pp < result.length; pp += 4 ) {
-        for ( var kk=0; kk < 3; ++kk ) {
-            var index = pp + kk;
-            var rr = real[ index ];
-            var ii = imag[ index ];
-            //Modulo = Math.sqrt( rr*rr + ii*ii );
-            //if(Modulo > maximumModulo){
-            //    maximumModulo = Modulo;
-            //}
-            //result[ index ] = Modulo;
-            //result[ index ] = Math.sqrt( rr*rr + ii*ii );
-            //myAbs = Math.log(Math.sqrt( rr*rr + ii*ii )+1);
-            //myAbs = Math.sqrt( rr*rr + ii*ii );
-            //if(myAbs>maximumModulo){
-            //    maximumModulo = myAbs;
-            //}
-            //result[ index ] = myAbs;
-            result[ index ] = Math.sqrt( rr*rr + ii*ii )*255;
+    var index,rr,ii;
+
+
+    if(compressionType == 1) {
+        var maximumValue = 1;
+        for (var pp = 0; pp < result.length; pp += 4) {
+            for (var kk = 0; kk < 3; ++kk) {
+                index = pp + kk;
+                rr = real[index];
+                ii = imag[index];
+                result[index] = Math.log(calculteMagnitude(rr, ii) + 1);
+                if(result[index] > maximumValue){
+                    maximumValue =  result[index];
+                }
+            }
+            result[pp + 3] = 255;
         }
-        result[ pp + 3 ] = 255;
+
+        for (var pp = 0; pp < result.length; pp += 4) {
+            for (var kk = 0; kk < 3; ++kk) {
+                index = pp + kk;
+                result[index] = (result[index]/maximumValue)*255;
+            }
+            result[pp + 3] = 255;
+        }
+
+
     }
 
-    /*for ( var pp=0; pp < result.length; pp += 4 ) {
-        for ( var kk=0; kk < 3; ++kk ) {
-            var index = pp + kk;
-            result[ index ] = (result[ index ]/myAbs)*255;
+    if(compressionType == 2) {//divided by number of samples
+        for (var pp = 0; pp < result.length; pp += 4) {
+            for (var kk = 0; kk < 3; ++kk) {
+                index = pp + kk;
+                rr = real[index];
+                ii = imag[index];
+                result[index] = calculteMagnitude(rr, ii) * 255/numberOfSamples ;
+            }
+            result[pp + 3] = 255;
         }
-        result[ pp + 3 ] = 255;
-    }*/
+    }
+
+    if(compressionType == 3) {//divided by number of samples
+        var maximumValue = 1;
+        for (var pp = 0; pp < result.length; pp += 4) {
+            for (var kk = 0; kk < 3; ++kk) {
+                index = pp + kk;
+                rr = real[index];
+                ii = imag[index];
+                result[index] = calculteMagnitude(rr, ii)/numberOfSamples;
+                if(result[index] > maximumValue){
+                    maximumValue =  result[index];
+                }
+            }
+            result[pp + 3] = 255;
+        }
+
+        for (var pp = 0; pp < result.length; pp += 4) {
+            for (var kk = 0; kk < 3; ++kk) {
+                index = pp + kk;
+                result[index] = (result[index]/maximumValue)*255;
+            }
+            result[pp + 3] = 255;
+        }
+    }
+
 
     context.putImageData( rawResult, 0, 0 );
 
     return fftData;
 }
 
-function IFFT( _fftData, _canvasId ) {
+function IFFT( _fftData, _canvasId, compressionType ) {
     var canvas = document.getElementById( _canvasId );
     if ( !canvas ) {
         return false;
@@ -254,22 +292,62 @@ function IFFT( _fftData, _canvasId ) {
     var scale = ww * hh;
 
 
-    for ( var pp=0; pp < result.length; pp += 4 ) {
-        for ( var kk=0; kk < 3; ++kk ) {
-            var index = pp + kk;
-            //var vv = 255 * real[ index ] / scale;
-            var vv = real[ index ] ;
-            if ( vv < 0 ) {
-                vv = 0;
+    if(compressionType == 1){
+        for ( var pp=0; pp < result.length; pp += 4 ) {
+            for ( var kk=0; kk < 3; ++kk ) {
+                var index = pp + kk;
+                //var vv = 255 * real[ index ] / scale;
+                var vv = real[ index ]/numberOfSamples ;
+                if ( vv < 0 ) {
+                    vv = 0;
+                }
+                else if ( 255 < vv ) {
+                    vv = 255;
+                }
+                result[ index ] = vv;
             }
-            else if ( 255 < vv ) {
-                vv = 255;
-            }
-            result[ index ] = vv;
+            result[ pp + 3 ] = 255;
+            //result[ pp + 3 ] =
         }
-       result[ pp + 3 ] = 255;
-        //result[ pp + 3 ] =
     }
+
+    if(compressionType == 2){
+        for ( var pp=0; pp < result.length; pp += 4 ) {
+            for ( var kk=0; kk < 3; ++kk ) {
+                var index = pp + kk;
+                //var vv = 255 * real[ index ] / scale;
+                var vv = real[ index ] /numberOfSamples;
+                if ( vv < 0 ) {
+                    vv = 0;
+                }
+                else if ( 255 < vv ) {
+                    vv = 255;
+                }
+                result[ index ] = vv;
+            }
+            result[ pp + 3 ] = 255;
+            //result[ pp + 3 ] =
+        }
+    }
+    if(compressionType == 3){
+        for ( var pp=0; pp < result.length; pp += 4 ) {
+            for ( var kk=0; kk < 3; ++kk ) {
+                var index = pp + kk;
+                //var vv = 255 * real[ index ] / scale;
+                var vv = real[ index ] /numberOfSamples;
+                if ( vv < 0 ) {
+                    vv = 0;
+                }
+                else if ( 255 < vv ) {
+                    vv = 255;
+                }
+                result[ index ] = vv;
+            }
+            result[ pp + 3 ] = 255;
+            //result[ pp + 3 ] =
+        }
+    }
+
 
     context.putImageData( rawResult, 0, 0 );
     return true;

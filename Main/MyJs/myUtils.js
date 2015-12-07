@@ -160,7 +160,7 @@ function drawObjectShapesInOriginalImage(){
 function drawInverseFFTImage(){
     if(isImageLoaded){
         addObjetcsInSpectrum();
-        IFFT(fftSpectrumModified,'imageFourierResult',contextCanvasImageUploadedArea.getImageData(0,0,imageWidthZeroPadding, imageHeightZeroPadding).data );
+        IFFT(fftSpectrumModified,'imageFourierResult', compressionType );
         if(needCrop){
             cropOutputImage();
         }
@@ -336,7 +336,63 @@ function addObjetcsInSpectrum(){
     }
 }
 
+function testeSpectrum(){
+
+
+    //var rawResult = contextFourierTransformArea.getImageData( 0, 0, imageWidthZeroPadding, imageHeightZeroPadding );
+    //var result = rawResult.data;
+
+    var rawResult2 = contextFourierModifications.getImageData(0, 0, imageWidthZeroPadding, imageHeightZeroPadding);
+    var result2 = rawResult2.data;
+
+    var rr;
+    var ii;
+    for(var row=0; row < imageHeightZeroPadding; row++){
+        for(var col=0; col < imageWidthZeroPadding; col++) {
+
+            if(compressionType = 1){
+                rr = fftSpectrumModified.real[ ((row*imageWidthZeroPadding)+col)*4 ];
+                ii = fftSpectrumModified.imag[ ((row*imageWidthZeroPadding)+col)*4 ];
+                result2[((row*imageWidthZeroPadding)+col)*4] = calculteMagnitude(rr, ii)*255/numberOfSamples;
+
+                rr = fftSpectrumModified.real[ ((row*imageWidthZeroPadding)+col)*4 +1];
+                ii = fftSpectrumModified.imag[ ((row*imageWidthZeroPadding)+col)*4 +1];
+                result2[((row*imageWidthZeroPadding)+col)*4+1] = calculteMagnitude(rr, ii)*255/numberOfSamples;
+
+                rr = fftSpectrumModified.real[ ((row*imageWidthZeroPadding)+col)*4 +2];
+                ii = fftSpectrumModified.imag[ ((row*imageWidthZeroPadding)+col)*4 +2];
+                result2[((row*imageWidthZeroPadding)+col)*4+2] = calculteMagnitude(rr, ii)*255/numberOfSamples;
+
+                result2[((row*imageWidthZeroPadding)+col)*4+3] = 255;
+            }
+
+            if(compressionType = 2){
+                rr = fftSpectrumModified.real[ ((row*imageWidthZeroPadding)+col)*4 ];
+                ii = fftSpectrumModified.imag[ ((row*imageWidthZeroPadding)+col)*4 ];
+                result2[((row*imageWidthZeroPadding)+col)*4] = calculteMagnitude(rr, ii)*255/numberOfSamples;
+
+                rr = fftSpectrumModified.real[ ((row*imageWidthZeroPadding)+col)*4 +1];
+                ii = fftSpectrumModified.imag[ ((row*imageWidthZeroPadding)+col)*4 +1];
+                result2[((row*imageWidthZeroPadding)+col)*4+1] = calculteMagnitude(rr, ii)*255/numberOfSamples;
+
+                rr = fftSpectrumModified.real[ ((row*imageWidthZeroPadding)+col)*4 +2];
+                ii = fftSpectrumModified.imag[ ((row*imageWidthZeroPadding)+col)*4 +2];
+                result2[((row*imageWidthZeroPadding)+col)*4+2] = calculteMagnitude(rr, ii)*255/numberOfSamples;
+
+                result2[((row*imageWidthZeroPadding)+col)*4+3] = 255;
+            }
+
+        }
+        //contextFourierModifications.putImageData( rawResult2, 0, 0 );
+    }
+
+    contextFourierModifications.putImageData( rawResult2, 0, 0 );
+}
+
 function preparationImage(img){
+
+
+
     originalImageWidth = img.width;
     originalImageHeight = img.height;
     var selector = document.getElementById("outputSize");
@@ -365,6 +421,10 @@ function preparationImage(img){
 
         contextFourierTransformArea.canvas.width = imageWidthZeroPadding;
         contextFourierTransformArea.canvas.height = imageHeightZeroPadding;
+
+        contextFourierModifications.canvas.width = imageWidthZeroPadding;
+        contextFourierModifications.canvas.height = imageHeightZeroPadding;
+
         contextCanvasImageUploadedArea.canvas.width = originalImageWidth;
         contextCanvasImageUploadedArea.canvas.height = originalImageHeight;
 
@@ -393,6 +453,10 @@ function preparationImage(img){
 
         contextFourierTransformArea.canvas.width = ImageWidthZeroPadding;
         contextFourierTransformArea.canvas.height = ImageHeightZeroPadding;
+
+        contextFourierModifications.canvas.width = imageWidthZeroPadding;
+        contextFourierModifications.canvas.height = imageHeightZeroPadding;
+
         contextCanvasImageUploadedArea.canvas.width = ImageWidthZeroPadding;
         contextCanvasImageUploadedArea.canvas.height = ImageHeightZeroPadding;
 
@@ -408,5 +472,16 @@ function cropOutputImage(){
     contextFourierResult.canvas.width = originalImageWidth;
     contextFourierResult.canvas.height = originalImageHeight;
     contextFourierResult.putImageData(imageData,0,0);
+}
 
+function setCompressionType(){
+    compressionType = document.getElementById("compressionType").value;
+    if(isImageLoaded){
+        preparationImage(img);
+        FFT('imageFourier',compressionType);
+        receiveDataFromNewImageUpdated(contextFourierTransformArea.getImageData(0,0,imageWidthZeroPadding, imageHeightZeroPadding));
+        fftCopyData(fftSpectrumOriginal,fftSpectrumModified);
+        testeSpectrum();
+        drawObjectShapesInOriginalImage()
+    }
 }

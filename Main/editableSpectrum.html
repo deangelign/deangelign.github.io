@@ -120,7 +120,7 @@
                             <div class="panel-body">
                                 <div class="col-xs-12 col-md-12">
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 col-lg-12 col-sm-12 col" >
 
                                             <div class="form-group">
                                                 <input type="file" name="imageLoader"  id="imageLoader" />
@@ -133,6 +133,16 @@
                                                     <option value="2">512x512</option>
                                                 </select>
                                             </div>
+
+                                            <div class="form-group">
+                                                <label>Spectrum compression type</label>
+                                                <select class="selectpicker" id="compressionType" onchange="setCompressionType()">
+                                                    <option value="1">Logarithmic scale</option>
+                                                    <option value="2">Divided by number of samples</option>
+                                                    <option value="3">Divided by maximum</option>
+                                                </select>
+                                            </div>
+
                                             <div class="form-group">
                                                 <div class="alert alert-info" role="alert" id="messagesBox" style="visibility:hidden;">
                                                     <i class = "glyphicon glyphicon-info-sign"></i><p id="infoText">
@@ -152,10 +162,16 @@
 
                                         <ul class="nav nav-tabs" style="border: none">
                                             <li class="active"><a data-toggle="tab" href="#editableSpectrum">Edtiable Spectrum</a></li>
+                                            <li><a data-toggle="tab" href="#SpectrumModifiedTab">Spectrum modified</a></li>
                                         </ul>
+
+
 
                                         <div class="tab-content" >
                                             <div id="editableSpectrum" class="tab-pane fade in active">
+
+
+
                                                 <table>
                                                     <thead>
                                                         <tr>
@@ -222,7 +238,16 @@
                                                     </tbody>
                                                 </table>
                                             </div>
+
+                                            <div  id="SpectrumModifiedTab" class="tab-pane fade">
+                                                <canvas id="espectrumModifications" width="512" height="512" style="border:1px solid #d3d3d3;"></canvas>
+                                            </div>
+
                                         </div>
+
+
+
+
                                     </div>
 
                                     <div class="col-md-5">
@@ -296,6 +321,11 @@
         var canvasFourierResult = document.getElementById('imageFourierResult');
         var contextFourierResult = canvasFourierResult.getContext('2d');
 
+        var canvasFourierModifications = document.getElementById('espectrumModifications');
+        var contextFourierModifications = canvasFourierModifications.getContext('2d');
+
+        var compressionType =  document.getElementById("compressionType").value;
+
         var needCrop = false;
         //var canvasFourierTransformAreaUnsettable = document.getElementById('imageFourierOriginalUnsettable');
         //var contextFourierTransformAreaUnsettable = canvasFourierTransformAreaUnsettable.getContext('2d');
@@ -303,19 +333,19 @@
         //var w=window.open('about:blank','image from canvas');
         //w.document.write("<img src='"+canvasFourierResult.toDataURL("image/png")+"' alt='from canvas'/>");
 
-        var myImageData,
-                re = [], im = [];
+        var img; //uploaded image
+
 
         function handleImage(e){
             var reader = new FileReader();
             reader.onload = function(event){//toda vez quando uma imagem for enviada e estiver sendo carregada
-                var img = new Image();
+                img = new Image();
                 img.onload = function(){
 
                     deleteAllObjectsShape();
                     clearAllCanvas();
                     preparationImage(img);
-                    FFT('imageFourier');
+                    FFT('imageFourier',compressionType);
                     isImageLoaded = true;
                     //canvasImageUploaded.width = canvasAreaWidth;
                     //canvasImageUploaded.height = canvasAreaHeight;
@@ -333,7 +363,8 @@
 
                     receiveDataFromNewImageUpdated(contextFourierTransformArea.getImageData(0,0,imageWidthZeroPadding, imageHeightZeroPadding));
                     fftCopyData(fftSpectrumOriginal,fftSpectrumModified);
-                    IFFT(fftSpectrumOriginal,'imageFourierResult');
+                    testeSpectrum();
+                    IFFT(fftSpectrumOriginal,'imageFourierResult', compressionType);
                     if(needCrop){
                         cropOutputImage();
                     }
