@@ -153,6 +153,7 @@ function drawObjectShapesInOriginalImage(){
 
     imageGeneratedFromLastMousePressUp = contextFourierTransformArea.getImageData(0,0,imageWidthZeroPadding, imageHeightZeroPadding);
     drawInverseFFTImage();
+    //testeSpectrum();
 }
 
 
@@ -481,7 +482,7 @@ function setCompressionType(){
         FFT('imageFourier',compressionType);
         receiveDataFromNewImageUpdated(contextFourierTransformArea.getImageData(0,0,imageWidthZeroPadding, imageHeightZeroPadding));
         fftCopyData(fftSpectrumOriginal,fftSpectrumModified);
-        testeSpectrum();
+        //testeSpectrum();
         drawObjectShapesInOriginalImage()
     }
 }
