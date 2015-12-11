@@ -341,25 +341,11 @@
             reader.onload = function(event){//toda vez quando uma imagem for enviada e estiver sendo carregada
                 img = new Image();
                 img.onload = function(){
-
                     deleteAllObjectsShape();
                     clearAllCanvas();
                     preparationImage(img);
                     FFT('imageFourier',compressionType);
                     isImageLoaded = true;
-                    //canvasImageUploaded.width = canvasAreaWidth;
-                    //canvasImageUploaded.height = canvasAreaHeight;
-                    //redimensiona a imagem e coloca na area do canvas de id imagemUploaded
-                    //contextFourierTransformAreaUnsettable.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasAreaWidth, canvasAreaHeight);
-                    //FFT('imageFourierOriginalUnsettable');
-                    //contextFourierTransformAreaUnsettable.scale(2,2);
-                    //contextFourierTransformArea.drawImage(img,0,0, img.width, img.height, 0 ,0, 512, 512);
-                    //FFT('imageFourier');
-                    //contextFourierResult.drawImage(img,0,0, img.width, img.height, 0 ,0, canvasEditableAreaWidth, canvasEditableAreaHeight);
-
-
-                    // 2D-FFT
-                    //FFT('imageFourier');
 
                     receiveDataFromNewImageUpdated(contextFourierTransformArea.getImageData(0,0,imageWidthZeroPadding, imageHeightZeroPadding));
                     fftCopyData(fftSpectrumOriginal,fftSpectrumModified);

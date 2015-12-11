@@ -121,6 +121,7 @@ function circleClearInSpectrum(circleClear){
     var recWidth = Math.round(recX + (circleClear.radius*2) );
     var recHeight = Math.round(recY + (circleClear.radius*2) );
 
+    var index, newIndex;
 
     for(var row=recY; row<recY+recHeight; row++){
 
@@ -129,6 +130,11 @@ function circleClearInSpectrum(circleClear){
             if( (circleClear.centerCoordinateX_InCanvasArea-col)*(circleClear.centerCoordinateX_InCanvasArea-col)
                 + (circleClear.centerCoordinateY_InCanvasArea-row)*(circleClear.centerCoordinateY_InCanvasArea-row)
                 < (circleClear.radius*circleClear.radius) ){//is it inside the circle
+
+                //index = ((row*fftSpectrumModified.width)+col);
+                //newIndex = ((index+(fftSpectrumOriginal.width/2))%fftSpectrumOriginal.width);
+                //newIndex = newIndex + (((fftSpectrumOriginal.width*fftSpectrumOriginal.height/2) + fftSpectrumOriginal.width*Math.floor(index/fftSpectrumOriginal.height))%numberOfSamples);
+
                 fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4] = fftSpectrumOriginal.real[((row*fftSpectrumModified.width)+col)*4];
                 fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4] = fftSpectrumOriginal.imag[((row*fftSpectrumModified.width)+col)*4];
 
@@ -140,6 +146,17 @@ function circleClearInSpectrum(circleClear){
 
                 fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
                 fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
+
+
+                /*fftSpectrumModified.real[(newIndex)*4] = fftSpectrumOriginal.real[(newIndex)*4];
+                fftSpectrumModified.imag[(newIndex)*4] = fftSpectrumOriginal.imag[(newIndex)*4];
+
+                fftSpectrumModified.real[(newIndex)*4+1] = fftSpectrumOriginal.real[(newIndex)*4+1];
+                fftSpectrumModified.imag[(newIndex)*4+1] = fftSpectrumOriginal.imag[(newIndex)*4+1];
+
+                fftSpectrumModified.real[(newIndex)*4+2] = fftSpectrumOriginal.real[(newIndex)*4+2];
+                fftSpectrumModified.imag[(newIndex)*4+2] = fftSpectrumOriginal.imag[(newIndex)*4+2];*/
+
             }
 
         }

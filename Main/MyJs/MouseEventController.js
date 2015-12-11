@@ -82,6 +82,7 @@ $("#imageFourier").mouseup(function (e) {
     if( anyButtonDrawSelected() && (mousePressed)){
         storeObjectShape();
         drawObjectShapesInOriginalImage();
+        clearCtrlYObjects();
     }
     e.stopPropagation();
     mousePressed = false;

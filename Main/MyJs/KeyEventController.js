@@ -45,6 +45,18 @@ function ctrlV_objects(){
 }
 
 
+function ctrlZ_action(){
+    objetcsShapeCtrlY.push(objetcsShape.pop());
+    drawObjectShapesInOriginalImage();
+}
+
+function ctrlY_action(){
+    objetcsShape.push(objetcsShapeCtrlY.pop());
+    drawObjectShapesInOriginalImage();
+}
+
+
+
 //deletar objeto
 document.addEventListener("keydown", keyDownTextField, false);
 function keyDownTextField(e) {
@@ -65,11 +77,11 @@ function keyDownTextField(e) {
 
 }
 
-//ctrl+c and ctrl+v of objects
+//ctrl+c, ctrl+v, ctrl+z and ctrl+y of objects
 $(document).ready(function()
 {
     var ctrlDown = false;
-    var ctrlKey = 17, vKey = 86, cKey = 67;
+    var ctrlKey = 17, vKey = 86, cKey = 67, yKey = 89,zKey = 90;
 
     $(document).keydown(function(e)
     {
@@ -92,6 +104,18 @@ $(document).ready(function()
             if(!anyButtonDrawSelected()){
                 ctrlV_objects();
                 //alert('objetos colados');
+            }
+        }
+
+        if (ctrlDown && (e.keyCode == zKey)){
+            if(objetcsShape.length > 0){
+                ctrlZ_action();
+            }
+        }
+
+        if (ctrlDown && (e.keyCode == yKey)){
+            if(objetcsShapeCtrlY.length > 0){
+                ctrlY_action();
             }
         }
 

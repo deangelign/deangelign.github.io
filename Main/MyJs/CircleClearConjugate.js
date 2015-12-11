@@ -239,6 +239,7 @@ function circleClearConjugateInSpectrum(circleClearConjugate){
     var recWidth = Math.round(recX + (circleClearConjugate.circleClear1.radius*2) );
     var recHeight = Math.round(recY + (circleClearConjugate.circleClear1.radius*2) );
 
+    var index, newIndex;
 
     for(var row=recY; row<recY+recHeight; row++){
 
@@ -247,6 +248,11 @@ function circleClearConjugateInSpectrum(circleClearConjugate){
             if( (circleClearConjugate.circleClear1.centerCoordinateX_InCanvasArea-col)*(circleClearConjugate.circleClear1.centerCoordinateX_InCanvasArea-col)
                 + (circleClearConjugate.circleClear1.centerCoordinateY_InCanvasArea-row)*(circleClearConjugate.circleClear1.centerCoordinateY_InCanvasArea-row)
                 < (circleClearConjugate.circleClear1.radius*circleClearConjugate.circleClear1.radius) ){//is it inside the circle?
+
+                //index = ((row*fftSpectrumModified.width)+col);
+                //newIndex = ((index+(fftSpectrumOriginal.width/2))%fftSpectrumOriginal.width);
+                //newIndex = newIndex + (((fftSpectrumOriginal.width*fftSpectrumOriginal.height/2) + fftSpectrumOriginal.width*Math.floor(index/fftSpectrumOriginal.height))%numberOfSamples);
+
                 fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4] = fftSpectrumOriginal.real[((row*fftSpectrumModified.width)+col)*4];
                 fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4] = fftSpectrumOriginal.imag[((row*fftSpectrumModified.width)+col)*4];
 
@@ -258,6 +264,15 @@ function circleClearConjugateInSpectrum(circleClearConjugate){
 
                 fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
                 fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
+
+                /*fftSpectrumModified.real[(newIndex)*4] = fftSpectrumOriginal.real[(newIndex)*4];
+                fftSpectrumModified.imag[(newIndex)*4] = fftSpectrumOriginal.imag[(newIndex)*4];
+
+                fftSpectrumModified.real[(newIndex)*4+1] = fftSpectrumOriginal.real[(newIndex)*4+1];
+                fftSpectrumModified.imag[(newIndex)*4+1] = fftSpectrumOriginal.imag[(newIndex)*4+1];
+
+                fftSpectrumModified.real[(newIndex)*4+2] = fftSpectrumOriginal.real[(newIndex)*4+2];
+                fftSpectrumModified.imag[(newIndex)*4+2] = fftSpectrumOriginal.imag[(newIndex)*4+2];*/
             }
 
         }
@@ -277,6 +292,12 @@ function circleClearConjugateInSpectrum(circleClearConjugate){
             if( (circleClearConjugate.circleClear2.centerCoordinateX_InCanvasArea-col)*(circleClearConjugate.circleClear2.centerCoordinateX_InCanvasArea-col)
                 + (circleClearConjugate.circleClear2.centerCoordinateY_InCanvasArea-row)*(circleClearConjugate.circleClear2.centerCoordinateY_InCanvasArea-row)
                 < (circleClearConjugate.circleClear2.radius*circleClearConjugate.circleClear2.radius) ){//is it inside the circle?
+
+                //index = ((row*fftSpectrumModified.width)+col);
+                //newIndex = ((index+(fftSpectrumOriginal.width/2))%fftSpectrumOriginal.width);
+                //newIndex = newIndex + (((fftSpectrumOriginal.width*fftSpectrumOriginal.height/2) + fftSpectrumOriginal.width*Math.floor(index/fftSpectrumOriginal.height))%numberOfSamples);
+
+
                 fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4] = fftSpectrumOriginal.real[((row*fftSpectrumModified.width)+col)*4 ];
                 fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4] = fftSpectrumOriginal.imag[((row*fftSpectrumModified.width)+col)*4 ];
 
@@ -288,6 +309,17 @@ function circleClearConjugateInSpectrum(circleClearConjugate){
 
                 fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
                 fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
+
+                /*fftSpectrumModified.real[(newIndex)*4] = fftSpectrumOriginal.real[(newIndex)*4];
+                fftSpectrumModified.imag[(newIndex)*4] = fftSpectrumOriginal.imag[(newIndex)*4];
+
+                fftSpectrumModified.real[(newIndex)*4+1] = fftSpectrumOriginal.real[(newIndex)*4+1];
+                fftSpectrumModified.imag[(newIndex)*4+1] = fftSpectrumOriginal.imag[(newIndex)*4+1];
+
+                fftSpectrumModified.real[(newIndex)*4+2] = fftSpectrumOriginal.real[(newIndex)*4+2];
+                fftSpectrumModified.imag[(newIndex)*4+2] = fftSpectrumOriginal.imag[(newIndex)*4+2];*/
+
+
             }
 
         }

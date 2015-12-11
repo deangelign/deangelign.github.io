@@ -185,6 +185,10 @@ function rectangleConjugateInSpectrum(rectangleConjugate){
     for(var row=rectangleConjugate.rectangle1.coordinateY_InCanvasArea; row<rectangleConjugate.rectangle1.coordinateY_InCanvasArea+rectangleConjugate.rectangle1.height; row++){
 
         for(var col=rectangleConjugate.rectangle1.coordinateX_InCanvasArea; col<rectangleConjugate.rectangle1.coordinateX_InCanvasArea+rectangleConjugate.rectangle1.width; col++){
+            //index = ((row*fftSpectrumModified.width)+col);
+            //newIndex = ((index+(fftSpectrumOriginal.width/2))%fftSpectrumOriginal.width);
+            //newIndex = newIndex + (((fftSpectrumOriginal.width*fftSpectrumOriginal.height/2) + fftSpectrumOriginal.width*Math.floor(index/fftSpectrumOriginal.height))%numberOfSamples);
+
             fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4] = 0;
             fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4] = 0;
 
@@ -196,12 +200,25 @@ function rectangleConjugateInSpectrum(rectangleConjugate){
 
             fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
             fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
+
+            /*fftSpectrumModified.real[(newIndex)*4] = 0;
+            fftSpectrumModified.imag[(newIndex)*4] = 0;
+
+            fftSpectrumModified.real[(newIndex)*4+1] = 0;
+            fftSpectrumModified.imag[(newIndex)*4+1] = 0;
+
+            fftSpectrumModified.real[(newIndex)*4+2] = 0;
+            fftSpectrumModified.imag[(newIndex)*4+2] = 0;*/
         }
     }
 
     for(var row=rectangleConjugate.rectangle2.coordinateY_InCanvasArea; row<rectangleConjugate.rectangle2.coordinateY_InCanvasArea+rectangleConjugate.rectangle2.height; row++){
 
         for(var col=rectangleConjugate.rectangle2.coordinateX_InCanvasArea; col<rectangleConjugate.rectangle2.coordinateX_InCanvasArea+rectangleConjugate.rectangle2.width; col++){
+            //index = ((row*fftSpectrumModified.width)+col);
+            //newIndex = ((index+(fftSpectrumOriginal.width/2))%fftSpectrumOriginal.width);
+            //newIndex = newIndex + (((fftSpectrumOriginal.width*fftSpectrumOriginal.height/2) + fftSpectrumOriginal.width*Math.floor(index/fftSpectrumOriginal.height))%numberOfSamples);
+
             fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4] = 0;
             fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4] = 0;
 
@@ -213,6 +230,15 @@ function rectangleConjugateInSpectrum(rectangleConjugate){
 
             fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
             fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
+
+            /*fftSpectrumModified.real[(newIndex)*4] = 0;
+            fftSpectrumModified.imag[(newIndex)*4] = 0;
+
+            fftSpectrumModified.real[(newIndex)*4+1] = 0;
+            fftSpectrumModified.imag[(newIndex)*4+1] = 0;
+
+            fftSpectrumModified.real[(newIndex)*4+2] = 0;
+            fftSpectrumModified.imag[(newIndex)*4+2] = 0;*/
         }
     }
 

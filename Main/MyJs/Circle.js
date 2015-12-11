@@ -120,14 +120,18 @@ function circleInSpectrum(circle){
     var recY = Math.round(circle.centerCoordinateY_InCanvasArea-circle.radius);
     var recWidth = Math.round(recX + (circle.radius*2) );
     var recHeight = Math.round(recY + (circle.radius*2) );
-    var circleBox = new Rectangle(circle.centerCoordinateX_InCanvasArea-circle.radius, circle.centerCoordinateY_InCanvasArea-circle.radius,circle.radius*2,circle.radius*2);
 
+    var index, newIndex;
 
     for(var row=recY; row<recY+recHeight; row++){
 
         for(var col=recX; col<recX+recWidth; col++){
 
             if( (circle.centerCoordinateX_InCanvasArea-col)*(circle.centerCoordinateX_InCanvasArea-col) + (circle.centerCoordinateY_InCanvasArea-row)*(circle.centerCoordinateY_InCanvasArea-row)  < (circle.radius*circle.radius) ){//is it inside the circle
+                //index = ((row*fftSpectrumModified.width)+col);
+                //newIndex = ((index+(fftSpectrumOriginal.width/2))%fftSpectrumOriginal.width);
+                //newIndex = newIndex + (((fftSpectrumOriginal.width*fftSpectrumOriginal.height/2) + fftSpectrumOriginal.width*Math.floor(index/fftSpectrumOriginal.height))%numberOfSamples);
+
                 fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4] = 0;
                 fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4] = 0;
 
@@ -139,6 +143,15 @@ function circleInSpectrum(circle){
 
                 fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
                 fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
+
+                /*fftSpectrumModified.real[(newIndex)*4] = 0;
+                fftSpectrumModified.imag[(newIndex)*4] = 0;
+
+                fftSpectrumModified.real[(newIndex)*4+1] = 0;
+                fftSpectrumModified.imag[(newIndex)*4+1] = 0;
+
+                fftSpectrumModified.real[(newIndex)*4+2] = 0;
+                fftSpectrumModified.imag[(newIndex)*4+2] = 0*/;
             }
 
         }

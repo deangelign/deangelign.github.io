@@ -9,6 +9,7 @@ var imageGeneratedFromLastMousePressUp = OriginalImage;
 //////////////////////////
 
 var objetcsShape = [];
+var objetcsShapeCtrlY = [];
 
 /////////////////////////////classes constructor//////////////////////////////
 
@@ -66,6 +67,12 @@ function deleteAllObjectsShape(){
     drawObjectShapesInOriginalImage();
 }
 
+function clearCtrlYObjects(){
+    if(objetcsShapeCtrlY.length > 0) {
+        objetcsShapeCtrlY.splice(0, objetcsShapeCtrlY.length);
+    }
+}
+
 function clearAllCanvas(){
     contextCanvasImageUploadedArea.clearRect(0,0,imageWidthZeroPadding, imageHeightZeroPadding);
     contextFourierTransformArea.clearRect(0,0,imageWidthZeroPadding, imageHeightZeroPadding);
@@ -75,85 +82,85 @@ function clearAllCanvas(){
 function drawObjectShapesInOriginalImage(){
     contextFourierTransformArea.putImageData(OriginalImage, 0,0);
 
-    for(var index=0; index < objetcsShape.length; index++){
+        for (var index = 0; index < objetcsShape.length; index++) {
 
-        if(objetcsShape[index].type == shapeTypes[0]){
-            if(objetcsShape[index].shape.isSelected){
-                drawFilledRectangleSelected(objetcsShape[index].shape);
+            if (objetcsShape[index].type == shapeTypes[0]) {
+                if (objetcsShape[index].shape.isSelected) {
+                    drawFilledRectangleSelected(objetcsShape[index].shape);
+                }
+                else {
+                    drawFilledRectangle(objetcsShape[index].shape);
+                }
             }
-            else{
-                drawFilledRectangle(objetcsShape[index].shape);
+
+            else if (objetcsShape[index].type == shapeTypes[1]) {
+                if (objetcsShape[index].shape.isSelected) {
+                    drawFilledRectangleConjugateSelected(objetcsShape[index].shape);
+                }
+                else {
+                    drawFilledRectangleConjugate(objetcsShape[index].shape);
+                }
             }
+
+            else if (objetcsShape[index].type == shapeTypes[2]) {
+                if (objetcsShape[index].shape.isSelected) {
+                    drawFilledCircleSelected(objetcsShape[index].shape);
+                }
+                else {
+                    drawFilledCircle(objetcsShape[index].shape);
+                }
+            }
+
+            else if (objetcsShape[index].type == shapeTypes[3]) {
+                if (objetcsShape[index].shape.isSelected) {
+                    drawFilledCircleConjugateSelected(objetcsShape[index].shape);
+                }
+                else {
+                    drawFilledCircleConjugate(objetcsShape[index].shape);
+                }
+            }
+
+            else if (objetcsShape[index].type == shapeTypes[4]) {
+                if (objetcsShape[index].shape.isSelected) {
+                    drawFilledClearRectangleSelected(objetcsShape[index].shape);
+                }
+                else {
+                    drawFilledClearRectangle(objetcsShape[index].shape);
+                }
+            }
+
+            else if (objetcsShape[index].type == shapeTypes[5]) {
+                if (objetcsShape[index].shape.isSelected) {
+                    drawFilledRectangleClearConjugateSelected(objetcsShape[index].shape);
+                }
+                else {
+                    drawFilledRectangleClearConjugate(objetcsShape[index].shape);
+                }
+            }
+
+            else if (objetcsShape[index].type == shapeTypes[6]) {
+                if (objetcsShape[index].shape.isSelected) {
+                    drawFilledCircleClearSelected(objetcsShape[index].shape);
+                }
+                else {
+                    drawFilledCircleClear(objetcsShape[index].shape);
+                }
+            }
+
+            else if (objetcsShape[index].type == shapeTypes[7]) {
+                if (objetcsShape[index].shape.isSelected) {
+                    drawFilledCircleClearConjugateSelected(objetcsShape[index].shape);
+                }
+                else {
+                    drawFilledCircleClearConjugate(objetcsShape[index].shape);
+                }
+            }
+
         }
 
-        else if(objetcsShape[index].type == shapeTypes[1]){
-            if(objetcsShape[index].shape.isSelected){
-                drawFilledRectangleConjugateSelected(objetcsShape[index].shape);
-            }
-            else{
-                drawFilledRectangleConjugate(objetcsShape[index].shape);
-            }
-        }
-
-        else if(objetcsShape[index].type == shapeTypes[2]){
-            if(objetcsShape[index].shape.isSelected){
-                drawFilledCircleSelected(objetcsShape[index].shape);
-            }
-            else{
-                drawFilledCircle(objetcsShape[index].shape);
-            }
-        }
-
-        else if(objetcsShape[index].type == shapeTypes[3]){
-            if(objetcsShape[index].shape.isSelected){
-                drawFilledCircleConjugateSelected(objetcsShape[index].shape);
-            }
-            else{
-                drawFilledCircleConjugate(objetcsShape[index].shape);
-            }
-        }
-
-        else if(objetcsShape[index].type == shapeTypes[4]){
-            if(objetcsShape[index].shape.isSelected){
-                drawFilledClearRectangleSelected(objetcsShape[index].shape);
-            }
-            else{
-                drawFilledClearRectangle(objetcsShape[index].shape);
-            }
-        }
-
-        else if(objetcsShape[index].type == shapeTypes[5]){
-            if(objetcsShape[index].shape.isSelected){
-                drawFilledRectangleClearConjugateSelected(objetcsShape[index].shape);
-            }
-            else{
-                drawFilledRectangleClearConjugate(objetcsShape[index].shape);
-            }
-        }
-
-        else if(objetcsShape[index].type == shapeTypes[6]){
-            if(objetcsShape[index].shape.isSelected){
-                drawFilledCircleClearSelected(objetcsShape[index].shape);
-            }
-            else{
-                drawFilledCircleClear(objetcsShape[index].shape);
-            }
-        }
-
-        else if(objetcsShape[index].type == shapeTypes[7]){
-            if(objetcsShape[index].shape.isSelected){
-                drawFilledCircleClearConjugateSelected(objetcsShape[index].shape);
-            }
-            else{
-                drawFilledCircleClearConjugate(objetcsShape[index].shape);
-            }
-        }
-
-    }
-
-    imageGeneratedFromLastMousePressUp = contextFourierTransformArea.getImageData(0,0,imageWidthZeroPadding, imageHeightZeroPadding);
+    imageGeneratedFromLastMousePressUp = contextFourierTransformArea.getImageData(0, 0, imageWidthZeroPadding, imageHeightZeroPadding);
     drawInverseFFTImage();
-    //testeSpectrum();
+     //testeSpectrum();
 }
 
 

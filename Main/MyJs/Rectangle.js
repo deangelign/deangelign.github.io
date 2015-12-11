@@ -65,9 +65,16 @@ function drawFilledRectangleWhileMouseHold(mouseX_while,mouseY_while,mouseX,mous
 
 function rectangleInSpectrum(retangle){
 
+    var index, newIndex;
+
      for(var row=retangle.coordinateY_InCanvasArea; row<retangle.coordinateY_InCanvasArea+retangle.height; row++){
 
          for(var col=retangle.coordinateX_InCanvasArea; col<retangle.coordinateX_InCanvasArea+retangle.width; col++){
+             //index = ((row*fftSpectrumModified.width)+col);
+             //newIndex = ((index+(fftSpectrumOriginal.width/2))%fftSpectrumOriginal.width);
+             //newIndex = newIndex + (((fftSpectrumOriginal.width*fftSpectrumOriginal.height/2) + fftSpectrumOriginal.width*Math.floor(index/fftSpectrumOriginal.height))%numberOfSamples);
+
+
              fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4] = 0;
              fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4] = 0;
 
@@ -79,6 +86,15 @@ function rectangleInSpectrum(retangle){
 
              fftSpectrumModified.real[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
              fftSpectrumModified.imag[((row*fftSpectrumModified.width)+col)*4 +3] = 255;
+
+             /*fftSpectrumModified.real[(newIndex)*4] = 0;
+             fftSpectrumModified.imag[(newIndex)*4] = 0;
+
+             fftSpectrumModified.real[(newIndex)*4+1] = 0;
+             fftSpectrumModified.imag[(newIndex)*4+1] = 0;
+
+             fftSpectrumModified.real[(newIndex)*4+2] = 0;
+             fftSpectrumModified.imag[(newIndex)*4+2] = 0;*/
          }
      }
  }
