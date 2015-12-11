@@ -37,21 +37,23 @@ function rectangleConjugate2Object(canvasEditableAreaWidth,canvasEditableAreaHei
 function drawFilledRectangleConjugate(rectangleConjugate){
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle = fillColor;
-    contextFourierTransformArea.globalAlpha= globalAlpha;
-    contextFourierTransformArea.lineWidth = borderWidth;
-    contextFourierTransformArea.strokeStyle = strokeColor;
+    contextFourierTransformArea.globalAlpha= fillAlpha;
     contextFourierTransformArea.rect(rectangleConjugate.rectangle1.coordinateX_InCanvasArea, rectangleConjugate.rectangle1.coordinateY_InCanvasArea, rectangleConjugate.rectangle1.width,rectangleConjugate.rectangle1.height );
     contextFourierTransformArea.fill();
+    contextFourierTransformArea.lineWidth = borderWidth;
+    contextFourierTransformArea.strokeStyle = strokeColor;
+    contextFourierTransformArea.globalAlpha = borderAlpha;
     contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
 
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle = fillColor;
-    contextFourierTransformArea.globalAlpha= globalAlpha;
-    contextFourierTransformArea.lineWidth = borderWidth;
-    contextFourierTransformArea.strokeStyle = strokeColor;
+    contextFourierTransformArea.globalAlpha= fillAlpha;
     contextFourierTransformArea.rect(rectangleConjugate.rectangle2.coordinateX_InCanvasArea, rectangleConjugate.rectangle2.coordinateY_InCanvasArea, rectangleConjugate.rectangle2.width,rectangleConjugate.rectangle2.height );
     contextFourierTransformArea.fill();
+    contextFourierTransformArea.lineWidth = borderWidth;
+    contextFourierTransformArea.strokeStyle = strokeColor;
+    contextFourierTransformArea.globalAlpha = borderAlpha;
     contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
 }
@@ -59,21 +61,23 @@ function drawFilledRectangleConjugate(rectangleConjugate){
 function drawFilledRectangleConjugateSelected(rectangleConjugate){
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle =  fillColorSelected;
-    contextFourierTransformArea.globalAlpha= globalAlphaSelected;
-    contextFourierTransformArea.strokeStyle = strokeColorSelected;
-    contextFourierTransformArea.lineWidth = borderWidthSelected;
+    contextFourierTransformArea.globalAlpha= filllAlphaSelected;
     contextFourierTransformArea.rect(rectangleConjugate.rectangle1.coordinateX_InCanvasArea, rectangleConjugate.rectangle1.coordinateY_InCanvasArea, rectangleConjugate.rectangle1.width, rectangleConjugate.rectangle1.height);
     contextFourierTransformArea.fill();
+    contextFourierTransformArea.strokeStyle = strokeColorSelected;
+    contextFourierTransformArea.lineWidth = borderWidthSelected;
+    contextFourierTransformArea.globalAlpha = borderAlphaSelected;
     contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
 
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle =  fillColorSelected;
-    contextFourierTransformArea.globalAlpha= globalAlphaSelected;
-    contextFourierTransformArea.strokeStyle = strokeColorSelected;
-    contextFourierTransformArea.lineWidth = borderWidthSelected;
+    contextFourierTransformArea.globalAlpha= filllAlphaSelected;
     contextFourierTransformArea.rect(rectangleConjugate.rectangle2.coordinateX_InCanvasArea, rectangleConjugate.rectangle2.coordinateY_InCanvasArea, rectangleConjugate.rectangle2.width, rectangleConjugate.rectangle2.height);
     contextFourierTransformArea.fill();
+    contextFourierTransformArea.strokeStyle = strokeColorSelected;
+    contextFourierTransformArea.lineWidth = borderWidthSelected;
+    contextFourierTransformArea.globalAlpha = borderAlphaSelected;
     contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
 }
@@ -153,12 +157,14 @@ function drawFilledRectangleConjugateWhileMouseHold(mouseX_while,mouseY_while,mo
     var rectHeight = mouseY_while - mouseY;
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle =  fillColorWhileDown;
-    contextFourierTransformArea.globalAlpha= globalAlphaWhileDown;
-    contextFourierTransformArea.strokeStyle = strokeColorWhileDown;
-    contextFourierTransformArea.lineWidth = borderWidthWhileDown;
+    contextFourierTransformArea.globalAlpha= fillAlphaWhileDown;
     contextFourierTransformArea.rect(mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,rectWidth,rectHeight);
     contextFourierTransformArea.fill();
+    contextFourierTransformArea.strokeStyle = strokeColorWhileDown;
+    contextFourierTransformArea.lineWidth = borderWidthWhileDown;
+    contextFourierTransformArea.globalAlpha = borderAlphaWhileDown;
     contextFourierTransformArea.stroke();
+    contextFourierTransformArea.closePath();
 
     var displacementCenterImageToRectangleCentroidX = (mouseCursorPositionInArea_X_mouseDown+(rectWidth/2))- canvasEditableAreaWidth/2;
     var displacementCenterImageToRectangleCentroidY = (mouseCursorPositionInArea_Y_mouseDown+(rectHeight/2))- canvasEditableAreaHeight/2;
@@ -172,12 +178,14 @@ function drawFilledRectangleConjugateWhileMouseHold(mouseX_while,mouseY_while,mo
 
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle =  fillColorWhileDown
-    contextFourierTransformArea.globalAlpha= globalAlphaWhileDown;
-    contextFourierTransformArea.strokeStyle = strokeColorWhileDown;
-    contextFourierTransformArea.lineWidth = borderWidthWhileDown;
+    contextFourierTransformArea.globalAlpha= fillAlphaWhileDown;
     contextFourierTransformArea.rect(conjugateCentroidX-(rectWidth/2),conjugateCentroidY-(rectHeight/2),rectWidth,rectHeight);
     contextFourierTransformArea.fill();
+    contextFourierTransformArea.strokeStyle = strokeColorWhileDown;
+    contextFourierTransformArea.lineWidth = borderWidthWhileDown;
+    contextFourierTransformArea.globalAlpha = borderAlphaWhileDown;
     contextFourierTransformArea.stroke();
+    contextFourierTransformArea.closePath();
 }
 
 function rectangleConjugateInSpectrum(rectangleConjugate){

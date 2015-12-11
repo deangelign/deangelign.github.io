@@ -254,15 +254,15 @@ function FFT( canvasId, compressionType ) {
 
                 realComponent  = realSamples[(index)*4];
                 imagineryComponent = imaginerySamples[(index)*4];
-                result[(index)*4] = calculteMagnitude(rr, ii) * 255/numberOfSamples ;
+                result[(index)*4] = calculteMagnitude(realComponent, imagineryComponent) * 255/numberOfSamples ;
 
-                realComponent  = realSamples[(newIndex)*4+ 1];
-                imagineryComponent = imaginerySamples[(newIndex)*4+ 1];
-                result[(index)*4+ 1] = calculteMagnitude(rr, ii) * 255/numberOfSamples ;
+                realComponent  = realSamples[(index)*4+ 1];
+                imagineryComponent = imaginerySamples[(index)*4+ 1];
+                result[(index)*4+ 1] = calculteMagnitude(realComponent, imagineryComponent) * 255/numberOfSamples ;
 
-                realComponent  = realSamples[(newIndex)*4+ 2];
-                imagineryComponent = imaginerySamples[(newIndex)*4+ 2];
-                result[(index)*4+ 2] = calculteMagnitude(rr, ii) * 255/numberOfSamples ;
+                realComponent  = realSamples[(index)*4+ 2];
+                imagineryComponent = imaginerySamples[(index)*4+ 2];
+                result[(index)*4+ 2] = calculteMagnitude(realComponent, imagineryComponent) * 255/numberOfSamples ;
 
                 result[(index)*4+ 3] = 255 ;
             }
@@ -303,10 +303,9 @@ function IFFT( fftData, canvasId, compressionType ) {
     var result = rawResult.data;
 
     if(compressionType == 1){
-        for ( var pp=0; pp < result.length; pp += 4 ) {
+        /*for ( var pp=0; pp < result.length; pp += 4 ) {
             for ( var kk=0; kk < 3; ++kk ) {
                 var index = pp + kk;
-                //var vv = 255 * real[ index ] / scale;
                 var vv = real[ index ]/numberOfSamples ;
                 if ( vv < 0 ) {
                     vv = 0;
@@ -317,7 +316,44 @@ function IFFT( fftData, canvasId, compressionType ) {
                 result[ index ] = vv;
             }
             result[ pp + 3 ] = 255;
+        }*/
+
+        var realComponent;
+        for(var row=0; row < imageHeightZeroPadding; row++){
+            for(var col=0; col < imageWidthZeroPadding; col++){
+                index = ((row*imageWidthZeroPadding)+col);
+
+                realComponent = real[ (index)*4 ]/numberOfSamples;;
+                if(realComponent > 255){
+                    realComponent = 255;
+                }
+                if(realComponent < 0){
+                    realComponent = 0;
+                }
+                result[(index)*4] = realComponent;
+
+                realComponent = real[ (index)*4 + 1]/numberOfSamples;;
+                if(realComponent > 255){
+                    realComponent = 255;
+                }
+                if(realComponent < 0){
+                    realComponent = 0;
+                }
+                result[(index)*4 + 1] = realComponent;
+
+                realComponent = real[ (index)*4 + 2]/numberOfSamples;;
+                if(realComponent > 255){
+                    realComponent = 255;
+                }
+                if(realComponent < 0){
+                    realComponent = 0;
+                }
+                result[(index)*4 + 2] = realComponent;
+                result[(index)*4 + 3] = 255;
+            }
         }
+
+
     }
 
     if(compressionType == 2){

@@ -25,45 +25,41 @@ function circleClear2Object(){
 function drawFilledCircleClear(circleClear){
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle =  fillColorClearArea;
-    contextFourierTransformArea.globalAlpha= globalAlphaClearArea;
-    contextFourierTransformArea.strokeStyle = strokeColorClearArea;
-    contextFourierTransformArea.lineWidth = borderWidthClearArea;
+    contextFourierTransformArea.globalAlpha= fillAlphaClearArea;
     contextFourierTransformArea.arc(circleClear.centerCoordinateX_InCanvasArea, circleClear.centerCoordinateY_InCanvasArea,circleClear.radius,circleClear.startAngle,circleClear.endAngle);
     contextFourierTransformArea.fill();
+    contextFourierTransformArea.strokeStyle = strokeColorClearArea;
+    contextFourierTransformArea.lineWidth = borderWidthClearArea;
+    contextFourierTransformArea.globalAlpha = borderAlphaClearArea;
     contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
 
 
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle =  fillColorClearArea;
-    contextFourierTransformArea.globalAlpha= globalAlphaClearArea;
-    contextFourierTransformArea.strokeStyle = strokeColorClearArea;
-    contextFourierTransformArea.lineWidth = borderWidthClearArea;
+    contextFourierTransformArea.globalAlpha= alphaIntern;
     contextFourierTransformArea.arc(circleClear.centerCoordinateX_InCanvasArea, circleClear.centerCoordinateY_InCanvasArea,internRadius,circleClear.startAngle,circleClear.endAngle);
     contextFourierTransformArea.fill();
-    contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
 }
 
 function drawFilledCircleClearSelected(circleClear){
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle =  fillColorSelected;
-    contextFourierTransformArea.globalAlpha= globalAlphaSelected;
-    contextFourierTransformArea.strokeStyle = strokeColorSelected;
-    contextFourierTransformArea.lineWidth = borderWidthSelected;
+    contextFourierTransformArea.globalAlpha= filllAlphaSelected;
     contextFourierTransformArea.arc(circleClear.centerCoordinateX_InCanvasArea, circleClear.centerCoordinateY_InCanvasArea,circleClear.radius,circleClear.startAngle,circleClear.endAngle);
     contextFourierTransformArea.fill();
+    contextFourierTransformArea.strokeStyle = strokeColorSelected;
+    contextFourierTransformArea.lineWidth = borderWidthSelected;
+    contextFourierTransformArea.globalAlpha = borderAlphaSelected;
     contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
 
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle =  fillColorSelected;
-    contextFourierTransformArea.globalAlpha= globalAlphaSelected;
-    contextFourierTransformArea.strokeStyle = strokeColorSelected;
-    contextFourierTransformArea.lineWidth = borderWidthSelected;
+    contextFourierTransformArea.globalAlpha= alphaIntern;
     contextFourierTransformArea.arc(circleClear.centerCoordinateX_InCanvasArea, circleClear.centerCoordinateY_InCanvasArea,internRadius,circleClear.startAngle,circleClear.endAngle);
     contextFourierTransformArea.fill();
-    contextFourierTransformArea.stroke();
     contextFourierTransformArea.closePath();
 }
 
@@ -98,21 +94,19 @@ function drawFilledCircleClearWhileMouseHold(mouseX_while,mouseY_while,mouseX,mo
     var radius = Math.sqrt((deltaX*deltaX) + (deltaY*deltaY));
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle =  fillColorClearArea;
-    contextFourierTransformArea.globalAlpha= globalAlphaClearArea;
-    contextFourierTransformArea.strokeStyle = strokeColorClearArea;
-    contextFourierTransformArea.lineWidth = borderWidthClearArea;
+    contextFourierTransformArea.globalAlpha= fillAlphaClearArea;
     contextFourierTransformArea.arc(mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,  radius, 0, 2 * Math.PI);
     contextFourierTransformArea.fill();
+    contextFourierTransformArea.strokeStyle = strokeColorClearArea;
+    contextFourierTransformArea.lineWidth = borderWidthClearArea;
+    contextFourierTransformArea.globalAlpha = borderAlphaClearArea;
     contextFourierTransformArea.stroke();
 
     contextFourierTransformArea.beginPath();
     contextFourierTransformArea.fillStyle =  fillColorClearArea;
-    contextFourierTransformArea.globalAlpha= globalAlphaClearArea;
-    contextFourierTransformArea.strokeStyle = strokeColorClearArea;
-    contextFourierTransformArea.lineWidth = borderWidthClearArea;
+    contextFourierTransformArea.globalAlpha= alphaIntern;
     contextFourierTransformArea.arc(mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown,  internRadius, 0, 2 * Math.PI);
     contextFourierTransformArea.fill();
-    contextFourierTransformArea.stroke();
 }
 
 function circleClearInSpectrum(circleClear){
