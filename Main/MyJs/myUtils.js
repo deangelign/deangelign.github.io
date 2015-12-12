@@ -9,7 +9,7 @@ var imageGeneratedFromLastMousePressUp = OriginalImage;
 //////////////////////////
 
 var objetcsShape = [];
-var objetcsShapeCtrlY = [];
+
 
 /////////////////////////////classes constructor//////////////////////////////
 
@@ -21,42 +21,58 @@ function storeObjectShape(){
     if(isButtonDrawingRectangleSelected && isButtonDrawingConjugateSelected && isButtonDrawingClearAreaSelected){
         obj = rectangleClearConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
         objetcsShape.push(obj);
+        clearTransitoryPiles();
+        PileOperations.push("created");
     }
 
     else if(isButtonDrawingRectangleSelected && isButtonDrawingConjugateSelected){
         obj = rectangleConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
         objetcsShape.push(obj);
+        clearTransitoryPiles();
+        PileOperations.push("created");
     }
 
     else if(isButtonDrawingClearAreaSelected && isButtonDrawingRectangleSelected){
         obj =rectangleClear2Object();
         objetcsShape.push(obj);
+        clearTransitoryPiles();
+        PileOperations.push("created");
     }
 
     else if(isButtonDrawingRectangleSelected){
         obj = rectangle2Object();
         objetcsShape.push(obj);
+        clearTransitoryPiles();
+        PileOperations.push("created");
     }
 
     else if(isButtonDrawingCircleSelected && isButtonDrawingConjugateSelected && isButtonDrawingClearAreaSelected){
         obj = circleClearConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
         objetcsShape.push(obj);
+        clearTransitoryPiles();
+        PileOperations.push("created");
     }
 
 
     else if(isButtonDrawingCircleSelected && isButtonDrawingConjugateSelected){
         obj = circleConjugate2Object(imageWidthZeroPadding, imageHeightZeroPadding);
         objetcsShape.push(obj);
+        clearTransitoryPiles();
+        PileOperations.push("created");
     }
 
     else if(isButtonDrawingCircleSelected && isButtonDrawingClearAreaSelected){
         obj = circleClear2Object();
         objetcsShape.push(obj);
+        clearTransitoryPiles();
+        PileOperations.push("created");
     }
 
     else if(isButtonDrawingCircleSelected){
         obj = circle2Object();
         objetcsShape.push(obj);
+        clearTransitoryPiles();
+        PileOperations.push("created");
     }
 
 
@@ -67,9 +83,12 @@ function deleteAllObjectsShape(){
     drawObjectShapesInOriginalImage();
 }
 
-function clearCtrlYObjects(){
-    if(objetcsShapeCtrlY.length > 0) {
-        objetcsShapeCtrlY.splice(0, objetcsShapeCtrlY.length);
+function clearTransitoryPiles(){
+    if(pileTransitoryOperations.length > 0) {
+        pileTransitoryOperations.splice(0, pileTransitoryOperations.length);
+    }
+    if(PileTransitoryObjects.length > 0){
+        PileTransitoryObjects.splice(0,PileTransitoryObjects.length);
     }
 }
 

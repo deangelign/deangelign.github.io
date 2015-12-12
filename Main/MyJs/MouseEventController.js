@@ -69,7 +69,7 @@ $("#imageFourier").on('mousedown', function (e) {
     var pos = findPos(this);
     mouseCursorPositionInArea_X_mouseDown = e.pageX - pos.x;
     mouseCursorPositionInArea_Y_mouseDown = e.pageY - pos.y;
-    startTime = new Date().getTime();
+    //startTime = new Date().getTime();
 
     mousePressed =  true;
     lastMouseCursorPositionX = mouseCursorPositionInArea_X;
@@ -77,12 +77,12 @@ $("#imageFourier").on('mousedown', function (e) {
 });
 
 $("#imageFourier").mouseup(function (e) {
-    endTime = new Date().getTime();
-    longpress = (endTime - startTime >= 200);//clica e espera pelo ao menos 0.2 segundo para ser considera um "click and hold"
+    //endTime = new Date().getTime();
+    //longpress = (endTime - startTime >= 200);//clica e espera pelo ao menos 0.2 segundo para ser considera um "click and hold"
     if( anyButtonDrawSelected() && (mousePressed)){
         storeObjectShape();
         drawObjectShapesInOriginalImage();
-        clearCtrlYObjects();
+        //clearCtrlYObjects();
     }
     e.stopPropagation();
     mousePressed = false;
