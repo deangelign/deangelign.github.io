@@ -13,6 +13,7 @@ var imageHeight;
 
 var originalImageData = [];
 var modifiedImageData = [];
+var modifiedImageDataCopy = [];
 
 function handleImage(e){
     var reader = new FileReader();
@@ -21,8 +22,8 @@ function handleImage(e){
         img.onload = function(){
             drawImageInCanvasAreas(img);
             storeOriginalData();
-            drawImageFiltered();
-
+            drawKernel(myKernel);
+            isImageLoaded = true;
         }
         img.src = event.target.result;
     }
@@ -44,7 +45,14 @@ function drawImageInCanvasAreas(image){
     contextCanvasImageUploadedArea.drawImage(image,0,0, imageWidth, imageHeight);
     contextCanvasImageFiltredArea.drawImage(image,0,0, imageWidth, imageHeight);
 
-    myKernel = new Kernel(11,11,"mean", imageWidth,imageHeight);
+    myKernel = new Kernel(3,3,document.getElementById('filterType').value, imageWidth,imageHeight);
+    updateFrames(myKernel);
+
+    document.getElementById('kernelWidth').value = 3;
+    document.getElementById('kernelHeight').value = 3;
+    document.getElementById('kernelHorizontalCoordinate').value = 1;
+    document.getElementById('kernelVerticalCoordinate').value = 1;
+
 }
 
 function storeOriginalData(){
@@ -53,18 +61,8 @@ function storeOriginalData(){
     var imageData = contextCanvasImageFiltredArea.getImageData(0,0,imageWidth,imageHeight);
     var data = imageData.data;
 
-    for(var row=0; row < imageHeight; row++){
-        for(var col=0; col < imageWidth; col++){
-            index = ((row*imageWidth)+col);
-            originalImageData[(index*4)] = data[(index*4)];
-            originalImageData[(index*4)+1] = data[(index*4)+1];
-            originalImageData[(index*4)+2] = data[(index*4)+2];
-            originalImageData[(index*4)+3] = data[(index*4)+3];
+    originalImageData = data.slice();
+    modifiedImageData = data.slice();
 
-            modifiedImageData[(index*4)] = data[(index*4)];
-            modifiedImageData[(index*4)+1] = data[(index*4)+1];
-            modifiedImageData[(index*4)+2] = data[(index*4)+2];
-            modifiedImageData[(index*4)+3] = data[(index*4)+3];
-        }
-    }
+
 }

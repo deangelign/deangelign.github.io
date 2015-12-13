@@ -124,22 +124,51 @@
                         </div>
 
                         <div class="panel-body">
-
-                            <div class="form-group">
-                                <label>Kernel size</label>
-                                <select class="selectpicker" id="kernelSize">
-                                    <option value="1">3x3</option>
-                                    <option value="2">5x5</option>
-                                    <option value="3">7x7</option>
-                                </select>
+                            <div class="form-group" id="kernelSizeDiv">
+                                <div class="col-md-2">
+                                    <label for="kernelWidth">Kernel size</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control" id="kernelWidth" placeholder="width" onchange="if(isImageLoaded)setWidthKernel()">
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control" id="kernelHeight" placeholder="height" onchange="if(isImageLoaded)setHeightKernel()" >
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label>Filter type</label>
-                                <select class="selectpicker" id="filterType">
-                                    <option value="1">Mean</option>
-                                    <option value="2">Median</option>
-                                </select>
+                            <div class="row"></div>
+                            <div class="form-group" id="filterTypeDiv">
+                                <div class="col-md-2">
+                                    <label for ="filterType">Filter type</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <select class="selectpicker" id="filterType" onchange="if(isImageLoaded) setConvolutionType()">
+                                        <option value="mean">Mean</option>
+                                        <option value="median">Median</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row"></div>
+                            <div class="form-group" id="animationSpeedDiv">
+                                <div class="col-md-2">
+                                    <label for ="filterType">Animation speed</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control" id="animationSpeed" placeholder="pixels/iteration" value="1" onchange="setAnimationSpeed()">
+                                </div>
+                            </div>
+                            <div class="row"></div>
+                            <div class="form-group" id="kernelPosition">
+                                <div class="col-md-2">
+                                    <label for="kernelWidth">Kernel position</label>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control" id="kernelHorizontalCoordinate" placeholder="horizontal" onchange="if(isImageLoaded)setHorizontalPosition()">
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control" id="kernelVerticalCoordinate" placeholder="vertical" onchange="if(isImageLoaded)setVerticalPosition()" >
+                                </div>
                             </div>
 
                         </div>
@@ -157,13 +186,39 @@
                             <li><a data-toggle="tab" href="#OriginalImage">Original Image</a></li>
                         </ul>
 
-                        <div class="tab-content" >
-                            <div id="FiltredImage" class="tab-pane fade in active">
-                                <canvas id="imageFiltred" width="512" height="512" style="border:1px solid #d3d3d3;" ></canvas>
-                            </div>
-                            <div id="OriginalImage" class="tab-pane fade">
-                                <canvas id="imageUploaded" width="512" height="512" style="border:1px solid #d3d3d3;"></canvas>
-                            </div>
+                        <div class="form-group">
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td >
+                                            <div class="tab-content" >
+                                            <div id="FiltredImage" class="tab-pane fade in active">
+                                                <canvas id="imageFiltred" width="512" height="512" style="border:1px solid #d3d3d3;" ></canvas>
+                                            </div>
+                                            <div id="OriginalImage" class="tab-pane fade">
+                                                <canvas id="imageUploaded" width="512" height="512" style="border:1px solid #d3d3d3;"></canvas>
+                                            </div>
+                                            </div>
+                                        </td>
+                                        <td style="padding: 5px">
+                                            <button id="drawRectangleIcon" onclick="drawRectangleSelectedButton()" type="button">
+                                                <img src="../imagesIcons/drawRectangleIcon.png" title="retangulo" width="32" height="32"/>
+                                            </button>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+
+
 
                         </div>
 
@@ -194,6 +249,7 @@
     <script src="js/ImageDataController.js"></script>
     <script src="js/Kernel.js"></script>
     <script src="js/DrawController.js"></script>
+    <script src="js/ConvolutionParameters.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>

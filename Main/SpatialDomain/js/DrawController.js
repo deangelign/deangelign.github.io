@@ -1,25 +1,22 @@
-var myKernel;
 var animationStatus = "stopped";
+var linearSpeedX = 100;
+var linearSpeedY = 100;
+var horizontalDisplacement = 0;
+var verticalDisplacement = 0;
 
-window.requestAnimFrame = (function(callback) {
-    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
-        function(callback) {
-            window.setTimeout(callback, 1000 / 60);
-        };
-})();
 
-function drawKernel(){
+function drawKernel(kernel){
     contextCanvasImageFiltredArea.beginPath();
     contextCanvasImageFiltredArea.fillStyle = "blue";
-    contextCanvasImageFiltredArea.globalAlpha = 1;
-    contextCanvasImageFiltredArea.rect(myKernel.topLeftCornerCol,myKernel.topLeftCornerRow , myKernel.numberColumns, myKernel.numberRows );
+    contextCanvasImageFiltredArea.globalAlpha = 0.1;
+    contextCanvasImageFiltredArea.rect(kernel.topLeftCornerCol,kernel.topLeftCornerRow , kernel.numberColumns, kernel.numberRows );
     contextCanvasImageFiltredArea.fill();
     contextCanvasImageFiltredArea.closePath();
 
     contextCanvasImageFiltredArea.beginPath();
     contextCanvasImageFiltredArea.fillStyle = "red";
     contextCanvasImageFiltredArea.globalAlpha = 1;
-    contextCanvasImageFiltredArea.rect(myKernel.currentColumn,myKernel.currentRow , 1, 1 );
+    contextCanvasImageFiltredArea.rect(kernel.currentColumn,kernel.currentRow , 1, 1 );
     contextCanvasImageFiltredArea.fill();
     contextCanvasImageFiltredArea.closePath();
 
@@ -39,16 +36,49 @@ function drawImageFiltered(){
             data[(index*4)+3] = modifiedImageData[(index*4)+3];
         }
     }
+
+    contextCanvasImageFiltredArea.putImageData(imageData,0,0);
 }
 
-function animate(myKernel) {
+function animate(kernel) {
+
     if(animationStatus == "running") {
-    // update
-        drawKernel();
 
 
-        requestAnimFrame(function () {
-            animate(myKernel);
+        convolve(myKernel, originalImageData,modifiedImageData,animationSpeed,0);
+        drawAnimation(kernel);
+        updatePositionField();
+        window.requestAnimationFrame(function () {
+            animate(kernel);
         });
     }
+
+};
+
+function drawAnimation(kernel){
+    drawImageFiltered();
+    drawKernel(kernel);
 }
+
+// add click listener to canvas
+document.getElementById('imageFiltred').addEventListener('click', function() {
+
+    if(animationStatus == "running"){
+        animationStatus = "stopped";
+    }else if(animationStatus == "stopped") {
+        animationStatus = "running";
+        //convolve(myKernel, originalImageData,modifiedImageData,0,0);
+        animate(myKernel);
+    }
+
+
+});
+
+
+
+/*window.requestAnimFrame = (function(callback) {
+    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+            window.setTimeout(callback, 1000 / 60);
+        };
+})();*/
