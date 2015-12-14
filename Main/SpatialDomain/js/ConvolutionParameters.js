@@ -1,6 +1,25 @@
-var myKernel;
-var animationSpeed = 1; //pixel/iteration
 
+
+
+var myKernel;
+var animationSpeed = 1; // pixels/iteration
+initKernel();
+
+function initKernel(){
+    var height = document.getElementById('kernelHeight').value;
+    height = Math.floor(height);
+
+    var width = document.getElementById('kernelWidth').value;
+    width = Math.floor(width);
+
+    var type = document.getElementById('filterType').value;
+
+    var imageWidth = 512;
+    var imaheHeight = 512;
+
+    myKernel = new Kernel(height,width, type, imageWidth,imaheHeight );
+    drawAnimationComponents(myKernel);
+}
 
 function setWidthKernel() {
     var width = document.getElementById('kernelWidth').value;
@@ -13,12 +32,11 @@ function setWidthKernel() {
         setKernelSize(myKernel, myKernel.numberRows,width,imageWidth,imageHeight);
     } else {
         document.getElementById('kernelWidth').value = 3;
-        myKernel = new Kernel(myKernel.numberRows,3,"mean", imageWidth,imageHeight);
         setKernelSize(myKernel, myKernel.numberRows,3,imageWidth,imageHeight);
     }
     document.getElementById('kernelHorizontalCoordinate').value = myKernel.currentColumn;
     document.getElementById('kernelVerticalCoordinate').value = myKernel.currentRow;
-    drawAnimation(myKernel);
+    drawAnimationComponents(myKernel);
 }
 function setHeightKernel(){
     var height = document.getElementById('kernelHeight').value;
@@ -35,7 +53,7 @@ function setHeightKernel(){
     }
     document.getElementById('kernelHorizontalCoordinate').value = myKernel.currentColumn;
     document.getElementById('kernelVerticalCoordinate').value = myKernel.currentRow;
-    drawAnimation(myKernel);
+    drawAnimationComponents(myKernel);
 }
 
 function setHorizontalPosition(){
@@ -43,7 +61,7 @@ function setHorizontalPosition(){
     horizontalCoord = Math.floor(horizontalCoord);
     setKernelPosition(myKernel,horizontalCoord,myKernel.currentRow);
     document.getElementById('kernelHorizontalCoordinate').value = myKernel.currentColumn;
-    drawAnimation(myKernel);
+    drawAnimationComponents(myKernel);
 }
 
 function setVerticalPosition(){
@@ -51,7 +69,7 @@ function setVerticalPosition(){
     verticalCoord = Math.floor(verticalCoord);
     setKernelPosition(myKernel,myKernel.currentColumn,verticalCoord);
     document.getElementById('kernelVerticalCoordinate').value = myKernel.currentRow;
-    drawAnimation(myKernel);
+    drawAnimationComponents(myKernel);
 }
 
 function setAnimationSpeed(){

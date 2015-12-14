@@ -1,8 +1,4 @@
 var animationStatus = "stopped";
-var linearSpeedX = 100;
-var linearSpeedY = 100;
-var horizontalDisplacement = 0;
-var verticalDisplacement = 0;
 
 
 function drawKernel(kernel){
@@ -27,58 +23,64 @@ function drawImageFiltered(){
     var imageData = contextCanvasImageFiltredArea.getImageData(0,0,imageWidth,imageHeight);
     var data = imageData.data;
 
-    for(var row=0; row < imageHeight; row++){
-        for(var col=0; col < imageWidth; col++){
-            index = ((row*imageWidth)+col);
-            data[(index*4)] = modifiedImageData[(index*4)] ;
-            data[(index*4)+1] = modifiedImageData[(index*4)+1];
-            data[(index*4)+2] = modifiedImageData[(index*4)+2];
-            data[(index*4)+3] = modifiedImageData[(index*4)+3];
+        for (var row = 0; row < imageHeight; row++) {
+            for (var col = 0; col < imageWidth; col++) {
+                index = ((row * imageWidth) + col);
+                data[(index * 4)] = modifiedImageData[(index * 4)];
+                data[(index * 4) + 1] = modifiedImageData[(index * 4) + 1];
+                data[(index * 4) + 2] = modifiedImageData[(index * 4) + 2];
+                data[(index * 4) + 3] = modifiedImageData[(index * 4) + 3];
+            }
         }
-    }
+
 
     contextCanvasImageFiltredArea.putImageData(imageData,0,0);
 }
 
-function animate(kernel) {
+
+function animation(kernel) {
 
     if(animationStatus == "running") {
-
-
         convolve(myKernel, originalImageData,modifiedImageData,animationSpeed,0);
-        drawAnimation(kernel);
+        drawAnimationComponents(kernel);
         updatePositionField();
         window.requestAnimationFrame(function () {
-            animate(kernel);
+            animation(kernel);
         });
     }
 
 };
 
-function drawAnimation(kernel){
+function drawAnimationComponents(kernel){
     drawImageFiltered();
     drawKernel(kernel);
 }
 
-// add click listener to canvas
-document.getElementById('imageFiltred').addEventListener('click', function() {
+function drawObjectWhileMouseDown(mouseCursorX, mouseCursorY){
+    contextCanvasImageFiltredArea.putImageData(imageGeneratedFromLastMousePressUp,0,0);
+    mouseCursorPositionInArea_X_mouseDown_While = mouseCursorX;
+    mouseCursorPositionInArea_Y_mouseDown_While = mouseCursorY;
+    drawShapeBorderWhileMouseDown();
+}
 
-    if(animationStatus == "running"){
-        animationStatus = "stopped";
-    }else if(animationStatus == "stopped") {
-        animationStatus = "running";
-        //convolve(myKernel, originalImageData,modifiedImageData,0,0);
-        animate(myKernel);
+function drawShapeBorderWhileMouseDown(){
+    if(isButtonDrawingRectangleSelected){
+        drawStrokeRectangleWhileMouseHold(mouseCursorPositionInArea_X_mouseDown_While,mouseCursorPositionInArea_Y_mouseDown_While,mouseCursorPositionInArea_X_mouseDown,mouseCursorPositionInArea_Y_mouseDown);
     }
+}
 
+function drawObjectSavedInImage(){
 
-});
+    var OriginalIMageData = contextCanvasImageUploadedArea.getImageData(0,0, imageWidth, imageHeight);
+    contextCanvasImageFiltredArea.putImageData(OriginalIMageData,0,0);
 
+    for (var index = 0; index < objetcs.length; index++) {
 
+        if (objetcs[index].type == shapeTypes[0]) {
+            drawStrokedRectangle(objetcs[index].shape);
+        }
 
-/*window.requestAnimFrame = (function(callback) {
-    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
-        function(callback) {
-            window.setTimeout(callback, 1000 / 60);
-        };
-})();*/
+    }
+    imageGeneratedFromLastMousePressUp = contextCanvasImageFiltredArea.getImageData(0,0,imageWidth,imageHeight);
+}
+

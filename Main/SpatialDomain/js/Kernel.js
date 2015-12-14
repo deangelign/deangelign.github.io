@@ -2,9 +2,6 @@ var frameRed;
 var frameGreen;
 var frameBlue;
 
-
-
-
 var Kernel = function(rows,cols, type, imageWidth, imageHeight){
     this.numberRows = rows;
     this.numberColumns = cols;
@@ -188,4 +185,13 @@ function median(values) {
         return (values[half-1] + values[half]) / 2.0;
 }
 
+function moveKernelToArea(kernel,object){
+    if(object.type == shapeTypes[0]){
+        object.shape.rectangle.coordinateX_InCanvasArea
+        kernel.se
+
+    }
+
+
+}
 

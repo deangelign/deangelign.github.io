@@ -8,12 +8,14 @@ var contextCanvasImageUploadedArea = canvasImageUploadedArea.getContext('2d');
 var canvasImageFilteredArea = document.getElementById('imageFiltred');
 var contextCanvasImageFiltredArea = canvasImageFilteredArea.getContext('2d');
 
-var imageWidth;
-var imageHeight;
+var imageWidth = 512;
+var imageHeight = 512;
 
 var originalImageData = [];
 var modifiedImageData = [];
 var modifiedImageDataCopy = [];
+
+var imageGeneratedFromLastMousePressUp = contextCanvasImageFiltredArea.getImageData(0,0,imageWidth,imageHeight);
 
 function handleImage(e){
     var reader = new FileReader();
@@ -24,10 +26,15 @@ function handleImage(e){
             storeOriginalData();
             drawKernel(myKernel);
             isImageLoaded = true;
+            updateLastFrameBeforeMouseEvent();
         }
         img.src = event.target.result;
     }
     reader.readAsDataURL(e.target.files[0]);
+}
+
+function updateLastFrameBeforeMouseEvent(){
+    imageGeneratedFromLastMousePressUp = contextCanvasImageFiltredArea.getImageData(0,0,imageWidth,imageHeight);
 }
 
 function drawImageInCanvasAreas(image){
@@ -52,7 +59,6 @@ function drawImageInCanvasAreas(image){
     document.getElementById('kernelHeight').value = 3;
     document.getElementById('kernelHorizontalCoordinate').value = 1;
     document.getElementById('kernelVerticalCoordinate').value = 1;
-
 }
 
 function storeOriginalData(){

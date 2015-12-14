@@ -129,10 +129,10 @@
                                     <label for="kernelWidth">Kernel size</label>
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="number" class="form-control" id="kernelWidth" placeholder="width" onchange="if(isImageLoaded)setWidthKernel()">
+                                    <input type="number" class="form-control" id="kernelWidth" placeholder="width" value="3" onchange="setWidthKernel()">
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="number" class="form-control" id="kernelHeight" placeholder="height" onchange="if(isImageLoaded)setHeightKernel()" >
+                                    <input type="number" class="form-control" id="kernelHeight" placeholder="height" value="3" onchange="setHeightKernel()" >
                                 </div>
                             </div>
 
@@ -142,7 +142,7 @@
                                     <label for ="filterType">Filter type</label>
                                 </div>
                                 <div class="col-md-10">
-                                    <select class="selectpicker" id="filterType" onchange="if(isImageLoaded) setConvolutionType()">
+                                    <select class="selectpicker" id="filterType" onchange="setConvolutionType()">
                                         <option value="mean">Mean</option>
                                         <option value="median">Median</option>
                                     </select>
@@ -164,10 +164,10 @@
                                     <label for="kernelWidth">Kernel position</label>
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="number" class="form-control" id="kernelHorizontalCoordinate" placeholder="horizontal" onchange="if(isImageLoaded)setHorizontalPosition()">
+                                    <input type="number" class="form-control" id="kernelHorizontalCoordinate" placeholder="horizontal" value = "1" onchange="setHorizontalPosition()">
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="number" class="form-control" id="kernelVerticalCoordinate" placeholder="vertical" onchange="if(isImageLoaded)setVerticalPosition()" >
+                                    <input type="number" class="form-control" id="kernelVerticalCoordinate" placeholder="vertical" value = "1" onchange="setVerticalPosition()" >
                                 </div>
                             </div>
 
@@ -207,9 +207,22 @@
                                             </div>
                                         </td>
                                         <td style="padding: 5px">
+
                                             <button id="drawRectangleIcon" onclick="drawRectangleSelectedButton()" type="button">
                                                 <img src="../imagesIcons/drawRectangleIcon.png" title="retangulo" width="32" height="32"/>
                                             </button>
+
+                                            <!--div class="row"></div>
+
+                                            <button id="mouserPointer" onclick="deslectAllButtonsDrawSelected()" type="button" ">
+                                                <img src="../imagesIcons/mouse_pointer-512.png" title="cursor edit" width="32" height="32"/>
+                                            </button-->
+
+                                            <div class="row"></div>
+
+                                            <br/>
+                                            <p id="TextInfo"></p>
+
                                         </td>
 
                                     </tr>
@@ -248,8 +261,13 @@
 
     <script src="js/ImageDataController.js"></script>
     <script src="js/Kernel.js"></script>
+    <script src="js/Object.js"></script>
+    <script src="js/ObjectManager.js"></script>
+    <script src="js/Rectangle.js"></script>
     <script src="js/DrawController.js"></script>
     <script src="js/ConvolutionParameters.js"></script>
+    <script src="js/ButtonActionController.js"></script>
+    <script src="js/MouseEventController.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>
