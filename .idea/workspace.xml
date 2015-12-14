@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e952d7f6-9b0e-4205-893e-b6a6e24e3300" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/SpatialDomain/js/MouseEventController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/SpatialDomain/js/Object.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/SpatialDomain/js/ObjectManager.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/SpatialDomain/js/Rectangle.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Main/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/SpatialDomain/interativeFilteringSpatialDomain.html" afterPath="$PROJECT_DIR$/Main/SpatialDomain/interativeFilteringSpatialDomain.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/SpatialDomain/js/ButtonActionController.js" afterPath="$PROJECT_DIR$/Main/SpatialDomain/js/ButtonActionController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/SpatialDomain/js/ConvolutionParameters.js" afterPath="$PROJECT_DIR$/Main/SpatialDomain/js/ConvolutionParameters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/SpatialDomain/js/DrawController.js" afterPath="$PROJECT_DIR$/Main/SpatialDomain/js/DrawController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/SpatialDomain/js/ImageDataController.js" afterPath="$PROJECT_DIR$/Main/SpatialDomain/js/ImageDataController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/SpatialDomain/js/Kernel.js" afterPath="$PROJECT_DIR$/Main/SpatialDomain/js/Kernel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/editableSpectrum.html" afterPath="$PROJECT_DIR$/Main/editableSpectrum.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/home.html" afterPath="$PROJECT_DIR$/Main/home.html" />
     </list>
     <ignored path="deangelign.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,6 +26,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="editableSpectrum.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="interativeFilteringSpatialDomain.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/SpatialDomain/interativeFilteringSpatialDomain.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,11 +60,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Kernel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Kernel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/SpatialDomain/js/Kernel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4108911">
+            <state vertical-scroll-proportion="0.0">
               <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Main/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.0">
+              <caret line="119" column="36" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -126,7 +139,6 @@
         <option value="$PROJECT_DIR$/Main/myUtils.js" />
         <option value="$PROJECT_DIR$/Main/Frequency Domain/editableSpectrum.html" />
         <option value="$PROJECT_DIR$/Main/LowHighPassFilter.html" />
-        <option value="$PROJECT_DIR$/Main/home.html" />
         <option value="$PROJECT_DIR$/Main/MyJs/filters.js" />
         <option value="$PROJECT_DIR$/Main/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -154,7 +166,6 @@
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/imageDataController.js" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/drawController.js" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/kernel.js" />
-        <option value="$PROJECT_DIR$/Main/editableSpectrum.html" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/ButtonActionController.js" />
         <option value="$PROJECT_DIR$/Main/MyJs/MouseEventController.js" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/ImageDataController.js" />
@@ -166,6 +177,8 @@
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/MouseEventController.js" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/DrawController.js" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/Kernel.js" />
+        <option value="$PROJECT_DIR$/Main/editableSpectrum.html" />
+        <option value="$PROJECT_DIR$/Main/home.html" />
       </list>
     </option>
   </component>
@@ -411,7 +424,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20863836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -455,13 +468,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main/MyJs/fftFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/MyJs/myUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -488,13 +494,6 @@
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -526,13 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="216" column="16" selection-start-line="216" selection-start-column="16" selection-end-line="216" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -588,24 +580,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.083484575">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5384617">
           <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029310346">
-          <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -767,25 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6465516">
-          <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#4;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#5;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#6;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/SpatialDomain/js/Object.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -884,8 +843,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/SpatialDomain/js/Kernel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4108911">
+        <state vertical-scroll-proportion="0.0">
           <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/sbAdmin2.1/bower_components/bootstrap/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.760726">
+          <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/editableSpectrum.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0">
+          <caret line="119" column="36" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
           <folding />
         </state>
       </provider>
