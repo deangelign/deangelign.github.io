@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e952d7f6-9b0e-4205-893e-b6a6e24e3300" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/home.html" afterPath="$PROJECT_DIR$/Main/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/SpatialDomain/interativeFilteringSpatialDomain.html" afterPath="$PROJECT_DIR$/Main/SpatialDomain/interativeFilteringSpatialDomain.html" />
     </list>
     <ignored path="deangelign.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interativeFilteringSpatialDomain.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="interativeFilteringSpatialDomain.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/SpatialDomain/interativeFilteringSpatialDomain.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.384615">
-              <caret line="169" column="143" selection-start-line="169" selection-start-column="143" selection-end-line="169" selection-end-column="143" />
+            <state vertical-scroll-proportion="0.41034484">
+              <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5275862">
+            <state vertical-scroll-proportion="5.8846154">
               <caret line="48" column="71" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
               <folding />
             </state>
@@ -169,13 +169,13 @@
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/ObjectShape.js" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/Rectangle.js" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/ObjectManager.js" />
-        <option value="$PROJECT_DIR$/Main/SpatialDomain/interativeFilteringSpatialDomain.html" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/ConvolutionParameters.js" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/MouseEventController.js" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/DrawController.js" />
         <option value="$PROJECT_DIR$/Main/SpatialDomain/js/Kernel.js" />
         <option value="$PROJECT_DIR$/Main/editableSpectrum.html" />
         <option value="$PROJECT_DIR$/Main/home.html" />
+        <option value="$PROJECT_DIR$/Main/SpatialDomain/interativeFilteringSpatialDomain.html" />
       </list>
     </option>
   </component>
@@ -283,7 +283,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="imagesInPage" />
+              <option name="myItemId" value="SpatialDomain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -744,18 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/SpatialDomain/interativeFilteringSpatialDomain.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.384615">
-          <caret line="169" column="143" selection-start-line="169" selection-start-column="143" selection-end-line="169" selection-end-column="143" />
-          <folding>
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/SpatialDomain/js/ConvolutionParameters.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -824,9 +812,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5275862">
+        <state vertical-scroll-proportion="5.8846154">
           <caret line="48" column="71" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/SpatialDomain/interativeFilteringSpatialDomain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41034484">
+          <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#1;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
