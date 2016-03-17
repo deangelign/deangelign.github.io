@@ -47,7 +47,7 @@ function rgbToHex(r, g, b) {
 }
 
 function updateCursosInformation(){
-    textComponent.innerHTML = currentCursorPosition + "<br>" + currentColorPixel + "<br>" + currentDragDropPosition;
+    textComponent.innerHTML = currentCursorPosition + "=" + currentColorPixel + "<br>" + currentDragDropPosition;
 }
 
 
@@ -94,7 +94,7 @@ $('#imageFourier').mousemove(function(e) {
     var pos = findPos(this);
     mouseCursorPositionInArea_X = e.pageX - pos.x;
     mouseCursorPositionInArea_Y = e.pageY - pos.y;
-    currentCursorPosition = "x=" +  mouseCursorPositionInArea_X + ", y=" + mouseCursorPositionInArea_Y;
+    currentCursorPosition = "(" +  mouseCursorPositionInArea_X + ", " + mouseCursorPositionInArea_Y +")";
     var c = this.getContext('2d');
     var p = contextFourierTransformArea.getImageData(mouseCursorPositionInArea_X, mouseCursorPositionInArea_Y, 1, 1).data;
     currentColorPixel =  "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
